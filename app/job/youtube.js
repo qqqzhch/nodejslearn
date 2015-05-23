@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 var async = require('async');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var gitRepoSql = require('../model/gitRepo')
@@ -18,7 +18,7 @@ function getresplist(callbaack) {
             offset: 0,
             limit: 50,
             order: '"createdAt" ASC',
-            where :"viedo_num is NULL"
+            where :["viedo_num is NULL"]
         })
         .then(function(result) {
 
@@ -134,6 +134,10 @@ function repoViedoUpdate(result, Callbaack) {
 
 
 
+
+
+
+module.exports .run=function () {
 async.waterfall([
     getresplist,
     getYoutubeSearch,
@@ -142,3 +146,4 @@ async.waterfall([
 ], function(err) {
     console.log('可以开始读取下一页了');
 })
+}

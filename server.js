@@ -5,7 +5,7 @@ var fs = require('fs');
 var env = process.env.OPENSHIFT_MONGODB_DB_URL ? 'production' : 'development',
     config = require('./config/config')[env];
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 // var errorhandler = require('express-common-errors');
 
 // mongoose.connect(config.db);
@@ -115,7 +115,7 @@ var SampleApp = function() {
     self.initializeServer = function() {
 
         self.app =  express();
-        self.app.set('mydb', mongoose);
+        // self.app.set('mydb', mongoose);
         require('./config/express')(self.app, config);
         //  Add handlers for the app (from the routes).
         // self.createRoutes();

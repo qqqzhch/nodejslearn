@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var gitRepo=require('./model/gitRepo');
 var youTobeVideos=require('./model/youTobeVideos');
@@ -10,26 +10,26 @@ var stackSearchHistry=require('./model/stackSearchHistry');
 
 
 
-// gitRepo.sync({
-//     force: true
-// })
-// youSearchHistry.sync({
-//     force: true
-// })
+gitRepo.sync({
+    force: true
+})
+youSearchHistry.sync({
+    force: true
+})
 
-// youTobeVideos.sync({
-//     force: true
-// })
-// stackSearchHistry.sync({
-//     force: true
-// })
+youTobeVideos.sync({
+    force: true
+})
+stackSearchHistry.sync({
+    force: true
+})
 
-// stackQuestion.sync({
-//     force: true
-// })
-// stackAnswer.sync({
-//     force: true
-// })
-// gitRepoHistry.sync({
-//     force: true
-// })
+stackQuestion.sync({
+    force: true
+})
+stackAnswer.sync({
+    force: true
+})
+gitRepoHistry.sync({
+    force: true
+})

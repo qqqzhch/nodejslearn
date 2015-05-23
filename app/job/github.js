@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 var async = require('async');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var gitRepoSql = require('../model/gitRepo')
@@ -124,7 +124,11 @@ function storeReadmeData(item, full_name, callbaack) {
 
 }
 
-async.waterfall([
+
+
+
+module.exports .run=function () {
+    async.waterfall([
         setUp,
         getgithubrepos,
         storeReopData,
@@ -150,3 +154,4 @@ async.waterfall([
             })
 
     });
+}

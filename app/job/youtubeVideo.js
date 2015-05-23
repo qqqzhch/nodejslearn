@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 var async = require('async');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var gitRepoSql = require('../model/gitRepo')
@@ -12,13 +12,13 @@ var Base64 = require('./base64.js').Base64;
 
 
 function foryoutubeSearch(callbaack) {
-
+console.log('foryoutubeSearch')
 
     youTobeVideosSql
         .findAll({
             offset: 0,
             limit: 50,
-             where: '"isSearchedSon" is NULL'
+             where: ['"isSearchedSon" is NULL']
         })
         .then(function(result) {
 
@@ -86,6 +86,9 @@ function stroeyoutubeVideo(list, callbaack) {
 
 }
 
+
+
+module.exports .run=function () {
 async.waterfall([
     foryoutubeSearch,
     getForGroup,
@@ -95,3 +98,4 @@ async.waterfall([
     console.log(err);
     console.log('采集完了可以开始下一页了');
 })
+}

@@ -176,7 +176,7 @@ exports.getSearch = function(req, res) {
             error: '缺少参数q'
         })
     }
-    filter.tagged = q;
+    filter.intitle = q;
     context.questions.questions(filter, function(err, results) {
         if (err) {
             return res.send({

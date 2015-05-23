@@ -1,24 +1,25 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 var async = require('async');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
-var gitRepoSql = require('../model/gitRepo')
-var stackQuestionSql = require('../model/stackQuestion')
+var gitRepoSql = require('../model/gitRepo');
+var stackQuestionSql = require('../model/stackQuestion');
 
-var stackSearchHistrySql = require('../model/stackSearchHistry')
+var stackSearchHistrySql = require('../model/stackSearchHistry');
 var requrstMock = require('./requrstMock');
 var _ = require('underscore');
 var Base64 = require('./base64.js').Base64;
 
 var searchPage = 0;
+var ids=[];
 
 function getresplist(callbaack) {
     console.log('读取repos');
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 29,
+            limit: 2,
             order: '"createdAt" ASC',
-            where: "question_num is NULL"
+            where: ["question_num is NULL"]
         })
         .then(function(result) {
 
@@ -35,7 +36,7 @@ function getrespQuestion(list, callbaack) {
                 body.items = []
             }
             async.each(body.items, function(qitem, itemCallback) {
-
+                   console.log('cunhu stackQuestion!=================!')
                 qitem.repo_full_name = aitem.full_name;
                 qitem.repo_language = aitem.language;
 
@@ -64,21 +65,23 @@ function getrespQuestion(list, callbaack) {
 
 
 function stackQuestionStore(qitem, itemCallback) {
-    
+    console.log('cunhu stackQuestion!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+    console.log(qitem.question_id)
+
+    qitem.question_id=qitem.question_id+"";
+    ids.push(qitem.question_id+"|"+qitem.title)
+    console.log('cunhu stackQuestion'+qitem.repo_full_name)
     stackQuestionSql
         .findOrCreate({
             where: {
                id_site: 'stackoverflow',
-               id_question_id: qitem.question_id+""
+               id_question_id: qitem.question_id
             },
             defaults: qitem
-        }).then(function(item) {
+        }).spread(function(temp, created) {
+            console.log('jieuo:'+created)
             itemCallback(null)
-        }, function(e) {
-            console.log(e);
-            itemCallback(null)
-
-        })
+            })
 }
 
 
@@ -111,7 +114,8 @@ function stackSearchHisstryStore(result, Callbaack) {
 
 
 function repoViedoUpdate(result, Callbaack) {
-
+        console.log('************************')
+    console.log(ids)
     async.each(result, function(item, callback) {
         item.pageindex = searchPage;
         gitRepoSql.find({
@@ -132,6 +136,9 @@ function repoViedoUpdate(result, Callbaack) {
 
 
 
+
+
+module.exports .run=function () {
 async.waterfall([
     getresplist,
     getrespQuestion,
@@ -139,4 +146,6 @@ async.waterfall([
    repoViedoUpdate
 ], function(err) {
     console.log('可以开始读取下一页了');
+    console.log(ids)
 })
+}

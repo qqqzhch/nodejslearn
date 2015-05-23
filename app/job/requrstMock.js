@@ -59,6 +59,7 @@ module.exports.getstackSearch = function(q, index, callbaack) {
     if (env == 'development') {
         //stackApi.getSearch(q, index, callbaack)
         var req = new tryReq();
+        console.log('http://test.unknownerror.org/stack/getSearch?q=' + q);
         req('http://test.unknownerror.org/stack/getSearch?q=' + q, callbaack)
     } else {
         stackApi.getSearch(q, index, callbaack)

@@ -1,4 +1,4 @@
-var Sequelize = require('Sequelize');
+var Sequelize = require('sequelize');
 var async = require('async');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var stackQuestionSql = require('../model/stackQuestion')
@@ -10,13 +10,13 @@ var _ = require('underscore');
 var Base64 = require('./base64.js').Base64;
 
 function getlist(callbaack) {
-    console.log('读取repos');
+    console.log('stackAnswer读取repos');
     stackQuestionSql
         .findAll({
             offset: 0,
             limit: 10,
             order: '"createdAt" ASC',
-            where: '"isSearchedSon" is NULL'
+            where: ['"isSearchedSon" is NULL']
         })
         .then(function(result) {
 
@@ -102,6 +102,9 @@ function updateFather(ids, callbaack) {
         });
 
 }
+
+
+module.exports .run=function () {
 async.waterfall([
     getlist,
     getForGroup,
@@ -112,3 +115,5 @@ async.waterfall([
     console.log(err);
     console.log('采集完了可以开始下一页了');
 })
+
+}
