@@ -1,0 +1,88 @@
+{{#def.include('layout')}} 
+{{##def.content:
+	<div class="post-topheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<img class="avatar-64 mr10" src="{{=it.respInfo.owner.avatar_url}}&s=64" alt="bianer">
+						<div class="author">
+							<strong>{{=it.respInfo.owner.login}}</strong>
+
+						</div>
+					</div>
+					<div class="col-md-10 col-xs-10">
+						<h1 class="h2 title">
+						
+							<a>{{=it.respInfo.name}}</a>
+						</h1>
+						<div>
+							{{=it.respInfo.description}}
+							
+
+						</div>
+						<div>
+							<strong>★{{=it.respInfo.stargazers_count}}</strong>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-9 main mt30">
+					<ul class="nav nav-tabs nav-tabs-zen mb10">
+						<li >
+							<a>Readme</a>
+						</li>
+						<li>
+							<a href="/opensource/{{=it.respInfo.full_name}}/question">Related Question</a>
+						</li>
+						<li class="active">
+							<a href="/opensource/{{=it.respInfo.full_name}}/video">Related Video</a>
+						</li>
+					</ul>
+					<h3 class="h3 title">
+						{{=it.VideoInfo.snippet.title}}
+					</h3>
+					<div class="readme">
+					{{=it.VideoUrl}}
+					</div>
+					<div>
+						{{=it.VideoInfo.snippet.description}}
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 side mt30">
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+						Upload a video about the {{=it.respInfo.name}}
+						</h2>
+						<ul class="taglist--inline multi">
+							<li><a class="tag" data-toggle="popover"  href="http://www.youtube.com/">youtube</a>
+							<li><span class="tag" data-toggle="popover"  >viewCount:{{=it.VideoInfo.statistics.viewCount}}</span>
+
+								
+							</li>
+							<li><span class="tag" data-toggle="popover" >
+								likeCount:{{=it.VideoInfo.statistics.likeCount}}</span>
+							</li>
+						
+						</ul>
+					</div>
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							
+						</h2>
+						<ul class="widget-links list-unstyled">
+						
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+
+#}}
+
+		

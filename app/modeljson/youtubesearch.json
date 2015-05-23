@@ -1,0 +1,27 @@
+  {
+      "kind": "youtube#searchResult",
+      "etag": "\"tbWC5XrSXxe1WOAx6MK9z4hHSU8/AOp1ocWBgX_gQ0TCGL_hRWmghOQ\"",
+      "id": {
+          "kind": "youtube#video",
+          "videoId": "kiDOgmVkoUw"
+      },
+      "snippet": {
+          "publishedAt": "2015-04-09T19:00:00.000Z",
+          "channelId": "UCxSITxL2JbF229OGCqieVZw",
+          "title": "Web Design Trends 2015 - Minimalist Design",
+          "description": "Sometime simplicity is complexity. Let's take a look at how designers can accomplish complexity and simplicity at the same time. ----- Code The Web is a ...",
+          "thumbnails": {
+              "default": {
+                  "url": "https://i.ytimg.com/vi/kiDOgmVkoUw/default.jpg"
+              },
+              "medium": {
+                  "url": "https://i.ytimg.com/vi/kiDOgmVkoUw/mqdefault.jpg"
+              },
+              "high": {
+                  "url": "https://i.ytimg.com/vi/kiDOgmVkoUw/hqdefault.jpg"
+              }
+          },
+          "channelTitle": "codetheweb",
+          "liveBroadcastContent": "none"
+      }
+  }

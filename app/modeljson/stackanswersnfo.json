@@ -1,0 +1,19 @@
+  {
+      "owner": {
+          "reputation": 29861,
+          "user_id": 418413,
+          "user_type": "registered",
+          "accept_rate": 95,
+          "profile_image": "https://www.gravatar.com/avatar/e459bf8123c85dc2c708ee8210c0320b?s=128&d=identicon&r=PG",
+          "display_name": "kojiro",
+          "link": "http://stackoverflow.com/users/418413/kojiro"
+      },
+      "is_accepted": true,
+      "score": 545,
+      "last_activity_date": 1398628463,
+      "last_edit_date": 1398628463,
+      "creation_date": 1398179914,
+      "answer_id": 23223602,
+      "question_id": 23223292,
+      "body": "<p>It seems to be a <a href=\"http://en.wikipedia.org/wiki/PHP\">PHP</a>-serialized empty array, base 64 encoded.</p>\n\n<pre><code>$ base64 -D &lt;&lt;&lt; 'YTowOnt9'\na:0:{}\n$ php -r 'var_dump(unserialize(base64_decode(\"YTowOnt9\")));'\narray(0) {\n}\n</code></pre>\n\n<p>There are many scripts that serialize arrays of data. When the arrays have data, they vary greatly, so the <a href=\"http://en.wikipedia.org/wiki/Base64\">Base64</a> encoded PHP-serialized values do too, but when they are empty they are all the same. It makes it look as if a lot of very different PHP scripts have this random string in common.</p>\n"
+  }

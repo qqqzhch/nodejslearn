@@ -1,0 +1,117 @@
+
+		{{#def.include('layout')}} {{##def.content:
+	<div class="post-topheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<img class="avatar-64 mr10" src="{{=it.respInfo.owner.avatar_url}}&s=64" alt="bianer">
+						<div class="author">
+							<strong>{{=it.respInfo.owner.login}}</strong>
+
+						</div>
+					</div>
+					<div class="col-md-10 col-xs-10">
+						<h1 class="h2 title">
+						
+							<a>{{=it.respInfo.name}}</a>
+						</h1>
+						<div>
+							{{=it.respInfo.description}}
+							
+
+						</div>
+						<div>
+							<strong>★{{=it.respInfo.stargazers_count}}</strong>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-9 main mt30">
+						<ul class="nav nav-tabs nav-tabs-zen mb10">
+						<li >
+							<a href="/opensource/{{=it.respInfo.full_name}}">Readme</a>
+						</li>
+						<li class="active">
+							<a href="/opensource/{{=it.respInfo.full_name}}/question">Related Question</a>
+						</li>
+						<li>
+							<a href="/opensource/{{=it.respInfo.full_name}}/video">Related Video</a>
+						</li>
+					</ul>
+					<div>
+						<article class="widget-question__item">
+						<div class="post-col">
+	<div class="widget-vote">
+		<button type="button" class="like" ></button> <span class="count">{{=it.questionInfo.score}}</span> 
+		<button type="button" class="hate" ></button>
+	</div><!-- end .widget-vote -->
+</div>
+<div class="post-offset">
+	<div class="question fmt">
+		<h1 class="h2 title">
+						
+							<a>{{=it.questionInfo.title}}</a>
+						</h1>
+		<p>
+		{{=it.questionInfo.body}}
+		</p>
+	</div>
+	<ul class="taglist--inline mb20">
+			{{~it.questionInfo.tags:tag}}
+									<li class="tagPopup">
+										<a class="tag tag-sm">{{=tag}}</a>
+									</li>
+			{{~}}
+	
+	</ul>
+</div>
+				      </article>
+				   <div class="widget-answers">
+						  <h2 class="title h4 mt30 mb20 post-title" id="answers-title">{{=it.questionInfo.answer_count}} Answer</h2>
+						  {{~it.Answers:Answer}}
+						<article class="clearfix widget-answers__item"> 
+							 <div class="post-offset">
+							 	<a>
+							 		<img class="avatar-24" alt="" src="{{=Answer.owner.profile_image}}"></a>
+							 	<strong><a class="mr5" href="/u/qianjiahao">{{=Answer.owner.display_name}}</a></strong>
+							 	<div class="answer fmt mt10">
+							     {{=Answer.body}} 		
+							 	</div>
+						 	
+							</div>
+						</article>
+						{{~}}
+					</div>
+					</div>
+	
+				</div>
+
+				<div class="col-xs-12 col-md-3 side mt30">
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							Ask a question associated with {{=it.respInfo.name}}
+						</h2>
+						<ul class="taglist--inline multi">
+							<li class="tagPopup">
+								<a class="tag" href="http://stackoverflow.com/" >{{=it.questionInfo.id_site}}</a>
+							</li>
+						</ul>
+					</div>
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							
+						</h2>
+						<ul class="widget-links list-unstyled">
+							<li class="widget-links__item">
+								
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	#}}

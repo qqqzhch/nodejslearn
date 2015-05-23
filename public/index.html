@@ -1,0 +1,2404 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta property="qc:admins" content="15317273575564615446375" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no" />
+<meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ"/>
+<title>SegmentFault</title>
+
+<meta name="description" content="最前沿的技术问答，最纯粹的技术切磋。让你不知不觉中开拓眼界，提高技能。在巨人的肩膀上，成为一名优秀开发者。" />
+
+    <meta name="keywords" content="SegmentFault 程序员 问答" />
+<script type='text/javascript'>window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"tpm.oneapm.com/static/js/bw-send.js","beaconUrl":"tpm.oneapm.com/beacon","licenseKey":"BV0DHAwTW100e","applicationID":6504};</script>
+<script type="text/javascript" src="http://tpm.oneapm.com/static/js/bw-loader.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault" />
+<link rel="shortcut icon" href="//static.segmentfault.com/global/img/favicon.30f7204d.ico" />
+<link rel="apple-touch-icon" href="//static.segmentfault.com/global/img/touch-icon.c78b1075.png">
+<meta name="userId" value="" id="SFUserId" />
+<meta name="userRank" value="" id="SFUserRank" />
+
+<link rel="alternate" type="application/atom+xml" title="SegmentFault 最新问题" href="/feeds/questions">
+<link rel="alternate" type="application/atom+xml" title="SegmentFault 最新文章" href="/feeds/blogs">
+<link rel="alternate" type="application/atom+xml" title="订阅 SegmentFault 当前页" href="/feeds">
+
+
+
+     <link rel="stylesheet" href="/public/css/global.css" />
+            <link rel="stylesheet" href="/public/css/qaall.css" />
+        <link rel="stylesheet" href="/public/css/responsive.css" />
+
+
+</head>
+<body class="qa-index">
+<!--[if lt IE 9]>
+    <div class="alert alert-danger topframe" role="alert">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说 <a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+
+
+
+<div class="global-nav">
+    <nav class="container nav">
+        <div class="dropdown m-menu">
+            <a href="javascript:void(0);" id="dLabel" class="visible-xs-block m-toptools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <span class="mobile-menu__unreadpoint"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li class="mobile-menu__item"><a href="/questions/newest">问答</a></li>
+                <li class="mobile-menu__item"><a href="/blogs">文章</a></li>
+                <li class="mobile-menu__item"><a href="/events">活动</a></li>
+                <li class="mobile-menu__item"><a href="/tags">标签</a></li>
+                <li class="mobile-menu__item"><a href="/users">榜单</a></li>
+                <li class="mobile-menu__item"><a href="/sites">子站</a></li>
+                            </ul>
+        </div>
+
+        <h1 class="logo"><a href="/">SegmentFault</a></h1>
+
+                <a href="/user/login" class="visible-xs-block pull-right m-ask m-toptools"><span class="glyphicon glyphicon-log-in"></span></a>
+        
+        <form action="/search" class="header-search pull-left hidden-sm hidden-xs">
+            <button type="submit" class="btn btn-link"><span class="sr-only">搜索</span><span class="glyphicon glyphicon-search"></span></button>
+            <input id="searchBox" name="q" type="text" placeholder="输入关键字搜索" class="form-control" value="">
+        </form>
+
+        <ul class="menu list-inline pull-left hidden-xs">
+            <li class="menu__item"><a href="/questions/newest">问答</a></li>
+            <li class="menu__item"><a href="/blogs">文章</a></li>
+            <li class="menu__item"><a href="/events">活动</a></li>
+            <li class="menu__item"><a href="/tags">标签</a></li>
+            <li class="menu__item"><a href="/users">榜单</a></li>
+            <li class="menu__item dropdown hoverDropdown">
+                <a data-toggle="dropdown" href="/sites" class="more dropdownBtn">
+                    &middot;&middot;&middot;<span class="sr-only">更多</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/sites">子站</a></li>
+                                    </ul>
+            </li>
+        </ul>
+
+        <ul class="opts pull-right list-inline hidden-xs">
+                    <!-- <li class="opts__item">赶快加入吧 <a id="sfLogin" href="/user/login" class="SFLogin em ml10" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Login']);">立即登录</a></li> -->
+            <li class="opts__item message has-unread">
+                <a target="_blank" href="/tour">
+                    <span class="sr-only">消息</span>
+                    <span id="messageCount" class="glyphicon glyphicon-envelope"></span>
+                </a>
+            </li>
+            <li class="opts__item">
+                <a href="/user/login" class="SFLogin em ml10" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Login']);">立即登录</a>
+            </li>
+                    </ul>
+    </nav>
+</div>
+
+<div class="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-9 main">
+                <p class="main-title hidden-xs">
+                    今天，你在开发时遇到了什么问题呢？
+                    <a id="goAsk" href="/ask" class="btn btn-primary">我要提问</a>
+                </p>
+
+                <ul class="nav nav-tabs nav-tabs-zen mb10">
+                    <li class="active"><a href="/questions/newest">最新的</a></li>
+                    <li><a href="/questions/hottest">热门的</a></li>
+                    <li><a href="/questions/unanswered">未回答</a></li>
+                </ul>
+
+                <div class="stream-list question-stream">
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                72<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/thonatos">Thonatos</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722463/a-1020000002724619">9 分钟前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722463">关于angular中rest API 异步数据传送的问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/angularjs" data-toggle="popover" data-original-title="angularjs" data-id="1040000000210853">angularjs</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                52<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/reeco">FullStackDeveloper</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724333/a-1020000002724577">30 分钟前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724333">ubuntu关不到机怎么办？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/ubuntu" data-toggle="popover" data-original-title="ubuntu" data-id="1040000000090245">ubuntu</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" data-toggle="popover" data-original-title="操作系统" data-id="1040000000090429">操作系统</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                46<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/yiliduo">毅力多</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724362/a-1020000002724569">34 分钟前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724362">微信公众平台有没有关注的开发接口</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                17<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/syyzz3">syyzz3大魔王</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724566" class="askDate" data-created="1430658728">34 分钟前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724566">jqmobi想使用他的tap,swipt等事件,但不想要他自带的ui，该如何做？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/jqmobi" data-toggle="popover" data-original-title="jqmobi" data-id="1040000000484174">jqmobi</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="移动web开发" data-id="1040000000089604">移动web开发</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/jquery-mobile" data-toggle="popover" data-original-title="jquery-mobile" data-id="1040000000136003">jquery-mobile</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="web前端开发" data-id="1040000000117807">web前端开发</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                2<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                111<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/xcode">非一般的瓜子</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002708165/a-1020000002724433">1 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002708165">Objective-C 方法调用语法疑惑，求解答</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/objective-c" data-toggle="popover" data-original-title="objective-c" data-id="1040000000090209">objective-c</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                44<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/puliuyinyi">蒲柳隐逸</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724390/a-1020000002724423">1 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724390">最近在学C的指针，为什么申请一个字节的空间缺可以放多个内容呢</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/c" data-toggle="popover" data-original-title="c" data-id="1040000000089457">c</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/c%2B%2B" data-toggle="popover" data-original-title="c++" data-id="1040000000089741">c++</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%8C%87%E9%92%88" data-toggle="popover" data-original-title="指针" data-id="1040000000131365">指针</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                38<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/mr_jing">Mr_Jing</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724330/a-1020000002724355">2 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724330">laravel控制器访问，url应该怎么写</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/laravel-5" data-toggle="popover" data-original-title="laravel-5" data-id="1040000002538899">laravel-5</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                54<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/ishaw">赵山河</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724165/a-1020000002724343">2 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724165">点击tableviewcell跳转到uiwebview，uiwebview怎样获取到被点击的当前cell中的网址并加载呢？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/ios" data-toggle="popover" data-original-title="ios" data-id="1040000000089442">ios</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/ios8" data-toggle="popover" data-original-title="ios8" data-id="1040000000661856">ios8</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/objective-c" data-toggle="popover" data-original-title="objective-c" data-id="1040000000090209">objective-c</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes minus hidden-xs">
+                -3<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                154<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/dwqs">不写代码的码农</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722781/a-1020000002724293">3 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722781">有开源的推荐系统吗？最好是php的</a> <sup class="text-muted">已关闭</sup></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                5<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                167<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="1 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 1
+                </li>
+                                <li>
+                                            <a href="/u/dwqs">不写代码的码农</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722733/a-1020000002724288">3 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722733">学习bootstrap 有什么什么方式 推荐一下吗？求推荐交流</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/bootstrap" data-toggle="popover" data-original-title="bootstrap" data-id="1040000000091210">bootstrap</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/html" data-toggle="popover" data-original-title="html" data-id="1040000000089571">html</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/css" data-toggle="popover" data-original-title="css" data-id="1040000000089434">css</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                5<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                146<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/dwqs">不写代码的码农</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002716580/a-1020000002724284">3 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002716580">float类型精度问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/c%2B%2B" data-toggle="popover" data-original-title="c++" data-id="1040000000089741">c++</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes plus hidden-xs">
+                1<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                116<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="2 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 2
+                </li>
+                                <li>
+                                            <a href="/u/dwqs">不写代码的码农</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723696/a-1020000002724276">3 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723696">如何正确的学习算法？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%AE%97%E6%B3%95" data-toggle="popover" data-original-title="算法" data-id="1040000000089524">算法</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                81<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/dwqs">不写代码的码农</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724043/a-1020000002724267">3 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724043">请教一下为什么在onclick=&quot;showPic(this)&quot;中，this代表a？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                104<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/jysperm">王子亭</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723239/a-1020000002724246">4 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723239">如何将atom打造成python开发环境？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/atom" data-toggle="popover" data-original-title="atom" data-id="1040000000090524">atom</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                82<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lowky">Lowky</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723586/a-1020000002724234">4 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723586">如果用php抓取微信文章正文？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F" data-toggle="popover" data-original-title="正则表达式" data-id="1040000000089653">正则表达式</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                2<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                40<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/icewalker">icewalker</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723982/a-1020000002724209">4 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723982">Go解析XML出错，求指点？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/go" data-toggle="popover" data-original-title="go" data-id="1040000000090203">go</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                58<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/reeco">FullStackDeveloper</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723886/a-1020000002724151">5 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723886">请问下类似扣钉冒泡 coding.net/pp 这样的社区模块是如何搭建的呢？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%A4%BE%E5%8C%BA" data-toggle="popover" data-original-title="社区" data-id="1040000000090029">社区</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%89%A3%E9%92%89" data-toggle="popover" data-original-title="扣钉" data-id="1040000002723884">扣钉</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/coding.net" data-toggle="popover" data-original-title="coding.net" data-id="1040000002399959">coding.net</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                4<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                219<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/markcoder">MarkCoder</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722664/a-1020000002724136">6 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722664">网站莫名被注入广告代码，求大神帮忙？急急急（在线等）</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%81%B6%E6%84%8F%E5%B9%BF%E5%91%8A" data-toggle="popover" data-original-title="恶意广告" data-id="1040000002722661">恶意广告</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/wordpress" data-toggle="popover" data-original-title="wordpress" data-id="1040000000089914">wordpress</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%9C%A8%E9%A9%AC" data-toggle="popover" data-original-title="木马" data-id="1040000000381192">木马</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%94%B5%E8%84%91%E7%97%85%E6%AF%92" data-toggle="popover" data-original-title="电脑病毒" data-id="1040000000383088">电脑病毒</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                47<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/akagi201">Akagi201</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724129" class="askDate" data-created="1430638619">6 小时前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724129">Mac 上 python 的site-packages目录出现了两个?</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/homebrew" data-toggle="popover" data-original-title="homebrew" data-id="1040000000122223">homebrew</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                39<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/cosven">cosven</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002724125" class="askDate" data-created="1430638377">6 小时前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002724125">python程序运行时 查看对象状态</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                98<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/aha__ha">Aha__ha</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002712740/a-1020000002724115">6 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002712740">连接mongodb,查询地理位置的问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/mongodb" data-toggle="popover" data-original-title="mongodb" data-id="1040000000089488">mongodb</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                42<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/socrates">socrates</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723751/a-1020000002724108">6 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723751">请问如何实现多台电脑的数据同步</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5" data-toggle="popover" data-original-title="文件同步" data-id="1040000000342096">文件同步</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%96%87%E4%BB%B6%E6%9B%B4%E6%96%B0%E5%90%8C%E6%AD%A5" data-toggle="popover" data-original-title="文件更新同步" data-id="1040000002590111">文件更新同步</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                264<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/iyoco">一直随风前进</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002640060/a-1020000002724088">6 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002640060">nodejs如何调用lua脚本？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/node.js" data-toggle="popover" data-original-title="node.js" data-id="1040000000089918">node.js</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/lua" data-toggle="popover" data-original-title="lua" data-id="1040000000090208">lua</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                55<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/liuliuqiu051">liuliuqiu051</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723810/a-1020000002724071">7 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723810">如何把现有的excel存放到Android sdcard中</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/android" data-toggle="popover" data-original-title="android" data-id="1040000000089658">android</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                8<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                104<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/bf">bf</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723115/a-1020000002724025">7 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723115">jquery ajax的success中给外部定义的变量赋值，外部引用的话为空？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/jquery" data-toggle="popover" data-original-title="jquery" data-id="1040000000089733">jquery</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes plus hidden-xs">
+                1<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                151<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="1 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 1
+                </li>
+                                <li>
+                                            <a href="/u/luckingboy">luckingboy</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002719161/a-1020000002723961">8 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002719161">如何重新运行css3的动画？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/css3" data-toggle="popover" data-original-title="css3" data-id="1040000000090141">css3</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/css3%E5%8A%A8%E7%94%BB" data-toggle="popover" data-original-title="css3动画" data-id="1040000002436752">css3动画</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1" data-toggle="popover" data-original-title="交互设计" data-id="1040000002494189">交互设计</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1" data-toggle="popover" data-original-title="前端设计" data-id="1040000000090477">前端设计</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                124<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zonxin">zonxin</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002713595/a-1020000002723950">8 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002713595">微信开发  长按弹出问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="微信开发" data-id="1040000000659227">微信开发</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                244<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zonxin">zonxin</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002659473/a-1020000002723944">8 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002659473">微信浏览器内 如何进行对COOKIE进行编辑？有工具吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/cookies" data-toggle="popover" data-original-title="cookies" data-id="1040000000256889">cookies</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                46<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/jikey">jikey</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723773/a-1020000002723930">8 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723773">IntelliJ中使用Emmet时的缩写问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/emmet" data-toggle="popover" data-original-title="emmet" data-id="1040000000597075">emmet</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/intellij-idea" data-toggle="popover" data-original-title="intellij-idea" data-id="1040000000090560">intellij-idea</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/html" data-toggle="popover" data-original-title="html" data-id="1040000000089571">html</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="web前端开发" data-id="1040000000117807">web前端开发</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                60<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/f0lk">f0lk</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722979/a-1020000002723857">9 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722979">cut命令在偶遇grep后居然发生延迟是什么鬼？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/linux" data-toggle="popover" data-original-title="linux" data-id="1040000000089392">linux</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/linux%E8%BF%90%E7%BB%B4" data-toggle="popover" data-original-title="linux运维" data-id="1040000000664856">linux运维</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/linux%E7%BC%96%E7%A8%8B" data-toggle="popover" data-original-title="linux编程" data-id="1040000000403377">linux编程</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80" data-toggle="popover" data-original-title="脚本语言" data-id="1040000000089558">脚本语言</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/shell-script" data-toggle="popover" data-original-title="shell-script" data-id="1040000002459748">shell-script</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                50<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/kasicass">kasicass</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722715/a-1020000002723804">10 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722715">Qt 动态链接库过大</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/qt" data-toggle="popover" data-original-title="qt" data-id="1040000000089776">qt</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/pyqt" data-toggle="popover" data-original-title="pyqt" data-id="1040000000174562">pyqt</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/c%2B%2B" data-toggle="popover" data-original-title="c++" data-id="1040000000089741">c++</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                41<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/yiliduo">毅力多</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723764/a-1020000002723800">10 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723764">wamp中的PHPadmin 存在404 的错误怎么解决</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes minus hidden-xs">
+                -1<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                51<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/kasicass">kasicass</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723336/a-1020000002723793">10 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723336">shared_ptr 智能指针与lambda表达式应用技巧</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/c%2B%2B" data-toggle="popover" data-original-title="c++" data-id="1040000000089741">c++</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                69<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/wywincl">wywincl</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723002/a-1020000002723728">12 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723002">Python的class中的参数的用法问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/class%E7%B1%BB" data-toggle="popover" data-original-title="class类" data-id="1040000002625723">class类</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%8F%82%E6%95%B0" data-toggle="popover" data-original-title="参数" data-id="1040000000090641">参数</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                50<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/netcan">netcan</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723710" class="askDate" data-created="1430616216">12 小时前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723710">Linux下的/sbin/v86d指令是干嘛的？为何cpu占用率这么高？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/linux" data-toggle="popover" data-original-title="linux" data-id="1040000000089392">linux</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/linux%E8%BF%90%E7%BB%B4" data-toggle="popover" data-original-title="linux运维" data-id="1040000000664856">linux运维</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/linux-desktop" data-toggle="popover" data-original-title="linux-desktop" data-id="1040000000724754">linux-desktop</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                58<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/phodal">phodal</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723680/a-1020000002723691">12 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723680">django如何引用bootstrap字体</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/django" data-toggle="popover" data-original-title="django" data-id="1040000000089564">django</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/bootstrap" data-toggle="popover" data-original-title="bootstrap" data-id="1040000000091210">bootstrap</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                205<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/boyang">BoYang</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002650990/a-1020000002723672">13 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002650990">现在还有人使用hadoop4win在window平台上操作么？自带的jdk会不会和电脑上已安装的jdk有冲突？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/hadoop" data-toggle="popover" data-original-title="hadoop" data-id="1040000000089648">hadoop</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                222<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/boyang">BoYang</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002674739/a-1020000002723657">13 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002674739">话说hadoop版本众多 该如何选择？各有什么不同</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/hadoop" data-toggle="popover" data-original-title="hadoop" data-id="1040000000089648">hadoop</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                80<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/boyang">BoYang</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002701693/a-1020000002723652">13 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002701693">有没有好用的大数据ETL工具</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%A4%A7%E6%95%B0%E6%8D%AE" data-toggle="popover" data-original-title="大数据" data-id="1040000000155662">大数据</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/etl" data-toggle="popover" data-original-title="etl" data-id="1040000000728929">etl</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/hive" data-toggle="popover" data-original-title="hive" data-id="1040000000090806">hive</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                57<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/a3510034">a3510034</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723055/a-1020000002723646">14 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723055">java web服务器如何监听服务器上的sendmail接收到了邮件，或者sendmail收到邮件后能通知web应用</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/java" data-toggle="popover" data-original-title="java" data-id="1040000000089449">java</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/web%E6%9C%8D%E5%8A%A1%E5%99%A8" data-toggle="popover" data-original-title="web服务器" data-id="1040000000590976">web服务器</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/sendmail" data-toggle="popover" data-original-title="sendmail" data-id="1040000000488706">sendmail</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%9C%8D%E5%8A%A1%E5%99%A8" data-toggle="popover" data-original-title="服务器" data-id="1040000000089496">服务器</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                92<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/linkarys">linkarys</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723488/a-1020000002723596">21 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723488">jQuery中的each()方法，如何在each()遍历结束后再执行其他函数?</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/jquery" data-toggle="popover" data-original-title="jquery" data-id="1040000000089733">jquery</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes minus hidden-xs">
+                -2<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                76<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/funkylover">funkyLover</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723211/a-1020000002723589">21 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723211">为什么jquery没有封装鼠标滚轮事件？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/jquery" data-toggle="popover" data-original-title="jquery" data-id="1040000000089733">jquery</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes minus hidden-xs">
+                -3<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                4<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                104<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/qianjiahao">qianjiahao</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723014/a-1020000002723574">21 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723014">js 数字相加的出现的问题？</a> <sup class="text-muted">已关闭</sup></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/jquery" data-toggle="popover" data-original-title="jquery" data-id="1040000000089733">jquery</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes plus hidden-xs">
+                1<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                73<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/wangdai">wangdai</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723516/a-1020000002723552">22 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723516">Python 3.4里， 进入子目录的语法是什么？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                57<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/sheilacat">sheilaCat</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723358/a-1020000002723499">22 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723358">failed to connect to github.com port 443: Timed out</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/git" data-toggle="popover" data-original-title="git" data-id="1040000000089459">git</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/github" data-toggle="popover" data-original-title="github" data-id="1040000000091226">github</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                82<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/babe219">hats</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723454/a-1020000002723493">22 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723454">如何把unicode中前面的‘u’去掉？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/unicode" data-toggle="popover" data-original-title="unicode" data-id="1040000000090682">unicode</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/utf-8" data-toggle="popover" data-original-title="utf-8" data-id="1040000000090683">utf-8</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                84<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zonxin">zonxin</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721022/a-1020000002723474">23 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721022">如何在U盘上实现引导扇区的写入？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" data-toggle="popover" data-original-title="操作系统" data-id="1040000000090429">操作系统</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/u%E7%9B%98" data-toggle="popover" data-original-title="u盘" data-id="1040000002387096">u盘</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                117<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zhengxiaodong">郑小东</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002719847/a-1020000002723464">23 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002719847">nodejs中使用mysql如何存储json格式数据</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/node.js" data-toggle="popover" data-original-title="node.js" data-id="1040000000089918">node.js</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/mysql" data-toggle="popover" data-original-title="mysql" data-id="1040000000089439">mysql</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/json" data-toggle="popover" data-original-title="json" data-id="1040000000090043">json</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                48<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/laminux29">laminux29</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723287/a-1020000002723460">23 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723287">为什么 Windows Server 2012中无法注入.reg文件？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%B3%A8%E5%86%8C%E8%A1%A8" data-toggle="popover" data-original-title="注册表" data-id="1040000000148922">注册表</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes minus hidden-xs">
+                -1<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                67<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zonxin">zonxin</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723078/a-1020000002723425">23 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723078">node的express怎么设置初始页面</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/node.js" data-toggle="popover" data-original-title="node.js" data-id="1040000000089918">node.js</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/express" data-toggle="popover" data-original-title="express" data-id="1040000000166256">express</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                5<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                123<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="1 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 1
+                </li>
+                                <li>
+                                            <a href="/u/geeklee">Go_Geek</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002720079/a-1020000002723411">23 小时前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002720079">Sublime text3 console，无法安装插件</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/sublime-text" data-toggle="popover" data-original-title="sublime-text" data-id="1040000000126097">sublime-text</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                64<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/zonxin">zonxin</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723193/a-1020000002723362">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723193">如何理解这段经典的宏定义？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%AE%97%E6%B3%95" data-toggle="popover" data-original-title="算法" data-id="1040000000089524">算法</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%88%86%E6%B2%BB" data-toggle="popover" data-original-title="分治" data-id="1040000002408679">分治</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E4%BA%8C%E5%88%86" data-toggle="popover" data-original-title="二分" data-id="1040000000627034">二分</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95" data-toggle="popover" data-original-title="数据结构和算法" data-id="1040000000363208">数据结构和算法</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/c%2B%2B" data-toggle="popover" data-original-title="c++" data-id="1040000000089741">c++</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                68<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/limichange">limichange</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723306/a-1020000002723350">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723306">本站编辑器渲染Markdown有问题啊！</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/markdown" data-toggle="popover" data-original-title="markdown" data-id="1040000000090338">markdown</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/segmentfault" data-toggle="popover" data-original-title="segmentfault" data-id="1040000000089399">segmentfault</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                3<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                136<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/geeklee">Go_Geek</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721829/a-1020000002723341">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721829">Android如何开发即时通讯功能？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/android" data-toggle="popover" data-original-title="android" data-id="1040000000089658">android</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF" data-toggle="popover" data-original-title="即时通讯" data-id="1040000000650283">即时通讯</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                57<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/Trunks">Trunks</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723264" class="askDate" data-created="1430571477">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723264">如何合并多个canvas图像？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/canvas" data-toggle="popover" data-original-title="canvas" data-id="1040000000090366">canvas</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                43<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/syyzz3">syyzz3大魔王</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723256" class="askDate" data-created="1430571339">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723256">开发phoneGap项目,没有安装sdk和代码编译工具,怎样实现phoneGap的一些功能呢？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/phonegap" data-toggle="popover" data-original-title="phonegap" data-id="1040000000115193">phonegap</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/webapp" data-toggle="popover" data-original-title="webapp" data-id="1040000000090825">webapp</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="移动web开发" data-id="1040000000089604">移动web开发</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                5<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                302<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/reeco">FullStackDeveloper</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002689616/a-1020000002723243">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002689616">sublime-text2 的代码提示问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/sublime-text" data-toggle="popover" data-original-title="sublime-text" data-id="1040000000126097">sublime-text</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA" data-toggle="popover" data-original-title="代码提示" data-id="1040000000091193">代码提示</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                2<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                111<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/rocketzinc">RocketZn</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723026/a-1020000002723183">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723026">像segmentfault这样的，一个问题与多个标签是在同一个数据表吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%A0%87%E7%AD%BE" data-toggle="popover" data-original-title="标签" data-id="1040000000090293">标签</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                56<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/Trunks">Trunks</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723172" class="askDate" data-created="1430564506">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723172">在DOM中插入的canvas不能写入图像</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/canvas" data-toggle="popover" data-original-title="canvas" data-id="1040000000090366">canvas</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                2<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                60<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lidashuang">lidashuang</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722959/a-1020000002723167">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722959">golang中同一个package中函数互相调用的问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/go" data-toggle="popover" data-original-title="go" data-id="1040000000090203">go</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes plus hidden-xs">
+                2<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                5<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                646<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="4 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 4
+                </li>
+                                <li>
+                                            <a href="/u/bf">bf</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722248/a-1020000002723156">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722248">JavaScript 算法题求解——最长的回文子字符串？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/node.js" data-toggle="popover" data-original-title="node.js" data-id="1040000000089918">node.js</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                80<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/wwq0327">wwq0327</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002718176/a-1020000002723144">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002718176">django中的User类应该怎么用</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python-django" data-toggle="popover" data-original-title="python-django" data-id="1040000000380004">python-django</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes plus hidden-xs">
+                2<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                2<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                148<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="2 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 2
+                </li>
+                                <li>
+                                            <a href="/u/wujiantao_fighter">吴建涛_Fighter</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721833/a-1020000002723133">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721833">有没有什么方式可以远程调试微信浏览器里的webapp？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="web前端开发" data-id="1040000000117807">web前端开发</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/ios" data-toggle="popover" data-original-title="ios" data-id="1040000000089442">ios</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/android" data-toggle="popover" data-original-title="android" data-id="1040000000089658">android</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                53<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/linghucong">令狐葱</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002723052" class="askDate" data-created="1430558272">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002723052">安卓微信浏览器内设置viewport不生效，如何解决？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%BE%AE%E4%BF%A1" data-toggle="popover" data-original-title="微信" data-id="1040000000090818">微信</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/viewport" data-toggle="popover" data-original-title="viewport" data-id="1040000002404858">viewport</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%B5%8F%E8%A7%88%E5%99%A8" data-toggle="popover" data-original-title="浏览器" data-id="1040000000089474">浏览器</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                97<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lilydjwg">依云</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721071/a-1020000002722996">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721071">Python:使用threadpool模块多线程写同一个文件的时，需要加锁吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                76<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lilydjwg">依云</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721106/a-1020000002722988">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721106">有人试过把HTTPS的certificate从SHA1转换到SHA2吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/https" data-toggle="popover" data-original-title="https" data-id="1040000000090541">https</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                58<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lilydjwg">依云</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721337/a-1020000002722969">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721337">在Bluehost的子目录上部署Flask碰到url重定向难题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/python" data-toggle="popover" data-original-title="python" data-id="1040000000089534">python</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/flask" data-toggle="popover" data-original-title="flask" data-id="1040000000125263">flask</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/bluehost" data-toggle="popover" data-original-title="bluehost" data-id="1040000000089923">bluehost</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                71<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lilydjwg">依云</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722719/a-1020000002722954">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722719">有什么办法能够解决火狐对图片链接的反斜杠不兼容？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%81%AB%E7%8B%90" data-toggle="popover" data-original-title="火狐" data-id="1040000000090132">火狐</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/html" data-toggle="popover" data-original-title="html" data-id="1040000000089571">html</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                1<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                57<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/lilydjwg">依云</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722932/a-1020000002722946">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722932">linux sendmail 服务器搭建</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/sendmail" data-toggle="popover" data-original-title="sendmail" data-id="1040000000488706">sendmail</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/linux" data-toggle="popover" data-original-title="linux" data-id="1040000000089392">linux</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E6%9C%8D%E5%8A%A1%E5%99%A8" data-toggle="popover" data-original-title="服务器" data-id="1040000000089496">服务器</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                7<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                170<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li class="pull-right" title="2 收藏">
+                    <small class="glyphicon glyphicon-bookmark"></small> 2
+                </li>
+                                <li>
+                                            <a href="/u/huaen">Huaen</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002721195/a-1020000002722895">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002721195">如果不给div定宽高，那么他的子类或子类的子类定宽高的话，那么那个div有宽高吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/webapp" data-toggle="popover" data-original-title="webapp" data-id="1040000000090825">webapp</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/html5" data-toggle="popover" data-original-title="html5" data-id="1040000000089409">html5</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/css3" data-toggle="popover" data-original-title="css3" data-id="1040000000090141">css3</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" data-toggle="popover" data-original-title="web前端开发" data-id="1040000000117807">web前端开发</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                39<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/crazyboyfeng">狂男风</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722870" class="askDate" data-created="1430548780">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722870">如何使 mercurial 和 tortoisehg 在 windows 下支持中文名的文件？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/mercurial" data-toggle="popover" data-original-title="mercurial" data-id="1040000000162035">mercurial</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/bitbucket" data-toggle="popover" data-original-title="bitbucket" data-id="1040000002722876">bitbucket</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                81<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/wanlion">wanlion</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722855" class="askDate" data-created="1430546483">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722855">使用gson.toJson(object)时发生错误:java.lang.StackOverflowError,求解决办法?</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/java" data-toggle="popover" data-original-title="java" data-id="1040000000089449">java</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/gson" data-toggle="popover" data-original-title="gson" data-id="1040000000627903">gson</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/stackoverflowerror" data-toggle="popover" data-original-title="stackoverflowerror" data-id="1040000002722806">stackoverflowerror</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                34<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/gaoyp27">gaoyp27</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722848" class="askDate" data-created="1430546295">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722848">docker在centos7 中安装后启动失败</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/docker-%E5%90%AF%E5%8A%A8" data-toggle="popover" data-original-title="docker-启动" data-id="1040000002722846">docker-启动</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                49<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/guihailiuli">guihailiuli</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722795" class="askDate" data-created="1430543445">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722795">WordPress主题开发遇到一段不理解的代码</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/wordpress" data-toggle="popover" data-original-title="wordpress" data-id="1040000000089914">wordpress</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/wordpress%E4%B8%BB%E9%A2%98" data-toggle="popover" data-original-title="wordpress主题" data-id="1040000002722793">wordpress主题</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                97<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/judi0713">testHs</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002720857/a-1020000002722772">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002720857">微博选择图片界面如何写</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/ios" data-toggle="popover" data-original-title="ios" data-id="1040000000089442">ios</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%9B%B8%E5%86%8C" data-toggle="popover" data-original-title="相册" data-id="1040000002542266">相册</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%9B%B8%E6%9C%BA" data-toggle="popover" data-original-title="相机" data-id="1040000000188758">相机</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                1<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                74<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/jetgeng">jetgeng</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722370/a-1020000002722767">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722370">ios发布如何做到app store和企业分发升级可以相互覆盖？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/ios" data-toggle="popover" data-original-title="ios" data-id="1040000000089442">ios</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E7%A7%BB%E5%8A%A8app" data-toggle="popover" data-original-title="移动app" data-id="1040000000493639">移动app</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/app-store" data-toggle="popover" data-original-title="app-store" data-id="1040000000090548">app-store</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                2<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                102<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/update">update</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722407/a-1020000002722747">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722407">Mac中存在两个PHP有影响吗？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/php" data-toggle="popover" data-original-title="php" data-id="1040000000089387">php</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers">
+                0<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                49<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/xiaonansoft">xiaonansoft</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722725" class="askDate" data-created="1430539158">1 天前提问</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722725">websocket的应用场景的选择  </a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/html5" data-toggle="popover" data-original-title="html5" data-id="1040000000089409">html5</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered solved">
+                6<small>解决</small>
+            </div>
+            <div class="views hidden-xs">
+                171<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/caicaicaiwei">菜菜蔡伟</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002718004/a-1020000002722707">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002718004">js 变量作用域与函数问题</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/javascript" data-toggle="popover" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>            </ul>
+                    </div>
+    </section>
+
+                                                <section class="stream-list__item">
+                <div class="qa-rank">
+            <div class="votes hidden-xs">
+                0<small>投票</small>
+            </div>
+            <div class="answers answered">
+                6<small>回答</small>
+            </div>
+            <div class="views hidden-xs">
+                96<small>浏览</small>
+            </div>
+        </div>
+        <div class="summary">
+            <ul class="author list-inline">
+                                                <li>
+                                            <a href="/u/caicaicaiwei">菜菜蔡伟</a>
+                        <span class="split"></span>
+                        <a href="/q/1010000002722603/a-1020000002722694">1 天前回答</a>
+                                    </li>
+            </ul>
+            <h2 class="title"><a href="/q/1010000002722603">HTML中&lt;nav&gt;实际上起了什么作用呢？</a></h2>
+                        <ul class="taglist--inline ib">
+                <li class="tagPopup"><a class="tag tag-sm" href="/t/html5" data-toggle="popover" data-original-title="html5" data-id="1040000000089409">html5</a></li><li class="tagPopup"><a class="tag tag-sm" href="/t/%E5%89%8D%E7%AB%AF" data-toggle="popover" data-original-title="前端" data-id="1040000000089899">前端</a></li>            </ul>
+                    </div>
+    </section>
+
+                                    </div><!-- /.stream-list -->
+
+                <div class="text-center">
+                                            <ul class="pager">
+                            <li>以上是部分更新，你还可以查看</li>
+                            <li><a href="/questions/newest">全部问题</a></li>
+                            <li>或者</li>
+                            <li><a href="/questions/hottest">热门问题</a></li>
+                            <li>列表</li>
+                        </ul>
+                                    </div>
+            </div><!-- /.main -->
+            <div class="col-xs-12 col-md-3 side mt30">
+                                    <aside class="widget-welcome">
+    <h2 class="h4 title">最专业的开发者社区</h2>
+    <p>最前沿的技术问答，最纯粹的技术切磋。让你不知不觉中开拓眼界，提高技能，认识更多朋友。</p>
+    <ul class="list-unstyled">
+        <li><a href="/user/oauth/google" class="3rdLogin btn btn-default btn-block btn-sn-google"><span class="icon-sn-google"></span> Google 账号登录</a></li>
+        <li><a href="/user/oauth/weibo" class="3rdLogin btn btn-default btn-block btn-sn-weibo"><span class="icon-sn-weibo"></span> 微博账号登录</a></li>
+    </ul>
+</aside>
+
+                
+                <div class="sfad-sidebar">
+    <div class="sfad-item" data-adn="ad-981183" id="adid-981183">
+    <button class="close" type="button" aria-hidden="true">&times;</button>
+</div>
+
+    <div class="sfad-item" data-adn="ad-981184" id="adid-981184">
+    <button class="close" type="button" aria-hidden="true">&times;</button>
+</div>
+
+    <div class="sfad-item" data-adn="ad-981694" id="adid-981694">
+    <button class="close" type="button" aria-hidden="true">&times;</button>
+</div>
+
+</div>
+
+
+                
+
+                
+                
+                <div class="widget-box">
+                    <h2 class="h4 widget-box__title">热议标签 <a href="/tags" title="更多">&raquo;</a></h2>
+                    <ul class="taglist--inline multi">
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089436" data-original-title="javascript" href="/t/javascript">javascript</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089387" data-original-title="php" href="/t/php">php</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089534" data-original-title="python" href="/t/python">python</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089434" data-original-title="css" href="/t/css">css</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089442" data-original-title="ios" href="/t/ios">ios</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089658" data-original-title="android" href="/t/android">android</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089918" data-original-title="node.js" href="/t/node.js">node.js</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089409" data-original-title="html5" href="/t/html5">html5</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000090203" data-original-title="go" href="/t/go">go</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089488" data-original-title="mongodb" href="/t/mongodb">mongodb</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089431" data-original-title="redis" href="/t/redis">redis</a></li>
+                        <li class="tagPopup"><a class="tag" data-toggle="popover" data-id="1040000000089556" data-original-title="程序员" href="/t/程序员">程序员</a></li>
+                    </ul>
+                </div>
+
+                                <div class="widget-box">
+                    <h2 class="h4 widget-box__title">最近热门的</h2>
+                    <ul class="widget-links list-unstyled">
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000002545549">微信支付 不允许跨号支付问题</a>
+                            <small class="text-muted">
+                                6 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000000095668">网页是无法显示，无法解析DSN服务器，怎回事？  </a>
+                            <small class="text-muted">
+                                2 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000000531508">GoAgent各种Timeout，求解决方案</a>
+                            <small class="text-muted">
+                                18 回答 | 已解决                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000000094674">如何理解皮尔逊相关系数（Pearson Correlation Coefficient）？</a>
+                            <small class="text-muted">
+                                1 回答 | 已解决                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000002723696">如何正确的学习算法？</a>
+                            <small class="text-muted">
+                                3 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000002722664">网站莫名被注入广告代码，求大神帮忙？急急急（在线等）</a>
+                            <small class="text-muted">
+                                4 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000000268754">微信自定义表情在哪个文件夹？</a>
+                            <small class="text-muted">
+                                2 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000002723586">如果用php抓取微信文章正文？</a>
+                            <small class="text-muted">
+                                1 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000002724043">请教一下为什么在onclick=&quot;showPic(this)&quot;中，this代表a？</a>
+                            <small class="text-muted">
+                                2 回答                            </small>
+                        </li>
+                                                <li class="widget-links__item">
+                            <a href="/q/1010000000489035">VMWare 10 安装 10.9 Mac OS 如何调整分辨率为 1920 * 1200？</a>
+                            <small class="text-muted">
+                                4 回答                            </small>
+                        </li>
+                                            </ul>
+                </div>
+                            </div><!-- /.side -->
+        </div>
+    </div>
+</div>
+
+<div class="container text-right mb20 hidden-xs">
+    <a href="/feeds" class="feed-link">订阅本页 RSS</a>
+</div>
+
+<footer id="footer">
+<div class="container">
+    <div class="row hidden-xs">
+        <dl class="col-sm-2 site-link">
+            <dt>网站相关</dt>
+            <dd><a href="/about">关于我们</a></dd>
+            <dd><a href="/tos">服务条款</a></dd>
+            <dd><a href="/faq">帮助中心</a></dd>
+            <dd><a href="/repu">声望与权限</a></dd>
+            <dd><a href="/markdown">编辑器语法</a></dd>
+            <dd><a href="http://weekly.segmentfault.com/">每周精选</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>联系合作</dt>
+            <dd><a href="/contact">联系我们</a></dd>
+            <dd><a href="/hiring">加入我们</a></dd>
+            <dd><a href="/link">合作伙伴</a></dd>
+            <dd><a href="/press">媒体报道</a></dd>
+            <dd><a href="http://0x.segmentfault.com">建议反馈</a></dd>
+            <dd><a href="http://pan.baidu.com/share/link?shareid=604288&uk=839272106" target="_blank">Logo 下载</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>常用链接</dt>
+            <dd><a href="http://mirrors.segmentfault.com/" target="_blank">文档镜像</a></dd>
+            <dd>订阅：<a href="/feeds">问答</a> / <a href="/feeds/blogs">文章</a></dd>
+            <dd><a href="http://segmentfault.com/events?category=4">黑客马拉松</a></dd>
+<!--             <dd><a href="http://zs.segmentfault.com/" target="_blank">一起涨姿势</a></dd> -->
+            <dd><a href="http://namebeta.com/" target="_blank">域名搜索注册</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>关注我们</dt>
+            <dd><a href="http://twitter.com/segment_fault" target="_blank">Twitter</a></dd>
+            <!-- <dd><a href="http://page.renren.com/699146294" target="_blank">人人网</a></dd> -->
+            <dd><a href="https://www.linkedin.com/company/segmentfault" target="_blank">LinkedIn</a></dd>
+            <dd><a href="http://weibo.com/segmentfault" target="_blank">新浪微博</a></dd>
+            <dd><a href="http://i.youku.com/segmentfault" target="_blank">优酷主页</a></dd>
+            <dd><a href="/giveaways" target="_blank">开发者福利</a></dd>
+            <dd><a href="http://blog.segmentfault.com/devblog" target="_blank">开发日志</a></dd>
+        </dl>
+        <dl class="col-sm-4 site-link" id="license">
+            <dt>内容许可</dt>
+            <dd>除特别说明外，用户内容均采用 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a> 进行许可</dd>
+            <dd>本站由 <a target="_blank" href="http://qingcloud.com/">青云 QingCloud</a> 提供云计算服务<br><a target="_blank" href="https://www.upyun.com/?utm_source=segmentfault&utm_medium=link&utm_campaign=upyun&md=segmentfault">又拍云</a> 提供 CDN 存储服务</dd>
+        </dl>
+    </div>
+    <div class="copyright">
+        Copyright &copy; 2011-2015 SegmentFault. 当前呈现版本 15.04.15<br><a href="http://www.miibeian.gov.cn/" rel="nofollow">浙ICP备15005796号-2</a>
+    </div>
+</div>
+</footer>
+
+<div id="fixedTools" class="hidden-xs hidden-sm">
+  <a id="backtop" class="hidden border-bottom" href="#">回顶部</a>
+  <div class="qrcodeWraper">
+    <a><span class="glyphicon glyphicon-qrcode"></span></a>
+    <img id="qrcode" class="border" src="//static.segmentfault.com/build/global/img/sf-wechat.27acd26c.png">
+  </div>
+</div>
+
+
+
+</body>
+</html>

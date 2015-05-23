@@ -1,0 +1,100 @@
+
+		{{#def.include('layout')}} {{##def.content:
+			<div class="post-topheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<img class="avatar-64 mr10" src="{{=it.respInfo.owner.avatar_url}}&s=64" alt="bianer">
+						<div class="author">
+							<strong>{{=it.respInfo.owner.login}}</strong>
+
+						</div>
+					</div>
+					<div class="col-md-10 col-xs-10">
+						<h1 class="h2 title">
+						
+							<a>{{=it.respInfo.name}}</a>
+						</h1>
+						<div>
+							{{=it.respInfo.description}}
+							
+
+						</div>
+						<div>
+							<strong>★{{=it.respInfo.stargazers_count}}</strong>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-9 main mt30">
+				<ul class="nav nav-tabs nav-tabs-zen mb10">
+						<li >
+							<a href="/opensource/{{=it.respInfo.full_name}}">Readme</a>
+						</li>
+						<li class="active">
+							<a href="/opensource/{{=it.respInfo.full_name}}/question">Related Question</a>
+						</li>
+						<li>
+							<a href="/opensource/{{=it.respInfo.full_name}}/video">Related Video</a>
+						</li>
+					</ul>
+					<div class="stream-list question-stream">
+						   {{~it.QuestionList.rows :item:index}}
+						<section class="stream-list__item">
+							<div class="qa-rank">
+								<div class="views hidden-xs">
+									<img style="width: 40px;" src="{{=item.owner.profile_image}}&s=40">
+								</div>
+							</div>
+							<div class="summary">
+								<ul class="author list-inline">
+									<li>
+										{{=item.owner.display_name}}
+									</li>
+								</ul>
+								<h2 class="title">
+									<a href="{{=it.questionBaseUrl}}{{=item.id_site}}/{{=item.id_question_id}}/{{=it.friendlyUrl(item.title)}}">{{=item.title}}</a>
+								</h2>
+								<ul class="taglist--inline ib">
+									{{~item.tags:tag}}
+									<li class="tagPopup">
+										<a class="tag tag-sm">{{=tag}}</a>
+									</li>
+									{{~}}
+								
+								</ul>
+							</div>
+						</section>
+						{{~}}
+					</div>
+					     {{#def.pager}}
+				</div>
+				<div class="col-xs-12 col-md-3 side mt30">
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							Ask Question Now 
+						</h2>
+						<ul class="taglist--inline multi">
+							<li class="tagPopup">
+								<a class="tag"  href="http://stackoverflow.com/">stackoverflow</a>
+							</li>
+						</ul>
+					</div>
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							
+						</h2>
+						<ul class="widget-links list-unstyled">
+							<li class="widget-links__item">
+								
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	#}}

@@ -1,0 +1,87 @@
+
+		{{#def.include('layout')}} {{##def.content:
+			<div class="post-topheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-xs-2">
+						<img class="avatar-64 mr10" src="{{=it.respInfo.owner.avatar_url}}&s=64" alt="bianer">
+						<div class="author">
+							<strong>{{=it.respInfo.owner.login}}</strong>
+
+						</div>
+					</div>
+					<div class="col-md-10 col-xs-10">
+						<h1 class="h2 title">
+						
+							<a>{{=it.respInfo.name}}</a>
+						</h1>
+						<div>
+							{{=it.respInfo.description}}
+							
+
+						</div>
+						<div>
+							<strong>★{{=it.respInfo.stargazers_count}}</strong>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-9 main mt30">
+						<ul class="nav nav-tabs nav-tabs-zen mb10">
+						<li >
+							<a href="/opensource/{{=it.respInfo.full_name}}">Readme</a>
+						</li>
+						<li >
+							<a href="/opensource/{{=it.respInfo.full_name}}/question">Related Question</a>
+						</li>
+						<li class="active">
+							<a href="/opensource/{{=it.respInfo.full_name}}/video">Related Video</a>
+						</li>
+					</ul>
+					<div class=" col-xs-12 col-md-12  mt20">
+						 {{~it.youtobeVideoList.rows :item:index}}
+					
+						<div class="col-md-6 col-sm-6 col-xs-12">
+	<div class="widget-event">
+		<a href="{{=it.videoBaseUrl}}{{=item.id_kind}}/{{=item.id_videoId}}/{{=it.friendlyUrl(item.snippet.title)}}"><img  src="{{=item.snippet.thumbnails.medium.url}}"></a>
+		<div class="widget-event__info" style="height: 100px;">
+			<h4 class="h4 title">
+				<a href="{{=it.videoBaseUrl}}{{=item.id_kind}}/{{=item.id_videoId}}/{{=it.friendlyUrl(item.snippet.title)}}">{{=item.snippet.title}}</a>
+			</h4>
+			<span  class="tag">
+				{{=item.snippet.channelTitle}}
+			</span>
+		</div>
+	</div>
+</div>
+						{{~}}
+					</div>
+					 {{#def.pager}}
+				</div>
+				<div class="col-xs-12 col-md-3 side mt30">
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+							Upload video  
+						</h2>
+						<ul class="taglist--inline multi">
+							<li class="tagPopup">
+								<a class="tag"  href="http://www.youtube.com">youtube</a>
+							</li>
+						</ul>
+					</div>
+					<div class="widget-box">
+						<h2 class="h4 widget-box__title">
+						
+						</h2>
+						<ul class="widget-links list-unstyled">
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	#}}

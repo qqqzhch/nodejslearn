@@ -1,0 +1,71 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit">
+
+<title>UnknownError</title>
+
+
+     <link rel="stylesheet" href="/public/css/global.css">
+            <link rel="stylesheet" href="/public/css/qaall.css">
+        <link rel="stylesheet" href="/public/css/responsive.css">
+
+</head>
+<body>
+<div class="global-nav">
+    <nav class="container nav">
+        <div class="dropdown m-menu">
+            <a href="javascript:void(0);" id="dLabel" class="visible-xs-block m-toptools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <span class="mobile-menu__unreadpoint"></span>
+            </a>
+
+        </div>
+
+        <h1 class="logo"><a href="/">UnknownError</a></h1>
+
+
+     
+    </nav>
+</div>
+
+<div class="wrap">
+    {{#def.contentHead || ""}}
+    {{#def.content || ""}}
+    
+        
+       
+</div>
+
+
+
+<footer id="footer">
+<div class="container">
+
+    <div class="copyright">
+        Copyright © 2015-2016 UnknownError <br>
+    </div>
+</div>
+</footer>
+</body>
+</html>
+
+
+{{##def.pager:
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="text-center">
+                <ul class="pagination">
+                    {{for(var pageIndex=it.pager.start;pageIndex<=it.pager.end; pageIndex++ ){}}
+                    <li {{?it.pager.now==pageIndex}}class="active" {{??}}{{?}} >
+                        <a href="{{=it.pager.pagerUrl}}{{=pageIndex}}">{{=pageIndex}}</a>
+                    </li>
+                    {{} }}
+                    <li class="disabled"><span>allItems:{{=it.pager.allitems}}</span></li>
+                    
+                </ul>
+            </div>
+        </div>
+#}}

@@ -1,0 +1,39 @@
+{{#def.include('layout')}}
+{{##def.content: 
+		<div class="post-topheader">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-9 mt20">
+					   {{~it.respList.rows :item:index}}
+                   
+						<div class="col-xs-12 mt10">
+							<div class="widget-event">
+								<a href="/opensource/{{=item.full_name}}" class="col-md-3 col-sm-3 col-xs-3 "><img class="widget-event__banner lazy"  src="{{=item.owner.avatar_url}}&s=120"></a>
+								<div class="col-md-9 col-sm-9 col-xs-9">
+									<h2 class="h4 title">
+										<a href="/opensource/{{=item.full_name}}">{{=item.name}}</a>
+									</h2>
+									<div>★:{{=item.stargazers_count}}</div>
+									<div>{{=item.description}}<a href="/opensource/{{=item.full_name}}" class="btn  btn-sm">readme</a></div>
+
+									
+								</div>
+								
+							</div>
+						</div>
+						{{~}}
+
+                          {{#def.pager}}
+        
+					</div>
+					<div class="col-xs-12 col-md-3 side mt30">
+						<div class="widget-box">
+							<h2 class="h4 widget-box__title">
+								
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+#}}

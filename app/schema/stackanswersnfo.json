@@ -1,0 +1,1 @@
+{"owner":{"reputation":Number,"user_id":Number,"user_type":String,"accept_rate":Number,"profile_image":String,"display_name":String,"link":String},"is_accepted":Boolean,"score":Number,"last_activity_date":Number,"last_edit_date":Number,"creation_date":Number,"answer_id":Number,"question_id":Number,"body":String}

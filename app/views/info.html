@@ -1,0 +1,197 @@
+{{#def.include('layout')}}
+{{##def.contentHead:
+	  <div class="post-topheader">
+    <div class="container">
+<div class="row">
+                <div class="col-md-9">
+                    <ol class="breadcrumb">
+                        <li><a href="/questions/newest">项目名称</a></li>
+                                                <li><a href="/101">tag名称</a></li>
+                                                <li class="active"> details</li>
+                    </ol>
+
+                    <h1 class="h3 title" id="questionTitle" data-id="1010000002722463"><a href="/q/1010000002722463">关于angular中rest API 异步数据传送的问题</a></h1>
+
+                    <div class="author">
+                        <a href="/u/bianer" class="mr5"><img class="avatar-24 mr10" src="//static.segmentfault.com/global/img/user-64.png" alt="bianer"><strong>bianer</strong></a> <strong class="text-black mr10">4</strong>
+                       
+                     </div>
+                </div>
+        
+            </div>
+           </div>
+           	</div>
+
+#}}
+
+{{##def.content:
+<div class="container mt30">
+       <div class="row">
+<div class="col-xs-12 col-md-9 main">
+                <article class="widget-question__item">
+                    <div class="post-col">
+                        <div class="widget-vote">
+                            <button type="button" class="like" data-id="1010000002722463" data-type="question" data-do="like" data-toggle="tooltip" data-placement="top" title="问题对人有帮助，内容完整，我也想知道答案">
+                                <span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>
+                            </button>
+                            <span class="count">0</span>
+                            <button type="button" class="hate" data-id="1010000002722463" data-type="question" data-do="hate" data-toggle="tooltip" data-placement="bottom" title="问题没有实际价值，缺少关键内容，没有改进余地">
+                                <span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>
+                            </button>
+                        </div><!-- end .widget-vote -->
+                    </div>
+
+                    <div class="post-offset">
+
+                        <div class="question fmt">
+<p>最近在做一个小项目，由于team里面缺少前端工程师，临时把我抓了过去写完全没有经验的angular。<br>
+我看了一些基础的书，感到angular中的rest API 异步传输机制非常神奇。<br>
+同时也在想，如果你的下一个http请求中的参数需要上一个请求get的结果，又该如何保证一定能拿到参数，不为空值。<br>
+我试过将第二个或第三个等等http请求放在.success后面，确实是成功的，但是这样感觉代码非常冗余，嵌套层次也超级多。<br>
+请问大家有什么建议？</p>
+</div>
+
+                        <ul class="taglist--inline mb20">
+                                                        <li class="tagPopup"><a class="tag" href="/t/angularjs" data-toggle="popover" data-placement="top" data-original-title="angularjs" data-id="1040000000210853" data-img="http://sfault-avatar.b0.upaiyun.com/327/297/3272974306-1040000000210853_huge100">angularjs</a></li>
+                                                    </ul>
+
+                                                                                                                        
+                 
+                        <ul class="widget-comments hidden" id="comment-1010000002722463" data-id="1010000002722463">
+                        <li class="widget-comments__form row">
+                                    <div class="col-md-12">
+                    请先 <a class="commentLogin" href="javascript:void(0);">登录</a> 后评论
+                </div>
+            
+    </li><!-- /.widget-comments__form -->
+    </ul><!-- /.widget-comments -->
+
+
+                    </div><!-- end .post-offset -->
+                </article>
+
+                    <div class="widget-answers">
+
+
+        <h2 class="title h4 mt30 mb20 post-title" id="answers-title">3 Answer</h2>
+
+        
+                    
+
+<article class="clearfix widget-answers__item" id="a-1020000002722513">
+ 
+
+    <div class="post-offset">
+        <a href="/u/qianjiahao"><img class="avatar-24" src="http://sfault-avatar.b0.upaiyun.com/672/040/67204040-5539cfc8133bc_big64" alt=""></a>
+        <strong><a href="/u/qianjiahao" class="mr5">qianjiahao</a></strong>
+
+        <span class="ml10 text-muted">
+            1 天前 回答
+                    </span>
+
+        <div class="answer fmt mt10">
+            
+<pre><code>$http.get('xxxxx')
+     .success(function(data){
+         $score.data = data;
+         // do somethint...
+     })
+</code></pre>
+
+<p>在success的里面操作，可以确保数据都获取到，这里有点像promise的链式调用。</p>
+
+        </div>
+
+        
+        
+ 
+
+
+
+
+    </div>
+</article><!-- /article -->
+
+                    
+
+<!-- /article -->
+
+                    
+
+<!-- /article -->
+
+        
+        
+        
+        
+    </div><!-- /.widget-answers -->
+
+            
+                
+        <input type="hidden" id="draftId" value="">
+        <input type="hidden" value="1010000002722463" id="questionId">
+        
+            
+                    
+                                    
+
+                            </div>
+
+<div class="col-xs-12 col-md-3 side">
+<!--     <div class="sfad-sidebar">
+    <div class="sfad-item" data-adn="ad-981179" id="adid-981179">
+    <button class="close" type="button" aria-hidden="true">×</button>
+</div>
+
+</div> -->
+
+<aside class="widget-welcome">
+    <h2 class="h4 title">github OpenSource</h2>
+    <p>get coding now</p>
+    <ul class="list-unstyled">
+        <li>git clone :****</li>
+       
+    </ul>
+</aside>
+        <div class="widget-box no-border">
+        <h2 class="h4 widget-box__title">Related issues</h2>
+        <ul class="widget-links list-unstyled">
+                            <li class="widget-links__item"><a title="多个角色的restful API开发" href="/q/1010000002532370">多个角色的restful API开发</a>
+                                    <small class="text-muted">
+                                                    3 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？" href="/q/1010000000271413">Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？</a>
+                                    <small class="text-muted">
+                                                    2 回答
+                                                                    </small>
+                                </li>
+                     
+                    </ul>
+    </div>
+           <div class="widget-box no-border">
+        <h2 class="h4 widget-box__title">Related videos</h2>
+        <ul class="widget-links list-unstyled">
+                            <li class="widget-links__item"><a title="多个角色的restful API开发" href="/q/1010000002532370">多个角色的restful API开发</a>
+                                    <small class="text-muted">
+                                                    3 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？" href="/q/1010000000271413">Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？</a>
+                                    <small class="text-muted">
+                                                    2 回答
+                                                                    </small>
+                                </li>
+                     
+                    </ul>
+    </div>
+
+    
+</div>
+ 
+ 
+ 
+ 
+ </div>
+    </div>
+#}}

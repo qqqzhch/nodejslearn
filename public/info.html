@@ -1,0 +1,961 @@
+
+
+
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta property="qc:admins" content="15317273575564615446375" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1, user-scalable=no" />
+<meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ"/>
+<title>关于angular中rest API 异步数据传送的问题 - SegmentFault</title>
+
+<meta name="description" content="最近在做一个小项目，由于team里面缺少前端工程师，临时把我抓了过去写完全没有经验的angular。 我看了一些基础的书，感到angular中的rest API 异步传输机制非常神奇。 同时也在想，如果你的下一个http请求中的参..." />
+
+    <meta name="keywords" content="angularjs" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault" />
+<link rel="shortcut icon" href="//static.segmentfault.com/global/img/favicon.30f7204d.ico" />
+<link rel="apple-touch-icon" href="//static.segmentfault.com/global/img/touch-icon.c78b1075.png">
+<meta name="userId" value="" id="SFUserId" />
+<meta name="userRank" value="" id="SFUserRank" />
+
+<link rel="alternate" type="application/atom+xml" title="SegmentFault 最新问题" href="/feeds/questions">
+<link rel="alternate" type="application/atom+xml" title="SegmentFault 最新文章" href="/feeds/blogs">
+
+
+
+     <link rel="stylesheet" href="/public/css/global.css" />
+            <link rel="stylesheet" href="/public/css/qaall.css" />
+        <link rel="stylesheet" href="/public/css/responsive.css" />
+
+</head>
+<body class="qa-question">
+<!--[if lt IE 9]>
+    <div class="alert alert-danger topframe" role="alert">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说 <a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+
+
+
+<div class="global-nav">
+    <nav class="container nav">
+        <div class="dropdown m-menu">
+            <a href="javascript:void(0);" id="dLabel" class="visible-xs-block m-toptools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <span class="mobile-menu__unreadpoint"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li class="mobile-menu__item"><a href="/questions/newest">问答</a></li>
+                <li class="mobile-menu__item"><a href="/blogs">文章</a></li>
+                <li class="mobile-menu__item"><a href="/events">活动</a></li>
+                <li class="mobile-menu__item"><a href="/tags">标签</a></li>
+                <li class="mobile-menu__item"><a href="/users">榜单</a></li>
+                <li class="mobile-menu__item"><a href="/sites">子站</a></li>
+                            </ul>
+        </div>
+
+        <h1 class="logo"><a href="/">SegmentFault</a></h1>
+
+                <a href="/user/login" class="visible-xs-block pull-right m-ask m-toptools"><span class="glyphicon glyphicon-log-in"></span></a>
+        
+        <form action="/search" class="header-search pull-left hidden-sm hidden-xs">
+            <button type="submit" class="btn btn-link"><span class="sr-only">搜索</span><span class="glyphicon glyphicon-search"></span></button>
+            <input id="searchBox" name="q" type="text" placeholder="输入关键字搜索" class="form-control" value="">
+        </form>
+
+        <ul class="menu list-inline pull-left hidden-xs">
+            <li class="menu__item"><a href="/questions/newest">问答</a></li>
+            <li class="menu__item"><a href="/blogs">文章</a></li>
+            <li class="menu__item"><a href="/events">活动</a></li>
+            <li class="menu__item"><a href="/tags">标签</a></li>
+            <li class="menu__item"><a href="/users">榜单</a></li>
+            <li class="menu__item dropdown hoverDropdown">
+                <a data-toggle="dropdown" href="/sites" class="more dropdownBtn">
+                    &middot;&middot;&middot;<span class="sr-only">更多</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/sites">子站</a></li>
+                                    </ul>
+            </li>
+        </ul>
+
+        <ul class="opts pull-right list-inline hidden-xs">
+                    <!-- <li class="opts__item">赶快加入吧 <a id="sfLogin" href="/user/login" class="SFLogin em ml10" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Login']);">立即登录</a></li> -->
+            <li class="opts__item message has-unread">
+                <a target="_blank" href="/tour">
+                    <span class="sr-only">消息</span>
+                    <span id="messageCount" class="glyphicon glyphicon-envelope"></span>
+                </a>
+            </li>
+            <li class="opts__item">
+                <a href="/user/login" class="SFLogin em ml10" onClick="_gaq.push(['_trackEvent', 'Button', 'Click', 'Login']);">立即登录</a>
+            </li>
+                    </ul>
+    </nav>
+</div>
+
+<div class="wrap">
+
+    <div class="post-topheader">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <ol class="breadcrumb">
+                        <li><a href="/questions/newest">问答</a></li>
+                                                <li><a href="/101">101 新手上路</a></li>
+                                                <li class="active">问答详情</li>
+                    </ol>
+
+                    <h1 class="h3 title" id="questionTitle" data-id="1010000002722463"><a href="/q/1010000002722463">关于angular中rest API 异步数据传送的问题</a></h1>
+
+                    <div class="author">
+                        <a href="/u/bianer" class="mr5"><img class="avatar-24 mr10" src="//static.segmentfault.com/global/img/user-64.png" alt="bianer"><strong>bianer</strong></a> <strong class="text-black mr10">4</strong>
+                        1 天前 提问
+                                                    &middot; <a href="/q/1010000002722463/revision">1 天前 更新</a>
+                                                                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ul class="widget-action--ver list-unstyled">
+                        <li>
+                                                        <button type="button" id="sideFollow" class="btn btn-success btn-sm" data-id="1010000002722463" data-do="follow" data-type="question" data-toggle="tooltip" data-placement="right" title="关注后将获得更新提醒">关注</button>
+                                                        <strong>4</strong> 关注
+                        </li>
+                        <li>
+                                                        <button type="button" id="sideBookmark" class="btn btn-default btn-sm" data-id="1010000002722463" data-type="question">收藏</button>
+                                                        <strong id="sideBookmarked">0</strong> 收藏，<strong class="no-stress">73</strong> 浏览
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .post-topheader -->
+
+    <div class="container mt30">
+        <div class="row">
+            <div class="col-xs-12 col-md-9 main">
+                <article class="widget-question__item">
+                    <div class="post-col">
+                        <div class="widget-vote">
+                            <button type="button"
+                                class="like"
+                                data-id="1010000002722463"
+                                data-type="question"
+                                data-do="like"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="问题对人有帮助，内容完整，我也想知道答案">
+                                <span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>
+                            </button>
+                            <span class="count">0</span>
+                            <button
+                                type="button"
+                                class="hate"
+                                data-id="1010000002722463"
+                                data-type="question"
+                                data-do="hate"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                title="问题没有实际价值，缺少关键内容，没有改进余地">
+                                <span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>
+                            </button>
+                        </div><!-- end .widget-vote -->
+                    </div>
+
+                    <div class="post-offset">
+
+                        <div class="question fmt">
+<p>最近在做一个小项目，由于team里面缺少前端工程师，临时把我抓了过去写完全没有经验的angular。<br>
+我看了一些基础的书，感到angular中的rest API 异步传输机制非常神奇。<br>
+同时也在想，如果你的下一个http请求中的参数需要上一个请求get的结果，又该如何保证一定能拿到参数，不为空值。<br>
+我试过将第二个或第三个等等http请求放在.success后面，确实是成功的，但是这样感觉代码非常冗余，嵌套层次也超级多。<br>
+请问大家有什么建议？</p>
+</div>
+
+                        <ul class="taglist--inline mb20">
+                                                        <li class="tagPopup"><a class="tag" href="/t/angularjs" data-toggle="popover" data-placement="top" data-original-title="angularjs" data-id="1040000000210853" data-img="http://sfault-avatar.b0.upaiyun.com/327/297/3272974306-1040000000210853_huge100" >angularjs</a></li>
+                                                    </ul>
+
+                                                                                                                        
+                        <div class="post-opt">
+                            <ul class="list-inline mb0">
+                                <li><a href="/q/1010000002722463">链接</a></li>
+                                                                <li><a href="javascript:void(0);" class="comments" data-id="1010000002722463" data-target="#comment-1010000002722463"> 评论</a></li>
+
+                                
+                                
+                                
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+                                    <ul class="dropdown-menu dropdown-menu-left">
+                                        <li><a href="#911" data-id="1010000002722463" data-toggle="modal" data-target="#911" data-type="question" data-typetext="问题">举报</a></li>
+
+                                                                                
+                                        
+                                        
+                                                                            </ul>
+                                </li>
+                                                            </ul>
+                        </div>
+                        <ul class="widget-comments hidden" id="comment-1010000002722463" data-id="1010000002722463">
+                        <li class="widget-comments__form row">
+                                    <div class="col-md-12">
+                    请先 <a class="commentLogin" href="javascript:void(0);">登录</a> 后评论
+                </div>
+            
+    </li><!-- /.widget-comments__form -->
+    </ul><!-- /.widget-comments -->
+
+
+                    </div><!-- end .post-offset -->
+                </article>
+
+                    <div class="widget-answers">
+        <div class="btn-group pull-right" role="group">
+            <a href="/q/1010000002722463#answers-title" id="sortby-rank" class="btn btn-default btn-xs active">默认排序</a>
+            <a href="?sort=created#answers-title" id="sortby-created" class="btn btn-default btn-xs">时间排序</a>
+        </div>
+
+        <h2 class="title h4 mt30 mb20 post-title" id="answers-title">3 个回答</h2>
+
+        
+                    
+
+<article class="clearfix widget-answers__item" id="a-1020000002722513">
+    <div class="post-col">
+        <div class="widget-vote">
+            <button type="button"
+                class="like"
+                data-id="1020000002722513"
+                data-type="answer"
+                data-do="like"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="答案对人有帮助，有参考价值">
+                <span class="sr-only">答案对人有帮助，有参考价值</span>
+            </button>
+            <span class="count">0</span>
+            <button type="button"
+                class="hate"
+                data-id="1020000002722513"
+                data-type="answer"
+                data-do="hate"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="答案没帮助，是错误的答案，答非所问">
+                <span class="sr-only">答案没帮助，是错误的答案，答非所问</span>
+            </button>
+
+        </div>
+            </div>
+
+    <div class="post-offset">
+        <a href="/u/qianjiahao"><img class="avatar-24" src="http://sfault-avatar.b0.upaiyun.com/672/040/67204040-5539cfc8133bc_big64" alt=""></a>
+        <strong><a href="/u/qianjiahao" class="mr5">qianjiahao</a> 1.5k</strong>
+
+        <span class="ml10 text-muted">
+            1 天前 回答
+                    </span>
+
+        <div class="answer fmt mt10">
+            
+<pre><code>$http.get('xxxxx')
+     .success(function(data){
+         $score.data = data;
+         // do somethint...
+     })
+</code></pre>
+
+<p>在success的里面操作，可以确保数据都获取到，这里有点像promise的链式调用。</p>
+
+        </div>
+
+        
+        
+        <div class="post-opt">
+            <ul class="list-inline mb0">
+                
+                <li><a href="/q/1010000002722463/a-1020000002722513">链接</a></li>
+                                <li><a href="javascript:void(0);" class="comments" data-id="1020000002722513" data-target="#comment-1020000002722513"> 评论</a></li>
+                                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="#911" data-id="1020000002722513" data-toggle="modal" data-target="#911" data-type="answer" data-typetext="答案">举报</a></li>
+                                                                    </ul>
+                </li>
+                            </ul>
+        </div>
+
+        <ul class="widget-comments hidden" id="comment-1020000002722513" data-id="1020000002722513">
+                        <li class="widget-comments__form row">
+                                    <div class="col-md-12">
+                    请先 <a class="commentLogin" href="javascript:void(0);">登录</a> 后评论
+                </div>
+            
+    </li><!-- /.widget-comments__form -->
+    </ul><!-- /.widget-comments -->
+
+
+    </div>
+</article><!-- /article -->
+
+                    
+
+<article class="clearfix widget-answers__item" id="a-1020000002724487">
+    <div class="post-col">
+        <div class="widget-vote">
+            <button type="button"
+                class="like"
+                data-id="1020000002724487"
+                data-type="answer"
+                data-do="like"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="答案对人有帮助，有参考价值">
+                <span class="sr-only">答案对人有帮助，有参考价值</span>
+            </button>
+            <span class="count">0</span>
+            <button type="button"
+                class="hate"
+                data-id="1020000002724487"
+                data-type="answer"
+                data-do="hate"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="答案没帮助，是错误的答案，答非所问">
+                <span class="sr-only">答案没帮助，是错误的答案，答非所问</span>
+            </button>
+
+        </div>
+            </div>
+
+    <div class="post-offset">
+        <a href="/u/jin"><img class="avatar-24" src="//static.segmentfault.com/global/img/user-64.png" alt=""></a>
+        <strong><a href="/u/jin" class="mr5">Jin</a> 194</strong>
+
+        <span class="ml10 text-muted">
+            1 小时前 回答
+                        &middot; <a href="/q/1010000002722463/a-1020000002724487/revision">1 小时前 更新</a>
+                    </span>
+
+        <div class="answer fmt mt10">
+            
+<p>楼主建议看看 promise 的嵌套 nest promise 和 promise 链式 promise chain</p>
+
+<p>由于angular的$http 内置了两个快捷方法success 和 error 导致标准的then方法容易让人忽略.</p>
+
+<p>楼主的需求 可以使用promise them的嵌套<br>
+例如</p>
+
+<pre><code>$http1.post().then(function(data){
+    $http2.post(data.data).then(function(data){
+        console.log(data);
+ })
+})
+</code></pre>
+
+<p>或者用promise chain 链式</p>
+
+<pre><code>$http1.post().then(function(data){
+
+    return $http2.post(data.data);
+}).then(function(data){
+    console.log(data);
+})
+</code></pre>
+
+<p>不同的需求可以用不同的promise 形式</p>
+
+<p>例如还有可以使用Q.all方法 使多个promise都完成在处理事件</p>
+
+        </div>
+
+        
+        
+        <div class="post-opt">
+            <ul class="list-inline mb0">
+                
+                <li><a href="/q/1010000002722463/a-1020000002724487">链接</a></li>
+                                <li><a href="javascript:void(0);" class="comments" data-id="1020000002724487" data-target="#comment-1020000002724487"> 评论</a></li>
+                                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="#911" data-id="1020000002724487" data-toggle="modal" data-target="#911" data-type="answer" data-typetext="答案">举报</a></li>
+                                                                    </ul>
+                </li>
+                            </ul>
+        </div>
+
+        <ul class="widget-comments hidden" id="comment-1020000002724487" data-id="1020000002724487">
+                        <li class="widget-comments__form row">
+                                    <div class="col-md-12">
+                    请先 <a class="commentLogin" href="javascript:void(0);">登录</a> 后评论
+                </div>
+            
+    </li><!-- /.widget-comments__form -->
+    </ul><!-- /.widget-comments -->
+
+
+    </div>
+</article><!-- /article -->
+
+                    
+
+<article class="clearfix widget-answers__item" id="a-1020000002724619">
+    <div class="post-col">
+        <div class="widget-vote">
+            <button type="button"
+                class="like"
+                data-id="1020000002724619"
+                data-type="answer"
+                data-do="like"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="答案对人有帮助，有参考价值">
+                <span class="sr-only">答案对人有帮助，有参考价值</span>
+            </button>
+            <span class="count">0</span>
+            <button type="button"
+                class="hate"
+                data-id="1020000002724619"
+                data-type="answer"
+                data-do="hate"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="答案没帮助，是错误的答案，答非所问">
+                <span class="sr-only">答案没帮助，是错误的答案，答非所问</span>
+            </button>
+
+        </div>
+            </div>
+
+    <div class="post-offset">
+        <a href="/u/thonatos"><img class="avatar-24" src="http://sfault-avatar.b0.upaiyun.com/592/283/592283953-1030000000629426_big64" alt=""></a>
+        <strong><a href="/u/thonatos" class="mr5">Thonatos</a> 35</strong>
+
+        <span class="ml10 text-muted">
+            18 分钟前 回答
+                        &middot; <a href="/q/1010000002722463/a-1020000002724619/revision">17 分钟前 更新</a>
+                    </span>
+
+        <div class="answer fmt mt10">
+            
+<p>个人项目里作为baseService存在的一段代码：</p>
+
+<pre><code>/**
+ * Created by thonatos on 14-11-14.
+ */
+
+var ajaxService = angular.module('ASS.service.ajaxService', [])
+    .factory('ajaxService', ['$http', function ($http) {
+
+        return ({
+            post: post,
+            get: get,
+            del: del,
+            put: put
+        });
+
+        function post(url, data) {
+            var promise = $http.post(url, data).then(function (response) {
+                return response.data;
+            });
+            return promise;
+        }
+
+        function get(url) {
+            var promise = $http.get(url).then(function (response) {
+                return response.data;
+            });
+            return promise;
+        }
+
+        function del(url) {
+            var promise = $http.delete(url, auth).then(function (response) {
+                return response.data;
+            });
+            return promise;
+        }
+
+        function put(url, data) {
+            var promise = $http.put(url, data).then(function (response) {
+                return response.data;
+            });
+            return promise;
+        }
+    }]);
+
+module.exports = ajaxService;
+</code></pre>
+
+<p>下面是具体的postService：</p>
+
+<pre><code>/**
+ * Created by thonatos on 14-11-8.
+ */
+
+var _postUrl = '/api/post';
+var _postsUrl = '/api/posts'
+var _user = 'thonatos';
+
+var postService = angular.module('ASS.service.postService', [])
+    .factory('postService', ['ajaxService', function (ajaxService) {
+
+        return ({
+            add: _add,
+            del: _del,
+            rev: _rev,
+            get: _get,
+            getAll: _getAll
+        });
+
+        function _add(post) {
+
+            post.category = post.category.name;
+            post.author = _user || 'nobody';
+            console.log(post);
+            return ajaxService.post(_postUrl, post);
+        }
+
+        function _del(pid) {
+            return ajaxService.delete(_postUrl + '/' + pid);
+        }
+
+        function _rev(pid, post) {
+            return ajaxService.put(_postUrl + '/' + pid, post);
+        }
+
+        function _get(pid) {
+            return ajaxService.get(_postUrl + '/' + pid);
+        }
+
+        function _getAll(pager) {
+            return ajaxService.get(_postsUrl + '/' + pager);
+        }
+    }]);
+
+module.exports = postService;
+</code></pre>
+
+<p>最后在blogConroller里大概就是这样：</p>
+
+<pre><code>blog.controller('blogPostCtrl', ['$scope', '$stateParams', 'postService', function ($scope, $stateParams, postService) {
+
+    var _pid = $stateParams.pid;
+    var _post = {};
+
+    postService.get(_pid).then(function (response) {
+        _post = response;
+        $scope.post = _post;
+    });
+
+}]);
+</code></pre>
+
+        </div>
+
+        
+        
+        <div class="post-opt">
+            <ul class="list-inline mb0">
+                
+                <li><a href="/q/1010000002722463/a-1020000002724619">链接</a></li>
+                                <li><a href="javascript:void(0);" class="comments" data-id="1020000002724619" data-target="#comment-1020000002724619"> 评论</a></li>
+                                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="#911" data-id="1020000002724619" data-toggle="modal" data-target="#911" data-type="answer" data-typetext="答案">举报</a></li>
+                                                                    </ul>
+                </li>
+                            </ul>
+        </div>
+
+        <ul class="widget-comments hidden" id="comment-1020000002724619" data-id="1020000002724619">
+                        <li class="widget-comments__form row">
+                                    <div class="col-md-12">
+                    请先 <a class="commentLogin" href="javascript:void(0);">登录</a> 后评论
+                </div>
+            
+    </li><!-- /.widget-comments__form -->
+    </ul><!-- /.widget-comments -->
+
+
+    </div>
+</article><!-- /article -->
+
+        
+        
+        
+        <div class="text-center">
+            
+        </div>
+    </div><!-- /.widget-answers -->
+
+            
+                <h4>撰写答案</h4>
+        <input type="hidden" id="draftId" value="">
+        <input type="hidden" value="1010000002722463" id="questionId">
+        <form action="/question/1010000002722463/answers/add" method="post" class="editor-wrap">
+            <div class="editor" id="questionText">
+                <textarea id="answerEditor" name="text" class="form-control" rows="4" placeholder="撰写答案..." ></textarea>
+            </div>
+            <div id="answerSubmit" class="hide mt15 clearfix">
+                <div class="checkbox pull-left">
+                    <label><input type="checkbox" class="" id="shareToWeibo">
+                        同步到新浪微博</label>
+                </div>
+                <div class="pull-right">
+                    <span id="editorStatus" class="hidden text-muted">
+
+                    </span>
+                    <a id="dropIt" href="javascript:void(0);" class="mr10 hidden">
+                        [舍弃]
+                    </a>
+                    <button type="submit" id="answerIt" data-id="1010000002722463" class="btn btn-lg btn-primary ml20">提交回答</button>
+                </div>
+            </div>
+        </form>
+            
+                    
+                                    <div class="widget-welcome-question mt20 mb20 hidden-xs widget-welcome">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="title h4">不要错过该问题的后续解决方案</h2>
+            <p>如果你没找到答案，记得登录关注哦，大家会尽全力帮你解决的 ^___^</p>
+        </div>
+        <form id="user">
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 pr0">
+                        <input type="text" class="form-control" placeholder="用户名" name="name" required>
+                    </div>
+                    <div class="col-sm-4 pr0">
+                        <input type="text" class="form-control" placeholder="Email" name="mail" id="mail" required>
+                    </div>
+                    <div class="col-sm-4 pr0">
+                        <input type="password" class="form-control" placeholder="密码" name="password" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary btn-block">注册</button>
+            </div>
+            <div class="col-sm-10 mt10 captcha-part" style="display:none;">
+                <div class="row">
+                    <div class="col-sm-4 pr0">
+                        <input type="text" class="form-control" id="captcha" name="captcha" placeholder="请输入验证码" disabled required>
+                    </div>
+                    <div class="col-sm-4 pr0">
+                        <a id="reloadCaptcha"  href="javascript:void(0)"><img src="" height="35" /></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+                            </div><!-- /.main -->
+
+
+            
+<div class="col-xs-12 col-md-3 side">
+    <div class="sfad-sidebar">
+    <div class="sfad-item" data-adn="ad-981179" id="adid-981179">
+    <button class="close" type="button" aria-hidden="true">&times;</button>
+</div>
+
+</div>
+
+
+        <div class="widget-box no-border">
+        <h2 class="h4 widget-box__title">相似问题</h2>
+        <ul class="widget-links list-unstyled">
+                            <li class="widget-links__item"><a title="多个角色的restful API开发" href="/q/1010000002532370">多个角色的restful API开发</a>
+                                    <small class="text-muted">
+                                                    3 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？" href="/q/1010000000271413">Backbone.js项目，在访问MongoDB时，除了通过REST API，还有其他方式吗？</a>
+                                    <small class="text-muted">
+                                                    2 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="restful api开发网站的要怎样架构？" href="/q/1010000000534346">restful api开发网站的要怎样架构？</a>
+                                    <small class="text-muted">
+                                                    4 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="一个关于Java应用的模块化问题" href="/q/1010000002432076">一个关于Java应用的模块化问题</a>
+                                    <small class="text-muted">
+                                                    1 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="用angularjs构建应用，后台是不是就只用写API啦？" href="/q/1010000002604116">用angularjs构建应用，后台是不是就只用写API啦？</a>
+                                    <small class="text-muted">
+                                                    3 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="restful的一个网站设计问题" href="/q/1010000002701912">restful的一个网站设计问题</a>
+                                    <small class="text-muted">
+                                                    2 回答
+                                                                             |                             已解决
+                                            </small>
+                                </li>
+                            <li class="widget-links__item"><a title="upyun rest api 的head方法获取文件信息api的bug" href="/q/1010000000195937">upyun rest api 的head方法获取文件信息api的bug</a>
+                                    <small class="text-muted">
+                                                    1 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="实现rest api，安全方面有哪些方法" href="/q/1010000000525855">实现rest api，安全方面有哪些方法</a>
+                                    <small class="text-muted">
+                                                    2 回答
+                                                                    </small>
+                                </li>
+                            <li class="widget-links__item"><a title="flask-restful浏览器访问api提示下载json文件" href="/q/1010000002444491">flask-restful浏览器访问api提示下载json文件</a>
+                                    <small class="text-muted">
+                                                    1 回答
+                                                                             |                             已解决
+                                            </small>
+                                </li>
+                            <li class="widget-links__item"><a title="AngularJS是不是不适合地图类应用" href="/q/1010000002484757">AngularJS是不是不适合地图类应用</a>
+                                    <small class="text-muted">
+                                                    3 回答
+                                                                    </small>
+                                </li>
+                    </ul>
+    </div>
+    <div class="widget-share" data-text="关于angular中rest API 异步数据传送的问题">
+</div>
+
+    
+</div><!-- /.side -->
+
+        </div>
+    </div>
+</div>
+
+<div id="shareToWeiboModal" class="modal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">分享</h4>
+            </div>
+            <div class="modal-body">
+                <p class="sfModal-content">
+                    分享到微博？
+                </p>
+            </div>
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-default dont-likeweibo" data-dismiss="modal">取消并且不再弹出</button>
+                <a href="" id="shareLink" class="btn btn-primary done-btn" target="_blank" onclick="$('#shareToWeiboModal').modal('hide')">分享</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="delete-modal" class="modal widget-911">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title radio-del question-close-only">关闭<span class="type-911">问题</span>（请谨慎操作）</h4>
+                <h4 class="modal-title radio-del question-delete-only">删除<span class="type-911">问题</span>（请谨慎操作）</h4>
+                <h4 class="modal-title radio-del answer-delete-only">删除<span class="type-911">回答</span>（请谨慎操作）</h4>
+                <h4 class="modal-title radio-del answer-ignore-only">忽略<span class="type-911">回答</span></h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <strong class="required radio-del question-close-only">关闭理由：</strong>
+                    <strong class="required radio-del question-delete-only answer-delete-only">删除理由：</strong>
+                    <strong class="required radio-del answer-ignore-only">忽略理由：</strong>
+                </p>
+                <div id="reportDescription">
+                    <div class="radio-del radio all">
+                        <label>
+                            <input type="radio" name="descRadio" value="垃圾广告" />
+                            垃圾广告
+                        </label>
+                    </div>
+                    <div class="radio-del radio question-close-only">
+                        <label>
+                            <input type="radio" name="descRadio" value="与已有问题重复">
+                            与已有问题重复（请编辑该提问指向已有相同问题）
+                        </label>
+                    </div>
+                    <div class="radio-del radio answer-ignore-only">
+                        <label>
+                            <input type="radio" name="descRadio" value="答非所问，不符合答题要求">
+                            答非所问，不符合答题要求
+                        </label>
+                    </div>
+                    <div class="radio-del radio answer-ignore-only">
+                        <label>
+                            <input type="radio" name="descRadio" value="宜作评论而非答案">
+                            宜作评论而非答案
+                        </label>
+                    </div>
+                    <div class="radio-del radio all">
+                        <label>
+                            <input type="radio" name="descRadio" value="带有人身攻击、辱骂、仇恨等违反条款的内容">
+                            带有人身攻击、辱骂、仇恨等违反条款的内容
+                        </label>
+                    </div>
+                    <div class="radio-del radio all">
+                        <label>
+                            <input type="radio" name="descRadio" value="内容质量差，或不适合在本网站出现">
+                            内容质量差，或不适合在本网站出现
+                        </label>
+                    </div>
+                    <div class="radio-del radio question-close-only question-delete-only">
+                        <label>
+                            <input type="radio" name="descRadio" value="无意义讨论型问题">
+                            无意义讨论型问题
+                        </label>
+                    </div>
+                    <div class="radio-del radio all btwRadio">
+                        <label>
+                            <input type="radio" name="descRadio" value="">
+                            其他原因（请补充说明）
+                        </label>
+                    </div>
+                    <div class="btw" style="display:none;">
+                        <p class="mt20"><strong>补充说明：</strong></p>
+                        <textarea class="form-control" rows="3" name="description" id="deleteDesc"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" id="submit-delete">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="911" class="modal widget-911">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">举报<span class="type-911">问题</span></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong class="required">举报理由：</strong></p>
+                <div id="reportDescription">
+                <div class="radio-911 radio all">
+                    <label>
+                        <input type="radio" name="descRadio" value="垃圾广告">
+                        垃圾广告
+                    </label>
+                </div>
+                <div class="radio-911 radio all">
+                    <label>
+                        <input type="radio" name="descRadio" value="带有人身攻击、辱骂、仇恨等违反条款的内容">
+                        带有人身攻击、辱骂、仇恨等违反条款的内容
+                    </label>
+                </div>
+                <div class="radio-911 radio question-only">
+                    <label>
+                        <input type="radio" name="descRadio" value="与已有问题重复">
+                        与已有问题重复（请编辑该提问指向已有相同问题）
+                    </label>
+                </div>
+                <div class="radio-911 radio question-only">
+                    <label>
+                        <input type="radio" name="descRadio" value="内容质量差，或不适合在本网站出现">
+                        内容质量差，或不适合在本网站出现
+                    </label>
+                </div>
+                <div class="radio-911 radio answer-only">
+                    <label>
+                        <input type="radio" name="descRadio" value="答非所问，不符合答题要求">
+                        答非所问，不符合答题要求
+                    </label>
+                </div>
+                <div class="radio-911 radio all" id="btwRadio">
+                    <label>
+                        <input type="radio" name="descRadio" value="">
+                        其他原因（请补充说明）
+                    </label>
+                </div>
+                <div class="hide btw">
+                    <p class="mt20"><strong>补充说明：</strong></p>
+                    <textarea class="form-control" rows="3" autocomplete="false" id="911Desc"></textarea>
+                </div>
+                                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="911Submit" class="btn btn-primary">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<footer id="footer">
+<div class="container">
+    <div class="row hidden-xs">
+        <dl class="col-sm-2 site-link">
+            <dt>网站相关</dt>
+            <dd><a href="/about">关于我们</a></dd>
+            <dd><a href="/tos">服务条款</a></dd>
+            <dd><a href="/faq">帮助中心</a></dd>
+            <dd><a href="/repu">声望与权限</a></dd>
+            <dd><a href="/markdown">编辑器语法</a></dd>
+            <dd><a href="http://weekly.segmentfault.com/">每周精选</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>联系合作</dt>
+            <dd><a href="/contact">联系我们</a></dd>
+            <dd><a href="/hiring">加入我们</a></dd>
+            <dd><a href="/link">合作伙伴</a></dd>
+            <dd><a href="/press">媒体报道</a></dd>
+            <dd><a href="http://0x.segmentfault.com">建议反馈</a></dd>
+            <dd><a href="http://pan.baidu.com/share/link?shareid=604288&uk=839272106" target="_blank">Logo 下载</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>常用链接</dt>
+            <dd><a href="http://mirrors.segmentfault.com/" target="_blank">文档镜像</a></dd>
+            <dd>订阅：<a href="/feeds">问答</a> / <a href="/feeds/blogs">文章</a></dd>
+            <dd><a href="http://segmentfault.com/events?category=4">黑客马拉松</a></dd>
+<!--             <dd><a href="http://zs.segmentfault.com/" target="_blank">一起涨姿势</a></dd> -->
+            <dd><a href="http://namebeta.com/" target="_blank">域名搜索注册</a></dd>
+        </dl>
+        <dl class="col-sm-2 site-link">
+            <dt>关注我们</dt>
+            <dd><a href="http://twitter.com/segment_fault" target="_blank">Twitter</a></dd>
+            <!-- <dd><a href="http://page.renren.com/699146294" target="_blank">人人网</a></dd> -->
+            <dd><a href="https://www.linkedin.com/company/segmentfault" target="_blank">LinkedIn</a></dd>
+            <dd><a href="http://weibo.com/segmentfault" target="_blank">新浪微博</a></dd>
+            <dd><a href="http://i.youku.com/segmentfault" target="_blank">优酷主页</a></dd>
+            <dd><a href="/giveaways" target="_blank">开发者福利</a></dd>
+            <dd><a href="http://blog.segmentfault.com/devblog" target="_blank">开发日志</a></dd>
+        </dl>
+        <dl class="col-sm-4 site-link" id="license">
+            <dt>内容许可</dt>
+            <dd>除特别说明外，用户内容均采用 <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a> 进行许可</dd>
+            <dd>本站由 <a target="_blank" href="http://qingcloud.com/">青云 QingCloud</a> 提供云计算服务<br><a target="_blank" href="https://www.upyun.com/?utm_source=segmentfault&utm_medium=link&utm_campaign=upyun&md=segmentfault">又拍云</a> 提供 CDN 存储服务</dd>
+        </dl>
+    </div>
+    <div class="copyright">
+        Copyright &copy; 2011-2015 SegmentFault. 当前呈现版本 15.04.15<br><a href="http://www.miibeian.gov.cn/" rel="nofollow">浙ICP备15005796号-2</a>
+    </div>
+</div>
+</footer>
+
+<div id="fixedTools" class="hidden-xs hidden-sm">
+  <a id="backtop" class="hidden border-bottom" href="#">回顶部</a>
+  <div class="qrcodeWraper">
+    <a><span class="glyphicon glyphicon-qrcode"></span></a>
+    <img id="qrcode" class="border" src="//static.segmentfault.com/build/global/img/sf-wechat.27acd26c.png">
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
