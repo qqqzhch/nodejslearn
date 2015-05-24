@@ -60,6 +60,7 @@ function getgitreadme(aitem, callbaack) {
 function storeReopData(body, callbaack) {
     // body...
     console.log("storeReopData");
+    console.log(body)
     async.each(body.items, function(aitem, callback) {
         console.log('存储');
         if(aitem.name=='node'){

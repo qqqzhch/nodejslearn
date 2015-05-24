@@ -22,7 +22,7 @@ exports.getSearch = function(q, index, callbaack) {
 
 
     filter.intitle = q;
-    context.questions.questions(filter, function(err, data) {
+   context.search.search(filter, function(err, data) {
            callbaack(err, data, data)
     });
 }

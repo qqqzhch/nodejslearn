@@ -26,7 +26,8 @@ function getlist(callbaack) {
 
 function getForGroup(list, callbaack) {
     var ids = _.pluck(list, 'id_question_id').join(',');
-
+          console.log(ids )
+          console.log(ids.length )
     callbaack(null, ids, list)
 }
 
@@ -77,6 +78,7 @@ function stroe(list, ids, callbaack) {
 
 function updateFather(ids, callbaack) {
     var idsList = ids.split(',');
+    console.log(idsList.length )
     async.each(idsList, function(item, callback) {
             if (item != "") {
                 stackQuestionSql
@@ -91,7 +93,7 @@ function updateFather(ids, callbaack) {
                     	result.save()
 
 
-                        callbaack(null)
+                        callback(null)
                     });
             }
 

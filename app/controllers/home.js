@@ -177,7 +177,7 @@ exports.getSearch = function(req, res) {
         })
     }
     filter.intitle = q;
-    context.questions.questions(filter, function(err, results) {
+    context.search.search(filter, function(err, results) {
         if (err) {
             return res.send({
                 error: err

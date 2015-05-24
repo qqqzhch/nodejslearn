@@ -25,6 +25,15 @@ module.exports = function(app, config) {
     app.use(express.cookieSession({
         secret: 'unknownerror.org'
     }));
+
+    app.use(function (req,res,next) {
+        res.locals.seo={
+            title:'unknownerror-collect relevant information about open source projects, for you!',
+            keywords:'unknownerror',
+            description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+        }
+        next()
+    });
     require('./routes')(app, config);
     
     app.configure("development", function() {

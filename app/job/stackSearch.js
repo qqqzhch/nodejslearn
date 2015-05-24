@@ -17,7 +17,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 2,
+            limit: 10,
             order: '"createdAt" ASC',
             where: ["question_num is NULL"]
         })
@@ -69,7 +69,7 @@ function stackQuestionStore(qitem, itemCallback) {
     console.log(qitem.question_id)
 
     qitem.question_id=qitem.question_id+"";
-    ids.push(qitem.question_id+"|"+qitem.title)
+    // ids.push(qitem.question_id+"|"+qitem.title)
     console.log('cunhu stackQuestion'+qitem.repo_full_name)
     stackQuestionSql
         .findOrCreate({
@@ -146,6 +146,6 @@ async.waterfall([
    repoViedoUpdate
 ], function(err) {
     console.log('可以开始读取下一页了');
-    console.log(ids)
+
 })
 }
