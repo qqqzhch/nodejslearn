@@ -27,10 +27,15 @@ module.exports = function(app, config) {
     }));
 
     app.use(function (req,res,next) {
+        // res.locals.seo={
+        //     title:'unknownerror-collect relevant information about open source projects, for you!',
+        //     keywords:'unknownerror',
+        //     description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+        // }
         res.locals.seo={
-            title:'unknownerror-collect relevant information about open source projects, for you!',
-            keywords:'unknownerror',
-            description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+            title:'',
+            keywords:'',
+            description:''
         }
         next()
     });

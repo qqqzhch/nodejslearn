@@ -12,6 +12,7 @@ exports.list = function(req, res) {
 
     res.locals.questionBaseUrl = questionBaseUrl;
     res.locals.friendlyUrl = friendlyUrl;
+    res.locals.seo.title="open source project "+ repo +" related issues"
 
     ///
     async.parallel([
@@ -107,6 +108,15 @@ exports.info = function(req, res) {
         if (err) {
             res.render('error');
         } else {
+            var keywords;
+            if(res.locals.questionInfo.tags){
+                 keywords=res.locals.questionInfo.tags.join(',');
+            }
+      res.locals.seo={
+                   title:res.locals.questionInfo.title,
+                    keywords:res.locals.questionInfo.tags.join(','),
+                    description:''
+        }
             res.render('OpenSource_questionInfo')
 
         }

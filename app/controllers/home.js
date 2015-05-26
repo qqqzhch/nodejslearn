@@ -57,6 +57,11 @@ var filterInfoQ = {
 //http://test.unknownerror.org/github/repos/?q=stars:%3E1
 exports.index = function(req, res) {
     console.log('首页');
+            res.locals.seo={
+            title:'unknownerror-collect relevant information about open source projects, for you!',
+            keywords:'unknownerror',
+            description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+        }
     res.render('index', {
         title: 'index',
         dev: process.env
