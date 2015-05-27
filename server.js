@@ -37,7 +37,7 @@ var SampleApp = function() {
 
         console.log('***********');
 
-        self.ipaddress = '127.0.0.1';
+        self.ipaddress = config.ip;
         self.port = env =="development"? 8080:80;
         console.log(self.port )
         console.log(env )

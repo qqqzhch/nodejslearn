@@ -5,6 +5,7 @@ module.exports = {
     development: {
         db: 'mongodb://localhost/online',
         root: rootPath,
+        ip:'127.0.0.1',
         client_id: "267680df1ce7e493",
         client_secret: '830412410225c0b99fb1af7fe3167bc8',
         app: {
@@ -43,6 +44,7 @@ module.exports = {
     production: {
         db: process.env.OPENSHIFT_MONGODB_DB_URL + 'nodejs',
         root: rootPath,
+        ip:'162.243.148.223',
         client_id: "267680df1ce7e493",
         client_secret: '830412410225c0b99fb1af7fe3167bc8',
         app: {
