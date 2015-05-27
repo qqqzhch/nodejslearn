@@ -71,7 +71,7 @@ module.exports.getYoutubeVideoInfo = function(ids, callbaack) {
         var req = new tryReq();
         req('http://test.unknownerror.org/youtube/videos?q=' + ids, callbaack)
     } else {
-        youtubeApi.videos(ids, index, callbaack)
+        youtubeApi.videos(ids, callbaack)
     }
 }
 
