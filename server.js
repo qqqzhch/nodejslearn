@@ -37,8 +37,10 @@ var SampleApp = function() {
 
         console.log('***********');
 
-        self.ipaddress = 'localhost';
-        self.port = 80;
+        self.ipaddress = '127.0.0.1';
+        self.port = env =="development"? 8080:80;
+        console.log(self.port )
+        console.log(env )
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
