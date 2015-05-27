@@ -2,7 +2,7 @@ var request = require('request');
 var gitHubApi = require('../dataApi/gitHub');
 var youtubeApi = require('../dataApi/youtube');
 var stackApi = require('../dataApi/stack');
-var env = process.env.OPENSHIFT_MONGODB_DB_URL ? 'production' : 'development';
+var env =process.env.NODE_ENV;
 
 function tryReq() {
 

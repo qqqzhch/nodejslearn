@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var env = process.env.OPENSHIFT_MONGODB_DB_URL ? 'production' : 'development',
+var env = process.env.NODE_ENV,
     config = require('../../config/config')[env]
 var sequelize = new Sequelize(config.postsql.dbname, config.postsql.username,  config.postsql.password, config.postsql.dbType);
 

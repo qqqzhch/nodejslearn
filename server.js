@@ -2,7 +2,7 @@
  //  OpenShift sample Node application
 var express = require('express');
 var fs = require('fs');
-var env = process.env.OPENSHIFT_MONGODB_DB_URL ? 'production' : 'development',
+var env = process.env.NODE_ENV,
     config = require('./config/config')[env];
 
 // var mongoose = require('mongoose');
@@ -37,8 +37,8 @@ var SampleApp = function() {
 
         console.log('***********');
 
-        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-        self.port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+        self.ipaddress = 'localhost';
+        self.port = 80;
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
