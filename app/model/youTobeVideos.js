@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var env = process.env.NODE_ENV,
     config = require('../../config/config')[env]
-var sequelize = new Sequelize(config.postsql.dbname, config.postsql.username, config.postsql.password, config.postsql.dbType);
+var sequelize = require('./database');
 
 // qitem.repo_full_name: aitem.full_name;
 // qitem.repo_language: aitem.language;

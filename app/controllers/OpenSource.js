@@ -1,5 +1,6 @@
 var gitRepoSql = require('../model/gitRepo');
 var MarkdownIt = require('markdown-it');
+var pagerCom = require('./pager');
 
 exports.index = function(req, res) {
     var index = req.params.pager || 1;
@@ -8,23 +9,12 @@ exports.index = function(req, res) {
     gitRepoSql
         .getReposPager(index - 1, 30)
         .then(function(data) {
-
-            var allNum = data.count;
-            var allpager = allNum % 30 == 0 ? (allNum / 30) : ((allNum - allNum % 30)/30 + 1);
-            if(index>1){
+          if(index>1){
                 res.locals.seo.title="page "+index+" of  "+res.locals.seo.title
             }
-            
-
+            pagerCom.getPager(res,data,index,'/opensource/')
             res.locals.respList = data;
-            res.locals.pager = {
-                start: ((index - 5) < 0 ? 1 : (index - 5)),
-                end: ((index + 5) > allpager ? allpager : (index + 5)),
-                now: index,
-                allitems: allNum,
-                pagerUrl:'/opensource/'
-            }
-            console.log(res.locals.pager);
+
             res.render('OpenSource_Index');
 
         }, function(err) {

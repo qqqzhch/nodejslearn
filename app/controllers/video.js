@@ -2,6 +2,7 @@ var gitRepoSql = require('../model/gitRepo');
 var async = require('async');
 var friendlyUrl = require('friendly-url');
 var youtobeVideoSql = require('../model/youTobeVideos');
+var pagerCom = require('./pager');
 
 exports.list = function(req, res) {
     var ower = req.params.ower;
@@ -28,19 +29,8 @@ exports.list = function(req, res) {
             youtobeVideoSql
                 .getVideosPager(full_name, index - 1, 30)
                 .then(function(data) {
-                    var allNum = data.count;
-                   var allpager = allNum % 30 == 0 ? (allNum / 30) : ((allNum - allNum % 30)/30 + 1);
-
                     res.locals.youtobeVideoList = data;
-                    console.log(data);
-                    res.locals.pager = {
-                        start: ((index - 5) < 0 ? 1 : (index - 5)),
-                        end: ((index + 5) > allpager ? allpager : (index + 5)),
-                        now: index,
-                        allitems: allNum,
-                       pagerUrl:'/opensource/' + ower + "/" + repo + '/video/'
-                    }
-
+                    pagerCom.getPager(res,data,index,'/opensource/' + ower + "/" + repo + '/video/');
                     callback()
                 }, function(e) {
                     console.log(e);

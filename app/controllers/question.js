@@ -3,6 +3,8 @@ var gitRepoSql = require('../model/gitRepo');
 var stackAnswerSql = require('../model/stackAnswer');
 var async = require('async');
 var friendlyUrl = require('friendly-url');
+var pagerCom = require('./pager');
+
 exports.list = function(req, res) {
     var ower = req.params.ower;
     var repo = req.params.repo;
@@ -31,21 +33,9 @@ exports.list = function(req, res) {
             stackQuestionSql
                 .getQuesionPager(full_name, index - 1, 30)
                 .then(function(data) {
-                    var allNum = data.count;
-                    var allpager = allNum % 30 == 0 ? (allNum / 30) : ((allNum - allNum % 30)/30 + 1);
-
-                    res.locals.QuestionList = data;
-               
-                    res.locals.pager = {
-                        start: ((index - 5) < 0 ? 1 : (index - 5)),
-                        end: ((index + 5) > allpager ? allpager : (index + 5)),
-                        now: index,
-                        allitems: allNum,
-                        pagerUrl:'/opensource/' + ower + "/" + repo + '/question/'
-                    }
-                   console.log(res.locals.pager);
-
-                    callback()
+                res.locals.QuestionList = data;
+                pagerCom.getPager(res,data,index,'/opensource/' + ower + "/" + repo + '/question/')
+                callback()
                 }, function(e) {
                     callback(e)
                 })
