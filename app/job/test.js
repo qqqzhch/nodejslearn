@@ -8,7 +8,7 @@ var youSearchHistrySql = require('../model/youSearchHistry')
 var requrstMock = require('./requrstMock');
 var _ = require('underscore');
 var Base64 = require('./base64.js').Base64;
-
+var youtubeApi = require('../dataApi/youtube');
     console.log('读取repos');
     // gitRepoSql
     //     .findAll({
@@ -22,5 +22,10 @@ var Base64 = require('./base64.js').Base64;
     //         callbaack(null, result)
     //     });
 
-var readme=require('./gitReadme')
-readme.run();
+// var readme=require('./gitReadme')
+// readme.run();
+console.log('888')
+    youtubeApi.search('typeahead.js    JavaScript', 1, function (dd) {
+        console.log('****')
+        console.log(dd)
+    })

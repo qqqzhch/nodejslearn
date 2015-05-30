@@ -14,7 +14,7 @@ exports.search = function(q,inxex,callbaack) {
         type: 'video',
         maxResults:[start,end],
         // videoCategoryId:'26,22,27',
-        order:'rating'
+        order:'relevance'
     }
     if(q.indexOf('  ')<2){
         objPra.videoCategoryId='26,22,27'
