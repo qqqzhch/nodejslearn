@@ -10,6 +10,7 @@ module.exports = function(app, config) {
     //app.get('/',home.index );
 
     app.get('/', home.index);
+    app.get('/404', home.index);
     app.get('/error', home.error);
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
@@ -34,7 +35,7 @@ module.exports = function(app, config) {
     app.get('/youtube/videos', home.videos);
     app.get('*', function(req, res) {
         res.writeHead(301, {
-            'Location': '/'
+            'Location': '/404'
         });
         res.end();
     });
