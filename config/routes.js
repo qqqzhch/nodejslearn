@@ -33,7 +33,7 @@ module.exports = function(app, config) {
     app.get('/youtube/search', home.search);
     app.get('/youtube/videos', home.videos);
     app.get('*', function(req, res) {
-        res.writeHead(302, {
+        res.writeHead(301, {
             'Location': '/'
         });
         res.end();
