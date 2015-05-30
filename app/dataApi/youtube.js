@@ -14,7 +14,7 @@ exports.search = function(q,inxex,callbaack) {
         q: q,
         type: 'video',
         maxResults:[start,end],
-        videoCategoryId:'26,22,27',
+        // videoCategoryId:'26,22,27',
         order:'rating'
 
 

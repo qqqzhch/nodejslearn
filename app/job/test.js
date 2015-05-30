@@ -10,14 +10,17 @@ var _ = require('underscore');
 var Base64 = require('./base64.js').Base64;
 
     console.log('读取repos');
-    gitRepoSql
-        .findAll({
-            offset: 0,
-            limit: 50,
-            order: '"createdAt" ASC',
-            where :["viedo_num is NULL"]
-        })
-        .then(function(result) {
+    // gitRepoSql
+    //     .findAll({
+    //         offset: 0,
+    //         limit: 50,
+    //         order: '"createdAt" ASC',
+    //         where :["viedo_num is NULL"]
+    //     })
+    //     .then(function(result) {
 
-            callbaack(null, result)
-        });
+    //         callbaack(null, result)
+    //     });
+
+var readme=require('./gitReadme')
+readme.run();

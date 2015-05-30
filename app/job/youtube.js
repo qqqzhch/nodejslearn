@@ -34,6 +34,9 @@ function getYoutubeSearch(list, callbaack) {
         if(aitem.search_name){
             nameForSearch=aitem.search_name;
         }
+        if(aitem.language){
+         nameForSearch+="    "  + aitem.language
+        }
         requrstMock.getYoutubeSearch(nameForSearch, searchPage, function(error, response, body) {
             if (body.items) {
                 async.each(body.items, function(qitem, itemCallback) {

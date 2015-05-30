@@ -4,10 +4,10 @@ console.log('kaishi');
 console.log(process.env.NODE_ENV);
 var github = require('./github');
 // github.run()
-new CronJob('*4 * * * *', function() {
-    console.log('4min  search github');
-    // github.run()
-}, null, true, "America/Los_Angeles");
+// new CronJob('*4 * * * *', function() {
+//     console.log('4min  search github');
+//     // github.run()
+// }, null, true, "America/Los_Angeles");
 
 
 new CronJob('*3 * * * *', function() {
@@ -15,10 +15,10 @@ new CronJob('*3 * * * *', function() {
     require('./youtube').run()
 }, null, true, "America/Los_Angeles");
 
-new CronJob('*3 * * * *', function() {
-    console.log('2min  search stackSearch');
-    require('./stackSearch').run()
-}, null, true, "America/Los_Angeles");
+// new CronJob('*3 * * * *', function() {
+//     console.log('2min  search stackSearch');
+//     require('./stackSearch').run()
+// }, null, true, "America/Los_Angeles");
 
 
 new CronJob('*3 * * * *', function() {
@@ -26,8 +26,13 @@ new CronJob('*3 * * * *', function() {
     require('./youtubeVideo').run()
 }, null, true, "America/Los_Angeles");
 
+// new CronJob('*2 * * * *', function() {
+//     console.log('2min  search stackAnswer');
+//     require('./stackAnswer').run()
+// }, null, true, "America/Los_Angeles");
+
 new CronJob('*2 * * * *', function() {
     console.log('2min  search stackAnswer');
-    require('./stackAnswer').run()
+    require('./gitReadme').run()
 }, null, true, "America/Los_Angeles");
 console.log('kaishiend');

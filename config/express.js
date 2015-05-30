@@ -42,7 +42,7 @@ module.exports = function(app, config) {
     require('./routes')(app, config);
     
     app.configure("development", function() {
-        console.log('开始模式');
+        console.log('开fa模式');
         app.engine("dot", doT.init({options:{templateSettings:{cache:false}}}).__express);
         app.use(express.errorHandler());
     });
