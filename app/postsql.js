@@ -24,15 +24,15 @@ stackQuestion.sync({
 stackAnswer.sync({
     force: false
 })
-gitRepoHistry.sync({
+
+youSearchHistry.sync({
     force: false
 })
 
-
-youSearchHistry.sync({
-    force: true
+youTobeVideos.sync({
+    force: false
 })
 
-youTobeVideos.sync({
+gitRepoHistry.sync({
     force: true
 })
