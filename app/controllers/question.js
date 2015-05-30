@@ -10,11 +10,12 @@ exports.list = function(req, res) {
     var repo = req.params.repo;
     var full_name = ower + "/" + repo;
     var index = req.params.pager || 1;
+    if(index<1){index=1}
     var questionBaseUrl = '/opensource/' + ower + "/" + repo + '/q/';
 
     res.locals.questionBaseUrl = questionBaseUrl;
     res.locals.friendlyUrl = friendlyUrl;
-    res.locals.seo.title="open source project "+ repo +" related issues"
+    res.locals.seo.title = "open source project " + repo + " related issues"
 
     ///
     async.parallel([
@@ -33,9 +34,9 @@ exports.list = function(req, res) {
             stackQuestionSql
                 .getQuesionPager(full_name, index - 1, 30)
                 .then(function(data) {
-                res.locals.QuestionList = data;
-                pagerCom.getPager(res,data,index,'/opensource/' + ower + "/" + repo + '/question/')
-                callback()
+                    res.locals.QuestionList = data;
+                    pagerCom.getPager(res, data, index, '/opensource/' + ower + "/" + repo + '/question/')
+                    callback()
                 }, function(e) {
                     callback(e)
                 })
@@ -83,13 +84,14 @@ exports.info = function(req, res) {
                     callback(e)
                 })
 
-        },function(callback){
+        },
+        function(callback) {
             stackAnswerSql.
             getAnswersByQuestion(id_question)
-            .then(function(data){
-            res.locals.Answers = data;     
-            callback()
-            }, function(e){
+                .then(function(data) {
+                    res.locals.Answers = data;
+                    callback()
+                }, function(e) {
                     callback(e)
                 })
 
@@ -99,14 +101,14 @@ exports.info = function(req, res) {
             res.render('error');
         } else {
             var keywords;
-            if(res.locals.questionInfo.tags){
-                 keywords=res.locals.questionInfo.tags.join(',');
+            if (res.locals.questionInfo.tags) {
+                keywords = res.locals.questionInfo.tags.join(',');
             }
-      res.locals.seo={
-                   title:res.locals.questionInfo.title,
-                    keywords:res.locals.questionInfo.tags.join(','),
-                    description:''
-        }
+            res.locals.seo = {
+                title: res.locals.questionInfo.title,
+                keywords: res.locals.questionInfo.tags.join(','),
+                description: ''
+            }
             res.render('OpenSource_questionInfo')
 
         }

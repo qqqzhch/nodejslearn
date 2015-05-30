@@ -9,6 +9,7 @@ exports.list = function(req, res) {
     var repo = req.params.repo;
     var full_name = ower + "/" + repo;
     var index = req.params.pager || 1;
+    if(index<1){index=1}
     var videoBaseUrl = '/opensource/' + ower + "/" + repo + '/v/';
     res.locals.videoBaseUrl = videoBaseUrl;
     res.locals.friendlyUrl = friendlyUrl;
