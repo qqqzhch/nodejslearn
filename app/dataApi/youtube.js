@@ -8,17 +8,19 @@ Youtube.authenticate({
 exports.search = function(q,inxex,callbaack) {
     var start=0+50*inxex;
     var end=50+50*inxex;
-    
-    Youtube.search.list({
+    var objPra={
         part: 'snippet,id',
         q: q,
         type: 'video',
         maxResults:[start,end],
         // videoCategoryId:'26,22,27',
         order:'rating'
-
-
-    }, function(err, data) {
+    }
+    if(q.indexOf('  ')<2){
+        objPra.videoCategoryId='26,22,27'
+    }
+    
+    Youtube.search.list(objPra, function(err, data) {
       callbaack(err, data,data)
 
     });

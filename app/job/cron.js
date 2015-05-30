@@ -32,7 +32,7 @@ new CronJob('*3 * * * *', function() {
 // }, null, true, "America/Los_Angeles");
 
 new CronJob('*2 * * * *', function() {
-    console.log('2min  search stackAnswer');
+    console.log('2min  search gitReadme');
     require('./gitReadme').run()
 }, null, true, "America/Los_Angeles");
 console.log('kaishiend');

@@ -13,13 +13,7 @@ var stackSearchHistry=require('./model/stackSearchHistry');
 gitRepo.sync({
     force: false
 })
-youSearchHistry.sync({
-    force: false
-})
 
-youTobeVideos.sync({
-    force: false
-})
 stackSearchHistry.sync({
     force: false
 })
@@ -32,4 +26,13 @@ stackAnswer.sync({
 })
 gitRepoHistry.sync({
     force: false
+})
+
+
+youSearchHistry.sync({
+    force: true
+})
+
+youTobeVideos.sync({
+    force: true
 })

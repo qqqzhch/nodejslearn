@@ -29,7 +29,7 @@ function getresplist(callbaack) {
 function getYoutubeSearch(list, callbaack) {
 
     async.map(list, function(aitem, callback) {
-        console.log('采集视频' + aitem.name);
+        
         var nameForSearch=aitem.name;
         if(aitem.search_name){
             nameForSearch=aitem.search_name;
@@ -37,6 +37,7 @@ function getYoutubeSearch(list, callbaack) {
         if(aitem.language){
          nameForSearch+="    "  + aitem.language
         }
+        console.log('采集视频' + nameForSearch);
         requrstMock.getYoutubeSearch(nameForSearch, searchPage, function(error, response, body) {
             if (body.items) {
                 async.each(body.items, function(qitem, itemCallback) {

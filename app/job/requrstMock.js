@@ -24,10 +24,10 @@ function tryReq() {
 module.exports.getgithubrepos = function(q, pageindex, callbaack) {
     if (env == 'development') {
         //请求代理站点
-        gitHubApi.repos(q, pageindex, callbaack)
-        return;
-        // var req = new tryReq();
-        // req('http://test.unknownerror.org/github/repos/?q=' + q + "&page=" + pageindex, callbaack)
+        // gitHubApi.repos(q, pageindex, callbaack)
+        // return;
+        var req = new tryReq();
+        req('http://test.unknownerror.org/github/repos/?q=' + q + "&page=" + pageindex, callbaack)
     } else {
         gitHubApi.repos(q, pageindex, callbaack)
     }
@@ -36,10 +36,10 @@ module.exports.getgithubrepos = function(q, pageindex, callbaack) {
 module.exports.getgithubReadMe = function(user, repo, callbaack) {
     if (env == 'development') {
         //请求代理站点
-        gitHubApi.getReadme(user, repo, callbaack)
-        return;
-        // var req = new tryReq();
-        // req('http://test.unknownerror.org/github/getReadme?user=' + user + '&repo=' + repo, callbaack)
+        // gitHubApi.getReadme(user, repo, callbaack)
+        // return;
+        var req = new tryReq();
+        req('http://test.unknownerror.org/github/getReadme?user=' + user + '&repo=' + repo, callbaack)
     } else {
         gitHubApi.getReadme(user, repo, callbaack)
     }
