@@ -43,7 +43,7 @@ var gitRepo = sequelize.define('gitRepo', {
                 .findAndCountAll({
                     attributes: ['name', 'full_name', 'owner', 'description', 'stargazers_count'],
                     where: {
-                        $and: [{
+                        $or: [{
                             question_num: {
                                 $gt: 0
                             }

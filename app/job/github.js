@@ -16,8 +16,8 @@ function setUp(callbaack) {
     searchPage = 1;
     gitRepoHistrySql
     .max('pagenum').then(function(item){
-        if(searchPage>1000){
-            callbaack('已经采集了1000个项目了，暂时不采集了', 'stars:>1', searchPage)
+        if(searchPage>35){
+            callbaack('已经采集了1000个项目了，暂时不采集了', 'forks:>100', searchPage)
             return;
         }
         if(item){
@@ -25,7 +25,7 @@ function setUp(callbaack) {
             console.log('采集第'+searchPage+"页");
         }
         
-        callbaack(null, 'stars:>1', searchPage)
+        callbaack(null, 'forks:>100', searchPage)
     })
     
 }
@@ -133,7 +133,7 @@ module.exports .run=function () {
         setUp,
         getgithubrepos,
         storeReopData,
-        getReadmeData
+        // getReadmeData
         // parallelPartForList,
 
     ],
