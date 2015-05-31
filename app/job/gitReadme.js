@@ -34,7 +34,12 @@ function getresplist(callbaack) {
 function getgitreadme(aitem, callbaack) {
 
     requrstMock.getgithubReadMe(aitem.owner.login, aitem.name, function(error, response, body) {
-   
+     if(error){
+
+        
+        updateReadmeData(body, aitem.full_name, callbaack);
+        return ;
+     }
 
         if (body) {
             body.repo = {
@@ -78,6 +83,24 @@ function storeReadmeData(item, full_name, callbaack) {
             project[0].updateAttributes({
                 readme_content: item.content,
                 readme_encoding: item.encoding
+            })
+            callbaack(null)
+
+        })
+
+}
+function updateReadmeData(item, full_name, callbaack) {
+    console.log('存redeme');
+    gitRepoSql
+        .findOrCreate({
+            where: {
+                full_name: full_name
+            }
+        }).then(function(project) {
+             
+            project[0].updateAttributes({
+                readme_content: '',
+                readme_encoding: ''
             })
             callbaack(null)
 
