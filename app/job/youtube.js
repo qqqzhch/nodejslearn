@@ -16,7 +16,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 10,
+            limit: 2,
             order: '"createdAt" ASC',
             where :["viedo_num is NULL"]
         })

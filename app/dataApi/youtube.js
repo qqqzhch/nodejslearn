@@ -12,7 +12,7 @@ exports.search = function(q,inxex,callbaack) {
         part: 'snippet,id',
         q: q,
         type: 'video',
-        maxResults:[start,end],
+        maxResults:50,
         // videoCategoryId:'26,22,27',
         order:'relevance'
     }
