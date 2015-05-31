@@ -35,8 +35,6 @@ function getgitreadme(aitem, callbaack) {
 
     requrstMock.getgithubReadMe(aitem.owner.login, aitem.name, function(error, response, body) {
      if(error){
-
-        
         updateReadmeData(body, aitem.full_name, callbaack);
         return ;
      }

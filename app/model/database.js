@@ -4,7 +4,9 @@ var env = process.env.NODE_ENV,
 module.exports = new Sequelize(
 	config.postsql.dbname,
 	config.postsql.username,
-	config.postsql.password, {
+	config.postsql.password,
+	logging: false,
+	 {
 		host: config.postsql.dbType.host,
 		dialect: config.postsql.dbType.dialect,
 		pool: {
