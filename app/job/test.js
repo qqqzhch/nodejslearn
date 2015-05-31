@@ -24,10 +24,10 @@ var youtubeApi = require('../dataApi/youtube');
 
 // var readme=require('./gitReadme')
 // readme.run();
-console.log('888')
-    youtubeApi.search('typeahead.js    JavaScript', 1, function (dd) {
-        console.log('****')
-        console.log(dd)
-    })
+// console.log('888')
+//     youtubeApi.search('typeahead.js    JavaScript', 1, function (dd) {
+//         console.log('****')
+//         console.log(dd)
+//     })
 
     

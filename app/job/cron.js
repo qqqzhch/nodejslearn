@@ -10,7 +10,7 @@ new CronJob('*4 * * * *', function() {
 }, null, true, "America/Los_Angeles");
 
 
-new CronJob('*2 * * * *', function() {
+new CronJob('*1 * * * *', function() {
     console.log('2min  search youtube');
     require('./youtube').run()
 }, null, true, "America/Los_Angeles");

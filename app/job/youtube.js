@@ -37,6 +37,9 @@ function getYoutubeSearch(list, callbaack) {
         if(aitem.language){
          nameForSearch+="    "  + aitem.language 
         }
+        if(aitem.language==nameForSearch){
+         nameForSearch+="    "+ aitem.owner.login   
+        }
         console.log('采集视频' + nameForSearch);
         requrstMock.getYoutubeSearch(nameForSearch, searchPage, function(error, response, body) {
             if (body.items) {
