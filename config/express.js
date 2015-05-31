@@ -1,6 +1,7 @@
 var express = require('express');
 // load express doT
 var doT = require('dot-emc');
+// var errorHandler = require('express-async-error').Handler
 
 // var errorhandler = require('errorhandler')
 
@@ -17,6 +18,7 @@ module.exports = function(app, config) {
     app.engine("html", doT.init({
         fileExtension: "html"
     }).__express);
+
     app.use(express.favicon());
     app.use(express.logger('dev'));
     app.use(express.bodyParser());
@@ -26,26 +28,32 @@ module.exports = function(app, config) {
         secret: 'unknownerror.org'
     }));
 
-    app.use(function (req,res,next) {
-        // res.locals.seo={
-        //     title:'unknownerror-collect relevant information about open source projects, for you!',
-        //     keywords:'unknownerror',
-        //     description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
-        // }
-        res.locals.seo={
-            title:'',
-            keywords:'',
-            description:''
+    app.use(function(req, res, next) {
+        res.locals.seo = {
+            title: '',
+            keywords: '',
+            description: ''
         }
         next()
     });
-    require('./routes')(app, config);
-    
+
+
     app.configure("development", function() {
         console.log('开fa模式');
-        app.engine("dot", doT.init({options:{templateSettings:{cache:false}}}).__express);
+        app.engine("dot", doT.init({
+            options: {
+                templateSettings: {
+                    cache: false
+                }
+            }
+        }).__express);
         app.use(express.errorHandler());
     });
+
+    require('./routes')(app, config);
+
+
+
 
     // app.configure('development', function() {
     //     app.use(express.errorHandler());

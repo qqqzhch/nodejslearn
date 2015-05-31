@@ -10,8 +10,9 @@ module.exports = function(app, config) {
     //app.get('/',home.index );
 
     app.get('/', home.index);
-    app.get('/404', home.index);
+    app.get('/404', home.http404);
     app.get('/error', home.error);
+    app.get('/errortest', home.errortest);
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
 

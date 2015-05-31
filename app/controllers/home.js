@@ -67,6 +67,28 @@ exports.index = function(req, res) {
         dev: process.env
     });
 }
+exports.http404 = function(req, res) {
+    console.log('首页');
+            res.locals.seo={
+            title:'unknownerror-collect relevant information about open source projects, for you!',
+            keywords:'unknownerror',
+            description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+        }
+    res.statusCode = 404;
+    res.render('404');
+}
+exports.errortest = function(req, res) {
+    console.log('首页');
+            res.locals.seo={
+            title:'unknownerror-collect relevant information about open source projects, for you!',
+            keywords:'unknownerror',
+            description:'Pay attention to open source projects, collect relevant information about open source projects, for you!'
+        }
+    res.statusCode = 404;
+    res.render('errortest');
+}
+
+
 exports.info = function(req, res) {
     console.log('首页');
     res.render('info', {

@@ -162,6 +162,10 @@ var SampleApp = function() {
 /**
  *  main():  Main code.
  */
+
+//  process.on('uncaughtException', function(err) {
+//         console.log(err);
+// });
 var zapp = new SampleApp();
 zapp.initialize();
 
