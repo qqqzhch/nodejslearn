@@ -110,6 +110,12 @@ exports.error = function(req, res) {
         dev: process.env
     });
 }
+exports.robots = function(req, res) {
+    console.log('errorerrorerrorerrorerrorerrorerrorerrorerror');
+    res.render('robots');
+}
+
+
 
 exports.repos = function(req, res) {
     console.log('测试');

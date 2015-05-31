@@ -8,7 +8,11 @@ var gitRepo = sequelize.define('gitRepoHistry', {
         type:  Sequelize.BIGINT,
         primaryKey: true
     },
-    "error": Sequelize.TEXT,
+    "language": {
+        type:  Sequelize.STRING(50),
+        primaryKey: true
+    },
+    "error": Sequelize.TEXT
     
 }, {
     // freezeTableName: true, // Model tableName will be the same as the model name

@@ -15,6 +15,8 @@ module.exports = function(app, config) {
     app.get('/errortest', home.errortest);
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
+    app.get('/robots.txt', home.robots);
+    
 
 
     app.get('/opensource/:pager(\\d+)?', OpenSource.index);
