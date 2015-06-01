@@ -41,6 +41,7 @@ function getyoutubeVideoListByGroup(ids, list, callbaack) {
 
         // console.log(body.content)
         // aitem.__readme = body;
+        console.log(error)
         if(error){
             callbaack(error, []);
         }else{
