@@ -34,5 +34,5 @@ youTobeVideos.sync({
 })
 
 gitRepoHistry.sync({
-    force: true
+    force: false
 })

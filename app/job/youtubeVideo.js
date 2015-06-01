@@ -41,11 +41,16 @@ function getyoutubeVideoListByGroup(ids, list, callbaack) {
 
         // console.log(body.content)
         // aitem.__readme = body;
-        if (body.items) {
-            callbaack(error, body.items);
-        } else {
+        if(error){
             callbaack(error, []);
+        }else{
+            if (body&&body.items) {
+                callbaack(error, body.items);
+            }   else{
+                callbaack(error, []);
+            } 
         }
+        
     })
 
 }

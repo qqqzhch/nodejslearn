@@ -3,10 +3,10 @@ console.log('kaishi');
 
 console.log(process.env.NODE_ENV);
 var github = require('./github');
-github.run()
+//github.run()
 new CronJob('*4 * * * *', function() {
     console.log('4min  search github');
-    github.run()
+    //github.run()
 }, null, true, "America/Los_Angeles");
 
 
@@ -31,8 +31,8 @@ new CronJob('*2 * * * *', function() {
     require('./stackAnswer').run()
 }, null, true, "America/Los_Angeles");
 
-new CronJob('*2 * * * *', function() {
-    console.log('2min  search gitReadme');
+new CronJob('*1 * * * *', function() {
+    console.log('1min  search gitReadme');
     require('./gitReadme').run()
 }, null, true, "America/Los_Angeles");
 
