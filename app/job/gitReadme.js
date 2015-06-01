@@ -17,7 +17,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 2,
+            limit: 10,
             order: '"createdAt" ASC',
             where: ["readme_content is NULL"]
         })
