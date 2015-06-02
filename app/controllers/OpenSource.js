@@ -1,5 +1,5 @@
 var gitRepoSql = require('../model/gitRepo');
-var MarkdownIt = require('markdown-it');
+var markdown = require('markdown-it')();
 var pagerCom = require('./pager');
 
 exports.index = function(req, res) {
@@ -44,9 +44,9 @@ exports.repo = function(req, res) {
             .then(function(data) {
 
                 res.locals.description = data.description;
-                var md = new MarkdownIt();
+                
                 try {
-                    data.readme_content = md.render(data.readme_content);
+                    data.readme_content = markdown.render(data.readme_content);
                 } catch (e) {
 
                 }

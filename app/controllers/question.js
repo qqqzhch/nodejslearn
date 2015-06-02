@@ -109,6 +109,7 @@ exports.info = function(req, res) {
                 keywords: res.locals.questionInfo.tags.join(','),
                 description: ''
             }
+
             res.render('OpenSource_questionInfo')
 
         }
