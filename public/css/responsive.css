@@ -125,10 +125,10 @@
         border-left: none;
     }
     .pagination li {
-        display: none;
+        /*display: none;*/
     }
     .pagination li.prev,.pagination li.next,.pagination li.active {
-        display: inline-block;
+        /*display: inline-block;*/
     }
     #carousel-recommend-event {
         height: auto;
