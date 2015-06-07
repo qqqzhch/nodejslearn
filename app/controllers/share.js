@@ -8,25 +8,36 @@ var forHtml = require('./forHtml');
 var getUid = require('./getUid');
 
 exports.code = function(req, res) {
-	var userCookieID = req.cookies.get('userCookieID')
+	var userCookieID = req.cookies.get('userCookieID');
 	var date = new Date();
 	var expireDays = 10;
-	var uid='';
+	var uid = '';
+	var urlId = req.query['id'];
+	console.log('urlId:' + urlId);
 	if (userCookieID == '' || userCookieID == undefined) {
-		uid=getUid.getid();
+		if (urlId == "" || urlId == undefined) {
+			uid = getUid.getid();
+		} else {
+			uid = urlId;
+		}
+
 		req.cookies.set('userCookieID', uid, {
 			expires: date.getTime() + expireDays * 24 * 3600 * 1000,
 			'maxAge': expireDays * 24 * 3600
 		})
 	} else {
-	            uid=userCookieID
+		uid = userCookieID
 		console.log('cookie cun zai ')
 	}
-	 res.locals.uid=uid;
+	res.locals.uid = uid;
 	//res.cookies.set
 	res.locals.seo.title = 'share code to twitter,facebook as a img .markdown supported';
+	if (urlId == "" || urlId == undefined) {
+		res.redirect("/sharecode?id=" + uid);
+	} else {
+		res.render('share_code');
+	}
 
-	res.render('share_code');
 }
 
 var options = {
@@ -67,15 +78,15 @@ exports.codeToimg = function(req, res) {
 		height = 1000;
 	}
 	var userCookieID = req.cookies.get('userCookieID')
-	if(userCookieID==""||userCookieID==undefined){
+	if (userCookieID == "" || userCookieID == undefined) {
 		res.send('not find userCookieID in cookie');
-		return ;
+		return;
 	}
 	var html = markdown.render(codeMark);
 	html = forHtml.tpl({
 		html: html
 	})
-	var filepath = 'public/webshot/'+userCookieID+'.png';
+	var filepath = 'public/webshot/' + userCookieID + '.png';
 	options.screenSize.height = height;
 	options.windowSize.height = height;
 	res.locals.seo.title = 'share code to twitter,facebook as a img .markdown supported';
