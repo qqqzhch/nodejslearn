@@ -1,5 +1,7 @@
 var gitRepoSql = require('../model/gitRepo');
-var markdown = require('markdown-it')();
+var markdown = require('markdown-it')({  html: true,
+  linkify: true,
+  typographer: true});
 var pagerCom = require('./pager');
 
 exports.index = function(req, res) {

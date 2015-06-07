@@ -2,6 +2,8 @@ var express = require('express');
 // load express doT
 var doT = require('dot');
 var fs = require('fs'); // this engine requires the fs module
+var bodyParser = require('body-parser');
+var Cookies = require( "cookies" )
 // var errorHandler = require('express-async-error').Handler
 
 // var errorhandler = require('errorhandler')
@@ -12,6 +14,7 @@ var fs = require('fs'); // this engine requires the fs module
 //     , destination: config.root + "/app/render/"
 //     , path: (config.root + '/app/views')
 // });
+var env = process.env.NODE_ENV;
 var cacheFile={}
 module.exports = function(app, config) {
     //app.set('views', __dirname + '/views');
@@ -28,7 +31,7 @@ module.exports = function(app, config) {
     app.engine("html", function(filePath, options, callback) {
         var resultText ;
         var tempFn;
-        if(cacheFile[filePath]){
+        if(cacheFile[filePath]&&env=="production" ){
             tempFn=cacheFile[filePath];
             resultText = tempFn(options);
             
@@ -55,7 +58,11 @@ app.use(require('express-bunyan-logger')({
 }));
     // app.use(express.favicon());
     // app.use(express.logger('dev'));
-    // app.use(express.bodyParser());
+app.use( Cookies.express( ['userCookieID'] ))
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json 
+app.use(bodyParser.json())
     // app.use(express.methodOverride());
     // app.use(express.cookieParser());
     // app.use(express.cookieSession({

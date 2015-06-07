@@ -2,12 +2,14 @@ var home = require('../app/controllers/home');
 var OpenSource = require('../app/controllers/OpenSource');
 var question = require('../app/controllers/question');
 var video = require('../app/controllers/video');
+var share = require('../app/controllers/share');
 
 
 
 module.exports = function(app, config) {
     console.log('luyou');
     //app.get('/',home.index );
+    app.get('/codeshow',share.codetpl)
 
     app.get('/', home.index);
     app.get('/404', home.http404);
@@ -16,6 +18,9 @@ module.exports = function(app, config) {
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
     app.get('/robots.txt', home.robots);
+    app.get('/sharecode',share.code)
+    app.post('/sharecodeToimg',share.codeToimg)
+
     
 
 
@@ -28,14 +33,14 @@ module.exports = function(app, config) {
 
 
 
-    app.get('/github/repos', home.repos);
-    app.get('/github/getReadme', home.getReadme);
-    app.get('/github/getConent', home.getConent);
-    app.get('/stack/getSearch', home.getSearch);
-    app.get('/stack/getQuestionsInfo', home.getQuestionsInfo);
-    app.get('/stack/getAnswersnfo', home.getAnswersnfo);
-    app.get('/youtube/search', home.search);
-    app.get('/youtube/videos', home.videos);
+    // app.get('/github/repos', home.repos);
+    // app.get('/github/getReadme', home.getReadme);
+    // app.get('/github/getConent', home.getConent);
+    // app.get('/stack/getSearch', home.getSearch);
+    // app.get('/stack/getQuestionsInfo', home.getQuestionsInfo);
+    // app.get('/stack/getAnswersnfo', home.getAnswersnfo);
+    // app.get('/youtube/search', home.search);
+    // app.get('/youtube/videos', home.videos);
     app.get('*', function(req, res) {
         res.writeHead(301, {
             'Location': '/404'
