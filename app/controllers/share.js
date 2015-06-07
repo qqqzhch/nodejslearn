@@ -12,15 +12,10 @@ exports.code = function(req, res) {
 	var date = new Date();
 	var expireDays = 10;
 	var uid = '';
-	var urlId = req.query['id'];
-	console.log('urlId:' + urlId);
+	// var urlId = req.query['id'];
+	// console.log('urlId:' + urlId);
 	if (userCookieID == '' || userCookieID == undefined) {
-		if (urlId == "" || urlId == undefined) {
-			uid = getUid.getid();
-		} else {
-			uid = urlId;
-		}
-
+		uid = getUid.getid();
 		req.cookies.set('userCookieID', uid, {
 			expires: date.getTime() + expireDays * 24 * 3600 * 1000,
 			'maxAge': expireDays * 24 * 3600
@@ -32,11 +27,9 @@ exports.code = function(req, res) {
 	res.locals.uid = uid;
 	//res.cookies.set
 	res.locals.seo.title = 'share code to twitter,facebook as a img .markdown supported';
-	if (urlId == "" || urlId == undefined) {
-		res.redirect("/sharecode?id=" + uid);
-	} else {
-		res.render('share_code');
-	}
+	
+	res.render('share_code');
+	
 
 }
 
@@ -71,12 +64,17 @@ var options = {
 exports.codeToimg = function(req, res) {
 	var codeMark = req.param('codeMark')
 	var height = req.param('height');
-	if (height == undefined || height < 100) {
+	var height=height-0;
+	if (height == undefined || height < 150) {
 		height = 150;
+	}else{
+		height+=100;
 	}
 	if (height > 1000) {
 		height = 1000;
 	}
+	console.log(height)
+	console.log(height-0+100);
 	var userCookieID = req.cookies.get('userCookieID')
 	if (userCookieID == "" || userCookieID == undefined) {
 		res.send('not find userCookieID in cookie');

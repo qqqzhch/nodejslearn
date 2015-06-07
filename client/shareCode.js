@@ -9,8 +9,8 @@ var md = new markdown({
 $(document).ready(function(argument) {
 	$('#codesharetextarea').on('keyup', function() {
 		console.log($('#codesharetextarea').val())
-		var height=$('#resultForPreview').height() ;
-		console.log($('#resultForPreview').height() );
+		var height = $('#resultForPreview').height();
+		console.log($('#resultForPreview').height());
 
 
 		var result = md.render($('#codesharetextarea').val());
@@ -19,23 +19,29 @@ $(document).ready(function(argument) {
 
 	$('#Generated_image').on('click', function(argument) {
 		var result = md.render($('#codesharetextarea').val());
-		var height=$('#resultForPreview').height() ;
-		console.log($('#resultForPreview').height() );
-		var time=new Date();
+		var height = $('#resultForPreview').height();
+		console.log($('#resultForPreview').height());
+		var time = new Date();
 		$.ajax({
-			 type: 'POST',
-			url: "sharecodeToimg/?v="+time.getTime(),
+			type: 'POST',
+			url: "sharecodeToimg/?v=" + time.getTime(),
 			data: {
 				codeMark: result,
-				height:height
+				height: height
 			},
 			success: function(data) {
 				console.log(data);
 				$("#resultForPreview").html("<img  id='codeimg'/>");
-				$('#codeimg').attr('src',data+"?v="+time.getTime());
+				$('#codeimg').attr('src', data + "?v=" + time.getTime());
+				var a = $("<a>").attr("href", data + "?v=" + time.getTime())
+				.attr("download", "codeshare.png")
+				.appendTo("body");
+				a[0].click();
+
+				a.remove();
 			},
-			error:function  (data) {
-			  console.log(data)	
+			error: function(data) {
+				console.log(data)
 			}
 		});
 
