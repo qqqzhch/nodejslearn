@@ -3,7 +3,7 @@ var OpenSource = require('../app/controllers/OpenSource');
 var question = require('../app/controllers/question');
 var video = require('../app/controllers/video');
 var share = require('../app/controllers/share');
-
+var yanzheng = require('../app/controllers/yanzheng');
 
 
 module.exports = function(app, config) {
@@ -23,7 +23,7 @@ module.exports = function(app, config) {
 
     
 
-
+    app.get('/googled096f8f26eebd636.html',yanzheng.google)
     app.get('/opensource/:pager(\\d+)?', OpenSource.index);
     app.get('/opensource/:ower/:repo', OpenSource.repo);
     app.get('/opensource/:ower/:repo/question/:pager(\\d+)?', question.list);
