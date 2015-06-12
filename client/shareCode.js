@@ -130,7 +130,7 @@ $(document).ready(function(argument) {
  	var res=window.performance.getEntriesByType('resource');
 	for(item in res){
 	   if(res[item].initiatorType=="script"){
-	   	if(res[item].name.indexOf('tanx')>0||res[item].name.indexOf('alicnd')>0){
+	   	if(res[item].responseEnd>(window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart)){
 	   		console.log(res[item])
 	   	}
 	   	
