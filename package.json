@@ -51,7 +51,10 @@
         "jquery":"~2.1.4 ",
         "body-parser ":"~1.12.4",
         "cookies":"~0.5.0",
-        "uid":"~0.0.2"
+        "uid":"~0.0.2",
+        "aws-lib":"~0.3.0",
+        "xml2js": "0.1.x",
+        "sax": "0.1.x"
     },
     "devDependencies": {
             "duo":"~0.12.0",

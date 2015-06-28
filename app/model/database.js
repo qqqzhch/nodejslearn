@@ -8,7 +8,7 @@ module.exports = new Sequelize(
 	 {
 		host: config.postsql.dbType.host,
 		dialect: config.postsql.dbType.dialect,
-		logging: false,
+		// logging: false,
 		pool: {
 			max: 50,
 			min: 0,

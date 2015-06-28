@@ -7,32 +7,44 @@ var stackAnswer=require('./model/stackAnswer');
 var gitRepoHistry=require('./model/gitRepoHistry');
 var youSearchHistry=require('./model/youSearchHistry');
 var stackSearchHistry=require('./model/stackSearchHistry');
+var amazonBook=require('./model/amazonBook');
+var booksearchHistry=require('./model/booksearchHistry');
 
 
 
 gitRepo.sync({
     force: false
 })
-
-stackSearchHistry.sync({
-    force: false
+amazonBook.sync({
+    force: true
+})
+booksearchHistry.sync({
+    force: true
 })
 
-stackQuestion.sync({
-    force: false
-})
-stackAnswer.sync({
-    force: false
-})
+// stackSearchHistry.sync({
+//     force: false
+// })
 
-youSearchHistry.sync({
-    force: false
-})
+// stackQuestion.sync({
+//     force: false
+// })
+// stackAnswer.sync({
+//     force: false
+// })
 
-youTobeVideos.sync({
-    force: false
-})
+// youSearchHistry.sync({
+//     force: false
+// })
 
-gitRepoHistry.sync({
-    force: false
-})
+// youTobeVideos.sync({
+//     force: false
+// })
+
+// gitRepoHistry.sync({
+//     force: false
+// })
+
+// amazonBook.sync({
+//     force: true
+// })

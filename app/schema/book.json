@@ -1,0 +1,3649 @@
+{
+	"@": {
+		"xmlns": "http://webservices.amazon.com/AWSECommerceService/2011-08-01"
+	},
+	"OperationRequest": {
+		"RequestId": "6807e210-6f4d-47d5-8b41-a5733e5ca7e0",
+		"Arguments": {
+			"Argument": [{
+				"@": {
+					"Name": "SearchIndex",
+					"Value": "Books"
+				}
+			}, {
+				"@": {
+					"Name": "Keywords",
+					"Value": "java"
+				}
+			}, {
+				"@": {
+					"Name": "ResponseGroup",
+					"Value": "Medium"
+				}
+			}, {
+				"@": {
+					"Name": "Operation",
+					"Value": "ItemSearch"
+				}
+			}, {
+				"@": {
+					"Name": "Service",
+					"Value": "AWSECommerceService"
+				}
+			}, {
+				"@": {
+					"Name": "Version",
+					"Value": "2009-10-01"
+				}
+			}, {
+				"@": {
+					"Name": "AssociateTag",
+					"Value": "unknownerroro-20"
+				}
+			}, {
+				"@": {
+					"Name": "Region",
+					"Value": "US"
+				}
+			}, {
+				"@": {
+					"Name": "Timestamp",
+					"Value": "2015-06-27T02:13:45.646Z"
+				}
+			}, {
+				"@": {
+					"Name": "AWSAccessKeyId",
+					"Value": "AKIAISTUCK6M4FWOKQUQ"
+				}
+			}, {
+				"@": {
+					"Name": "Signature",
+					"Value": "Z1itxopptQTdG2oW3MuQC3DjTPUpEgBGwFitD+5rIME="
+				}
+			}]
+		},
+		"RequestProcessingTime": "0.0751110000000000"
+	},
+	"Items": {
+		"Request": {
+			"IsValid": "True",
+			"ItemSearchRequest": {
+				"Keywords": "java",
+				"ResponseGroup": "Medium",
+				"SearchIndex": "Books"
+			}
+		},
+		"TotalResults": "25399",
+		"TotalPages": "2540",
+		"MoreSearchResultsUrl": "http://www.amazon.com/gp/redirect.html?linkCode=xm2&SubscriptionId=AKIAISTUCK6M4FWOKQUQ&location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fsearch%3Fkeywords%3Djava%26url%3Dsearch-alias%253Dstripbooks&tag=unknownerroro-20&creative=386001&camp=2025",
+		"Item": [
+		{
+			"ASIN": "0071809252",
+			"DetailPageURL": "http://www.amazon.com/Java-Beginners-Guide-Herbert-Schildt/dp/0071809252%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0071809252",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Java-Beginners-Guide-Herbert-Schildt/dp/tech-data/0071809252%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0071809252%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0071809252%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0071809252%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/0071809252%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/0071809252%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/0071809252%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071809252"
+				}]
+			},
+			"SalesRank": "3553",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "61",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "130",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "406",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "89",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "130",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/513e7QBzZ%2BL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "405",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "82",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "120",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31k-lzM9DkL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "375",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "89",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "130",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51bSQY6AZhL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "406",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "Herbert Schildt",
+				"Binding": "Paperback",
+				"EAN": "9780071809252",
+				"EANList": {
+					"EANListElement": "9780071809252"
+				},
+				"Edition": "6",
+				"ISBN": "0071809252",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "730",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "261",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "130",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "Mcgraw-Hill Osborne Media",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "4000",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$40.00"
+				},
+				"Manufacturer": "Mcgraw-Hill Osborne Media",
+				"NumberOfItems": "1",
+				"NumberOfPages": "699",
+				"PackageDimensions": {
+					"Height": {
+						"#": "180",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "260",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "730",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2014-04-15",
+				"Publisher": "Mcgraw-Hill Osborne Media",
+				"Studio": "Mcgraw-Hill Osborne Media",
+				"Title": "Java: A Beginner's Guide",
+				"TradeInValue": {
+					"Amount": "999",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$9.99"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "2051",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$20.51"
+				},
+				"LowestUsedPrice": {
+					"Amount": "1577",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$15.77"
+				},
+				"TotalNew": "53",
+				"TotalUsed": "34",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<h4>Essential Java Programming Skills--Made Easy!</h4> <p>Fully updated for Java Platform, Standard Edition 8 (Java SE 8), <i>Java: A Beginner's Guide</i>, Sixth Edition gets you started programming in Java right away. Bestselling programming author Herb Schildt begins with the basics, such as how to create, compile, and run a Java program. He then moves on to the keywords, syntax, and constructs that form the core of the Java language. This Oracle Press resource also covers some of Java's more advanced features, including multithreaded programming, generics, and Swing. Of course, new Java SE 8 features such as lambda expressions and default interface methods are described. An introduction to JavaFX, Java's newest GUI, concludes this step-by-step tutorial.</p> <p><b>Designed for Easy Learning:</b> <ul> <li>Key Skills & Concepts -- Chapter-opening lists of specific skills covered in the chapter <li>Ask the Expert -- Q&A sections filled with bonus information and helpful tips <li>Try This -- Hands-on exercises that show you how to apply your skills <li>Self Tests -- End-of-chapter quizzes to reinforce your skills <li>Annotated Syntax -- Example code with commentary that describes the programming techniques being illustrated</ul></p> <p>The book's code examples are available FREE for download.</p>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "0321356683",
+			"DetailPageURL": "http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/0321356683%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0321356683",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Effective-Java-Edition-Joshua-Bloch/dp/tech-data/0321356683%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0321356683%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0321356683%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0321356683%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/0321356683%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/0321356683%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/0321356683%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0321356683"
+				}]
+			},
+			"SalesRank": "7500",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "54",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "116",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "361",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "88",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "129",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5129aLuXJYL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "402",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "54",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "54",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "79",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "116",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51poMjBx7PL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "361",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "Joshua Bloch",
+				"Binding": "Paperback",
+				"EAN": "9780321356680",
+				"EANList": {
+					"EANListElement": ["8601300201986", "9780321356680", "8580001065304"]
+				},
+				"Edition": "2",
+				"Feature": ["ISBN13: 9780321356680", "Condition: New", "Notes: BRAND NEW FROM PUBLISHER! 100% Satisfaction Guarantee. Tracking provided on most orders. Buy with Confidence! Millions of books sold!"],
+				"ISBN": "0321356683",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "730",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "170",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "110",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "Addison-Wesley",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "5499",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$54.99"
+				},
+				"Manufacturer": "Addison-Wesley",
+				"MPN": "978-0-3213-5668-0",
+				"NumberOfItems": "1",
+				"NumberOfPages": "346",
+				"PackageDimensions": {
+					"Height": {
+						"#": "102",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "913",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "176",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "732",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"PackageQuantity": "1",
+				"PartNumber": "978-0-3213-5668-0",
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2008-05-28",
+				"Publisher": "Addison-Wesley",
+				"Studio": "Addison-Wesley",
+				"Title": "Effective Java (2nd Edition)",
+				"TradeInValue": {
+					"Amount": "1523",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$15.23"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "3211",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$32.11"
+				},
+				"LowestUsedPrice": {
+					"Amount": "3065",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$30.65"
+				},
+				"TotalNew": "52",
+				"TotalUsed": "43",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<B> <P style=\"MARGIN: 0px\"> </B>Are you looking for a deeper understanding of the Java™ programming language so that you can write code that is clearer, more correct, more robust, and more reusable? Look no further! <I> <B> <I>Effective Java™, Second Edition,</I> </B> </I> brings together seventy-eight indispensable programmer’s rules of thumb: working, best-practice solutions for the programming challenges you encounter every day.</P> <P style=\"MARGIN: 0px\"> </P> <P style=\"MARGIN: 0px\">This highly anticipated new edition of the classic, Jolt Award-winning work has been thoroughly updated to cover Java SE 5 and Java SE 6 features introduced since the first edition. Bloch explores new design patterns and language idioms, showing you how to make the most of features ranging from generics to enums, annotations to autoboxing.</P> <P style=\"MARGIN: 0px\"> </P> <P style=\"MARGIN: 0px\">Each chapter in the book consists of several “items” presented in the form of a short, standalone essay that provides specific advice, insight into Java platform subtleties, and outstanding code examples. The comprehensive descriptions and explanations for each item illuminate what to do, what not to do, and why.</P> <P style=\"MARGIN: 0px\"> </P> <P style=\"MARGIN: 0px\">Highlights include: </P> <UL> <LI> <DIV style=\"MARGIN: 0px\">New coverage of generics, enums, annotations, autoboxing, the for-each loop, varargs, concurrency utilities, and much more</DIV> <LI> <DIV style=\"MARGIN: 0px\">Updated techniques and best practices on classic topics, including objects, classes, libraries, methods, and serialization</DIV> <LI> <DIV style=\"MARGIN: 0px\">How to avoid the traps and pitfalls of commonly misunderstood subtleties of the language</DIV> <LI> <DIV style=\"MARGIN: 0px\">Focus on the language and its most fundamental libraries: java.lang, java.util, and, to a lesser extent, java.util.concurrent and java.io</DIV> </LI> </UL> <P style=\"MARGIN: 0px\">Simply put, <B> <I> <B>Effective Java™, Second Edition,</B> </I> </B> presents the most practical, authoritative guidelines available for writing efficient, well-designed programs.</P>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "0596009208",
+			"DetailPageURL": "http://www.amazon.com/Head-First-Java-2nd-Edition/dp/0596009208%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0596009208",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Head-First-Java-2nd-Edition/dp/tech-data/0596009208%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0596009208%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0596009208%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0596009208%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/0596009208%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/0596009208%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/0596009208%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0596009208"
+				}]
+			},
+			"SalesRank": "2698",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "65",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "139",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "433",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "26",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "65",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "65",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "95",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "139",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51IP8YJW8zL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "433",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "26",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "65",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "65",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "95",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "139",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51a1RPCmv7L.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "433",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": ["Kathy Sierra", "Bert Bates"],
+				"Binding": "Paperback",
+				"CatalogNumberList": {
+					"CatalogNumberListElement": "AL12133143"
+				},
+				"EAN": "9780596009205",
+				"EANList": {
+					"EANListElement": "9780596009205"
+				},
+				"Edition": "2nd",
+				"IsAdultProduct": "0",
+				"ISBN": "0596009208",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "925",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "800",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "253",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "148",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "O'Reilly Media",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "4495",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$44.95"
+				},
+				"Manufacturer": "O'Reilly Media",
+				"MPN": "978-0-596-00920-5",
+				"NumberOfItems": "1",
+				"NumberOfPages": "688",
+				"PackageDimensions": {
+					"Height": {
+						"#": "140",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "920",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "290",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "790",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"PackageQuantity": "1",
+				"PartNumber": "978-0-596-00920-5",
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2005-02-19",
+				"Publisher": "O'Reilly Media",
+				"ReleaseDate": "2005-02-09",
+				"Studio": "O'Reilly Media",
+				"Title": "Head First Java, 2nd Edition",
+				"TradeInValue": {
+					"Amount": "968",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$9.68"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "2411",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$24.11"
+				},
+				"LowestUsedPrice": {
+					"Amount": "1599",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$15.99"
+				},
+				"TotalNew": "74",
+				"TotalUsed": "82",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<p>Learning a complex new language is no easy task especially when it s an object-oriented computer programming language like Java. You might think the problem is your brain. It seems to have a mind of its own, a mind that doesn't always want to take in the dry, technical stuff you're forced to study.<br /><br /> The fact is your brain craves novelty. It's constantly searching, scanning, waiting for something unusual to happen. After all, that's the way it was built to help you stay alive. It takes all the routine, ordinary, dull stuff and filters it to the background so it won't interfere with your brain's real work--recording things that matter. How does your brain know what matters? It's like the creators of the Head First approach say, suppose you're out for a hike and a tiger jumps in front of you, what happens in your brain? Neurons fire. Emotions crank up. Chemicals surge. That's how your brain knows.<br /><br /> And that's how your brain will learn Java. <em>Head First Java</em> combines puzzles, strong visuals, mysteries, and soul-searching interviews with famous Java objects to engage you in many different ways. It's fast, it's fun, and it's effective. And, despite its playful appearance, Head First Java is serious stuff: a complete introduction to object-oriented programming and Java. You'll learn everything from the fundamentals to advanced topics, including threads, network sockets, and distributed programming with RMI. And the new. second edition focuses on Java 5.0, the latest version of the Java language and development platform. Because Java 5.0 is a major update to the platform, with deep, code-level changes, even more careful study and implementation is required. So learning the Head First way is more important than ever.<br /><br /> If you've read a Head First book, you know what to expect--a visually rich format designed for the way your brain works. If you haven't, you're in for a treat. You'll see why people say it's unlike any other Java book you've ever read.<br /><br /> By exploiting how your brain works, <em>Head First Java</em> compresses the time it takes to learn and retain--complex information. Its unique approach not only shows you what you need to know about Java syntax, it teaches you to think like a Java programmer. If you want to be bored, buy some other book. But if you want to understand Java, this book's for you.</p>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "0071808558",
+			"DetailPageURL": "http://www.amazon.com/Java-The-Complete-Reference-Series/dp/0071808558%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0071808558",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Java-The-Complete-Reference-Series/dp/tech-data/0071808558%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0071808558%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0071808558%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0071808558%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/0071808558%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/0071808558%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/0071808558%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0071808558"
+				}]
+			},
+			"SalesRank": "11196",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "60",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "129",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "402",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "89",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "130",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51gSeB1u3fL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "405",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "82",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "120",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/31RJqDjnSqL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "375",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "88",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "129",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/5167DLns7pL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "402",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "Herbert Schildt",
+				"Binding": "Paperback",
+				"EAN": "9780071808552",
+				"EANList": {
+					"EANListElement": "9780071808552"
+				},
+				"Edition": "9",
+				"ISBN": "0071808558",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "730",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "414",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "170",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "Mcgraw-Hill Osborne Media",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "6000",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$60.00"
+				},
+				"Manufacturer": "Mcgraw-Hill Osborne Media",
+				"NumberOfItems": "1",
+				"NumberOfPages": "1274",
+				"PackageDimensions": {
+					"Height": {
+						"#": "190",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "410",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "720",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2014-03-11",
+				"Publisher": "Mcgraw-Hill Osborne Media",
+				"Studio": "Mcgraw-Hill Osborne Media",
+				"Title": "Java: The Complete Reference (Complete Reference Series)",
+				"TradeInValue": {
+					"Amount": "1904",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$19.04"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "3143",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$31.43"
+				},
+				"LowestUsedPrice": {
+					"Amount": "3135",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$31.35"
+				},
+				"TotalNew": "37",
+				"TotalUsed": "24",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<h4>The Definitive Java Programming Guide</h4> <p>Fully updated for Java SE 8, <i>Java: The Complete Reference</i>, Ninth Edition explains how to develop, compile, debug, and run Java programs. Bestselling programming author Herb Schildt covers the entire Java language, including its syntax, keywords, and fundamental programming principles, as well as significant portions of the Java API library. JavaBeans, servlets, applets, and Swing are examined and real-world examples demonstrate Java in action. New Java SE 8 features such as lambda expressions, the stream library, and the default interface method are discussed in detail. This Oracle Press resource also offers a solid introduction to JavaFX.</p> <p><b>Coverage includes:</b><ul> <li>Data types, variables, arrays, and operators <li>Control statements <li>Classes, objects, and methods <li>Method overloading and overriding <li>Inheritance <li>Interfaces and packages <li>Exception handling <li>Multithreaded programming <li>Enumerations, autoboxing, and annotations <li>The I/O classes <li>Generics <li>Lambda expressions <li>String handling <li>The Collections Framework <li>Networking <li>Event handling <li>AWT and Swing <li>The Concurrent API <li>The Stream API <li>Regular expressions <li>JavaFX <li>JavaBeans <li>Applets and servlets <li>Much, much more</ul></p>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "B00Y96U1D2",
+			"DetailPageURL": "http://www.amazon.com/Java-Ultimate-Beginners-Learning-Programming-ebook/dp/B00Y96U1D2%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00Y96U1D2",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Java-Ultimate-Beginners-Learning-Programming-ebook/dp/tech-data/B00Y96U1D2%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00Y96U1D2%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00Y96U1D2%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00Y96U1D2%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/B00Y96U1D2%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/B00Y96U1D2%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/B00Y96U1D2%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00Y96U1D2"
+				}]
+			},
+			"SalesRank": "9132",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "47",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "100",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "313",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "19",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "47",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "47",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "69",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "100",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51QwjuDAsTL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "313",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}
+			},
+			"ItemAttributes": {
+				"Author": "Eprogramy",
+				"Binding": "Kindle Edition",
+				"Creator": {
+					"#": "Java",
+					"@": {
+						"Role": "Editor"
+					}
+				},
+				"Format": "Kindle eBook",
+				"IsAdultProduct": "0",
+				"Languages": {
+					"Language": {
+						"Name": "English",
+						"Type": "Published"
+					}
+				},
+				"NumberOfPages": "185",
+				"ProductGroup": "eBooks",
+				"ProductTypeName": "ABIS_EBOOKS",
+				"PublicationDate": "2015-05-24",
+				"ReleaseDate": "2015-05-24",
+				"Title": "Java: Crash Course - The Ultimate Beginner's Course to Learning Java Programming in Under 12 Hours"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<h2>Are You Ready to Learn Java Programming FASTER Than You Ever Thought Possible?</h2>\r<br /><b>Welcome to the Ultimate Crash Course on Java!</b>\r<br />\r<br /><b>With Tons of Detailed Step by Step Pictures Inside!</b>\r<br />\r<br />Are you ready to unlock the keys to the future? If your answer is a resounding 'YES!', then this crash course on Java Programming is exactly what you need in your toolkit. In these days of the 3.0 era, there are essential tools that we must absolutely have at hand to solve everyday problems. And guess what? One of these skills consists of... how to use programming languages. Can you imagine what we could do if we'd knew how to write a simple instruction for our PC? What we could achieve if we could create from scratch something that'd solve problems in just seconds? That would be absolutely amazing: no limits, no boundaries, no frontiers. A whole new world of possibilities in front of us!\r<br />\r<br />Perhaps you are an amateur just getting started with Java, or maybe you already know a few things about this exciting programming language and you'd like to reach for the next level. Which one are you? Actually, it doesn't matter! This course will approach Javascript Programming from both starting points! The aim is to achieve all the necessary skills to learn how to program Java in under 12 hours. Yes, I said it! 12 hours. In less than half a day you will incorporate the ABCS of Java, and from there you'll develop the advanced techniques you need to create your own projects.\r<br />\r<br />Want to hear the best part? This is not a mere theoretical book. Not at all. In here, you'll find tons of useful exercises and tasks that will take your Java skills (and overall, your whole programming skills) to a whole new level. You'll experience in first person how simple and entertaining Java can be! This book will assist you not only to develop and improve your skills, but most importantly, it will help you unlock the joy learning a new programming language can unexpectedly bring. You can be sure of that!\r<br />\r<br />The idea we're proposing is quite simple. You will learn Java from zero to hero, in less than half a day. We will go from the root to the top of this ground-breaking programming language, and from there we'll build the solid foundations you are looking for. And at the end you will find a special bonus! Sounds good? So let's go for it!\r<br />\r<br /><h2>Here Is A Preview Of What You'll Learn Inside...</h2> <ul><li>Welcome To Your New Programming Language</li><li>History of Java</li><li>What is Java?</li><li>Installation of Java</li><li>Java Language Structure</li><li>Java Variables</li><li>Javascript Operators</li><li>User Input - The Scanner Object</li><li>The String Object</li><li>Boolean Logic</li><li>Loops and Arrays</li><li>Java Methods</li><li>Interfaces and Abstract Classes in Java</li><li>Debugging</li><li>Example Programs</li><li>Much, much more!</li></ul> The contents of this book are easily worth over $9.99, but for a limited time you can download \"Java Programming Crash Course, The Ultimate Beginner’s Course to Learning Java Programming in Under 12 hours –\" for a special discounted price of only $3.99\r<br />\r<br /><b>Buy Your Copy Right Now!</b>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "B00UI9266Y",
+			"DetailPageURL": "http://www.amazon.com/JAVA-Beginners-Simple-programming-coding-ebook/dp/B00UI9266Y%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00UI9266Y",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/JAVA-Beginners-Simple-programming-coding-ebook/dp/tech-data/B00UI9266Y%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00UI9266Y%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00UI9266Y%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00UI9266Y%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/B00UI9266Y%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/B00UI9266Y%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/B00UI9266Y%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00UI9266Y"
+				}]
+			},
+			"SalesRank": "10355",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "54",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "115",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "360",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "54",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "54",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "79",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "115",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41RsR81tbpL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "360",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}
+			},
+			"ItemAttributes": {
+				"Author": "Ray Yao",
+				"Binding": "Kindle Edition",
+				"Creator": [{
+					"#": "Ada R. Swift",
+					"@": {
+						"Role": "Editor"
+					}
+				}, {
+					"#": "Ruby C. Perl",
+					"@": {
+						"Role": "Illustrator"
+					}
+				}],
+				"Format": "Kindle eBook",
+				"IsAdultProduct": "0",
+				"Label": "Rails Excel SharePoint Web Access Database Flash Lamp ActionScript Software",
+				"Languages": {
+					"Language": {
+						"Name": "English",
+						"Type": "Published"
+					}
+				},
+				"Manufacturer": "Rails Excel SharePoint Web Access Database Flash Lamp ActionScript Software",
+				"NumberOfPages": "250",
+				"ProductGroup": "eBooks",
+				"ProductTypeName": "ABIS_EBOOKS",
+				"PublicationDate": "2015-03-09",
+				"Publisher": "Rails Excel SharePoint Web Access Database Flash Lamp ActionScript Software",
+				"ReleaseDate": "2015-03-09",
+				"Studio": "Rails Excel SharePoint Web Access Database Flash Lamp ActionScript Software",
+				"Title": "JAVA: JAVA in 8 Hours, JAVA for Beginners, Learn Java fast! A smart way to learn Java. Plain & Simple. JAVA programming, JAVA in easy steps, Start coding today: A Beginner's Guide, Fast & Easy!"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "Currently, you are able to get this Kindle book for $2.99. It regularly prices at $8.99. You can return the eBook for a refund within seven days of the date of purchase.\r<br /> <br />“JAVA in 8 Hours” is a useful book for beginners. You can learn complete primary knowledge of JAVA fast and easily. The straightforward definitions, the plain and simple examples, the elaborate explanations and the neat and beautiful layout feature this helpful and educative book. You will be impressed by the new distinctive composing style. Reading this book is a great enjoyment! You can master all essential JAVA skill in 8 hours.\r<br />\r<br />(The appendix of this book includes:\r<br />12 important Java Rules.\r<br />100 Tests for Interview, Answers & Explanations.)\r<br />\r<br />\r<br />Table of Contents\r<br />\r<br />Hour 1 Start JAVA\r<br />What is JAVA?\r<br />Java Comments\r<br />Output Commands\r<br />Escaping Characters\r<br />Java Keywords\r<br />Data Types\r<br />Create a Variable\r<br />Arithmetical Operators\r<br />Logical Operators\r<br />Assignment Operators\r<br />Comparison Operators\r<br />Conditional Operator\r<br />\r<br />Hour 2 Statements\r<br />If Statement\r<br />If-else Statement\r<br />Switch Statement\r<br />For Loop\r<br />While Loop\r<br />Do-While Loop\r<br />Break Statement\r<br />Continue Statement\r<br />Boolean-Expression\r<br />\r<br />Hour 3 Array & Math\r<br />Create an Array (1)\r<br />Create an Array (2)\r<br />Array Length\r<br />Element Value\r<br />Sort Array Elements\r<br />Math Methods\r<br />Ceil ( ) & Floor ( )\r<br />Max ( ) & Min ( )\r<br />pow ( ) & sqrt ( )\r<br />Math.PI & random( )\r<br />\r<br />Hour 4 String Processing\r<br />String Length\r<br />String Connection\r<br />String Comparing\r<br />Extract a Character\r<br />Locate a Character\r<br />Extract a Substring\r<br />Case Change\r<br />Character Replace\r<br />String Type Change\r<br />StringBuffer\r<br />\r<br />Hour 5 Method, Class & Object\r<br />Method\r<br />Method & Arguments\r<br />Return Value\r<br />Class Definition\r<br />Object Declaration\r<br />Constructor\r<br />Overloading\r<br />“this” Keyword (1)\r<br />“this” Keyword (2)\r<br />Instance & Local variable\r<br />\r<br />Hour 6 Inheritance & Modifiers\r<br />Inheritance\r<br />“super” keyword\r<br />Overriding\r<br />Overloading & Overriding\r<br />Static variable\r<br />Static Method\r<br />final Variable\r<br />final Method( )\r<br />final class\r<br />Package & Import\r<br />\r<br />Hour 7 Abstract & Interface\r<br />Abstract Class & Method\r<br />Permission\r<br />Default Member\r<br />Public Member\r<br />Private Member\r<br />Protected Member\r<br />Interface\r<br />Abstract & Interface\r<br />Initializes Method\r<br />Another Class\r<br />\r<br />Hour 8 Exception & I/O\r<br />Exception\r<br />Catch Exception (1)\r<br />Catch Exception (2)\r<br />Catch Exception (3)\r<br />Finally Command\r<br />Throw Exception\r<br />Throws Exception\r<br />File Class\r<br />FileInputStream\r<br />FileOutputStream\r<br />\r<br />Appendix1 Important Java Rules\r<br />12 important Java Rues\r<br />\r<br />Appendix2 Tests\r<br />100 Tests for Interview, Answers & Explanations\r<br />\r<br />Don't miss the chance to succeed!\r<br />\r<br />",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "B00XFUQ5I8",
+			"DetailPageURL": "http://www.amazon.com/Java-Programming-Ultimate-Beginners-JavaScript-ebook/dp/B00XFUQ5I8%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00XFUQ5I8",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Java-Programming-Ultimate-Beginners-JavaScript-ebook/dp/tech-data/B00XFUQ5I8%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00XFUQ5I8%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00XFUQ5I8%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00XFUQ5I8%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/B00XFUQ5I8%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/B00XFUQ5I8%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/B00XFUQ5I8%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00XFUQ5I8"
+				}]
+			},
+			"SalesRank": "45352",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "47",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "100",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "313",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "19",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "47",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "47",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "69",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "100",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/414fJ4gskhL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "313",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}
+			},
+			"ItemAttributes": {
+				"Author": "Paul Madoff",
+				"Binding": "Kindle Edition",
+				"Format": "Kindle eBook",
+				"IsAdultProduct": "0",
+				"Languages": {
+					"Language": {
+						"Name": "English",
+						"Type": "Published"
+					}
+				},
+				"NumberOfPages": "75",
+				"ProductGroup": "eBooks",
+				"ProductTypeName": "ABIS_EBOOKS",
+				"PublicationDate": "2015-05-09",
+				"ReleaseDate": "2015-05-09",
+				"Title": "Java: Learn Java Programming With Ultimate Zero to Hero Programming Crash Course for Beginners (Java, Java Programming Language, Java Coding, Java for ... Java Programming for Beginners, JavaScript)"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<h2>Learn Java Today and get FREE JavaScript Learning Course inside</h2>\r<br /><b>Today only, get this Kindle book for $2.99! Regularly priced at $7.99. Read on your PC, Mac, smart phone, tablet or Kindle device</b>\r<br />\r<br />This book contains proven steps and strategies on how to use Java and be a programming expert in no time. This book will help beginners to know and understand what Java is, what it can do, and how to make the most out of the program. <br />\r<br />Understanding Java opens up a whole new world for you as Java is in the heart of today’s programming, from laptops to supercomputers, from mobile phones to gaming consoles. Even the Internet uses Java as applications and websites need Java to work. So even if you are not into computer programming, you will still need it in your online activities.\r<br />\r<br />For beginners, programming language can get a bit overwhelming. With all the terms and the strings of characters, one can easily get lost. Fortunately, this book is all you need to get started and easily navigate this programming software.\r<br />\r<br /><h2>Here Is A Preview Of What You'll Learn...</h2><ul><li>Java Basics</li><li>Basic Functions of Java Language</li><li>Java Language: Objects</li><li>Java Language: Variables</li><li>Java Language: Operators</li><li>Much, much more!</li></ul>\r<br />Take action right away to find out how you can master Java programming language by downloading \"Java: Learn Java With Ultimate Zero to Hero Programming Crash Course for Beginners\" book, for a limited time just for $2.99!\r<br />\r<br /><b>Invest in yourself by downloading this book TODAY and ALSO Receive a FREE JavaScript Course inside!</b>\r<br />\r<br /><h2>SCROLL UP & DOWNLOAD YOUR COPY NOW TO LEARN JAVA FAST!</h2>\r<br />\r<br />\r<br />Tags: Java, Java course, Java book, learning Java, Java language, Java examples, Java tutorials, Java programming language, Java coding, Java programming for beginners, Java for Dummies, Programming Language, Learn Programming, JavaScript",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "1118407814",
+			"DetailPageURL": "http://www.amazon.com/Beginning-Programming-Java-For-Dummies/dp/1118407814%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1118407814",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Beginning-Programming-Java-For-Dummies/dp/tech-data/1118407814%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D1118407814%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D1118407814%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D1118407814%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/1118407814%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/1118407814%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/1118407814%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1118407814"
+				}]
+			},
+			"SalesRank": "8521",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "60",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "127",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "398",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "88",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "128",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PJF1a5e%2BL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "399",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "82",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "120",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/41GQjtuugkL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "375",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "60",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "88",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "127",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51PSObHngoL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "398",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "Barry Burd",
+				"Binding": "Paperback",
+				"EAN": "9781118407813",
+				"EANList": {
+					"EANListElement": "9781118407813"
+				},
+				"Edition": "4",
+				"ISBN": "1118407814",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "930",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "740",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "884",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "95",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "For Dummies",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "2999",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$29.99"
+				},
+				"Manufacturer": "For Dummies",
+				"NumberOfItems": "1",
+				"NumberOfPages": "480",
+				"PackageDimensions": {
+					"Height": {
+						"#": "100",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "920",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "40",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "730",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2014-06-23",
+				"Publisher": "For Dummies",
+				"Studio": "For Dummies",
+				"Title": "Beginning Programming with Java For Dummies",
+				"TradeInValue": {
+					"Amount": "703",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$7.03"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "1611",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$16.11"
+				},
+				"LowestUsedPrice": {
+					"Amount": "1500",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$15.00"
+				},
+				"TotalNew": "56",
+				"TotalUsed": "20",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "A practical introduction to programming with Java Beginning Programming with Java For Dummies, 4 th Edition is a comprehensive guide to learning one of the most popular programming languages worldwide. This book covers basic development concepts and techniques through a Java lens. You'll learn what goes into a program, how to put the pieces together, how to deal with challenges, and how to make it work. The new Fourth Edition has been updated to align with Java 8, and includes new options for the latest tools and techniques. Java is the predominant language used to program Android and cloud apps, and its popularity is surging as app demand rises. Whether you're just tooling around, or embarking on a career, Beginning Programming with Java For Dummies, 4 th Edition is a great place to start. Step-by-step instruction, easy-to-read language, and quick navigation make this book the perfect resource for new programmers. You'll begin with the basics before moving into code, with simple, yet detailed explanations every step of the way. Topics include: Learn the language with sample programs and the Java toolkit Familiarize yourself with decisions, conditions, statements, and information overload Differentiate between loops and arrays, objects and classes, methods and variables The book also contains links to additional resources, other programming languages, and guidance as to the most useful classes in the Java API. If you're new to programming languages, Beginning Programming with Java For Dummies, 4 th Edition provides the instruction and practice you need to become a confident Java programmer.",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "1503032434",
+			"DetailPageURL": "http://www.amazon.com/Java-Programming-Kids-Interactive-Calculator/dp/1503032434%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1503032434",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Java-Programming-Kids-Interactive-Calculator/dp/tech-data/1503032434%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D1503032434%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D1503032434%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D1503032434%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/1503032434%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/1503032434%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/1503032434%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1503032434"
+				}]
+			},
+			"SalesRank": "18547",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "49",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "104",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "324",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "19",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "49",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "49",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "71",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "104",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51xDY-wvqoL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "324",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "19",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "49",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "49",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "71",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "104",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/51Yk9YjxWuL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "324",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "R. Chandler Thompson",
+				"Binding": "Paperback",
+				"EAN": "9781503032439",
+				"EANList": {
+					"EANListElement": "9781503032439"
+				},
+				"ISBN": "1503032434",
+				"ItemDimensions": {
+					"Height": {
+						"#": "850",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "550",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "0",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "23",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "CreateSpace Independent Publishing Platform",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "999",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$9.99"
+				},
+				"Manufacturer": "CreateSpace Independent Publishing Platform",
+				"NumberOfItems": "1",
+				"NumberOfPages": "102",
+				"PackageDimensions": {
+					"Height": {
+						"#": "50",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "850",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "35",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "550",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2014-10-31",
+				"Publisher": "CreateSpace Independent Publishing Platform",
+				"Studio": "CreateSpace Independent Publishing Platform",
+				"Title": "Java Programming for Kids: Learn Java Step By Step and Build Your Own Interactive Calculator for Fun! (Java for Beginners)"
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "760",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$7.60"
+				},
+				"LowestUsedPrice": {
+					"Amount": "862",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$8.62"
+				},
+				"TotalNew": "25",
+				"TotalUsed": "9",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<span>***** #1 Best Seller in Children's Computer Programming ***** </span><br><br><span>Ever use that free calculator application on your computer? Probably, but chances are it was such an unmemorable experience that you couldn't say for sure whether you have or not. </span><br><br><br><span>What if that calculator knew your name? What if it carried on a conversation with you, and asked you questions? You'd probably remember it a little better! Maybe even make a point of using it whenever you needed to crack an equation! </span><br><br><br><span>But you know what? You could build your own one-of-a-kind calculator. </span><br><br><br><span>All you need is Java. </span><br><br><br><span>Java is a very powerful, yet easy to learn language. It's absolutely FREE and it's EVERYWHERE - on your phone, on your computer, and on many other devices all around you every day, and in \"Java Programming for Kids: Learn Java Step By Step and Build Your Own Interactive Calculator for Fun!\" bestselling author R. Chandler Thompson will start you on your path as a Java programmer! </span><br><br><br><span>In this tutorial you will learn: </span><br><br><br><br><span>* How to set up the basic Java development environment and start developing any application you can imagine </span><br><br><span>* How to create programs that interact with the people using them </span><br><br><span>* Learn quick and easy ways to do math using Java </span><br><br><span>* Exactly how a Java program works </span><br><br><span>* How to make your programs reusable and structured with the help of methods </span><br><br><span>* How to create a number of specific Java programs </span><br><br><span>* How to develop a cool Talking Calculator </span><br><br><br><span>Learning is not complete until we can apply what we have learned to our own lives. In case of programming, your learning will only be a success when are able to use your own knowledge of Java programming to create something brand new. </span><br><br><br><span>Java programming is a language, sure, but it's also an art - just like music composition. In \"Java Programming for Kids: Learn Java Step By Step and Build Your Own Interactive Calculator for Fun!\" You will quickly and effectively learn the language you need to create something fun, exciting, and awesome! </span><br><br><br><span>Don't wait, scroll up and get your copy today!</span>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}, {
+			"ASIN": "0672337029",
+			"DetailPageURL": "http://www.amazon.com/Hours-Teach-Yourself-Covering-Edition/dp/0672337029%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0672337029",
+			"ItemLinks": {
+				"ItemLink": [{
+					"Description": "Technical Details",
+					"URL": "http://www.amazon.com/Hours-Teach-Yourself-Covering-Edition/dp/tech-data/0672337029%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "Add To Baby Registry",
+					"URL": "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0672337029%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "Add To Wedding Registry",
+					"URL": "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0672337029%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "Add To Wishlist",
+					"URL": "http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D0672337029%26SubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "Tell A Friend",
+					"URL": "http://www.amazon.com/gp/pdp/taf/0672337029%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "All Customer Reviews",
+					"URL": "http://www.amazon.com/review/product/0672337029%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}, {
+					"Description": "All Offers",
+					"URL": "http://www.amazon.com/gp/offer-listing/0672337029%3FSubscriptionId%3DAKIAISTUCK6M4FWOKQUQ%26tag%3Dunknownerroro-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0672337029"
+				}]
+			},
+			"SalesRank": "31904",
+			"SmallImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL75_.jpg",
+				"Height": {
+					"#": "75",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "61",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"MediumImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL160_.jpg",
+				"Height": {
+					"#": "160",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "129",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"LargeImage": {
+				"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL.jpg",
+				"Height": {
+					"#": "500",
+					"@": {
+						"Units": "pixels"
+					}
+				},
+				"Width": {
+					"#": "404",
+					"@": {
+						"Units": "pixels"
+					}
+				}
+			},
+			"ImageSets": {
+				"ImageSet": [{
+					"@": {
+						"Category": "variant"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "22",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "56",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "82",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "120",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/319GyrTDCcL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "375",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}, {
+					"@": {
+						"Category": "primary"
+					},
+					"SwatchImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL30_.jpg",
+						"Height": {
+							"#": "30",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "24",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"SmallImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"ThumbnailImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL75_.jpg",
+						"Height": {
+							"#": "75",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "61",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"TinyImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL110_.jpg",
+						"Height": {
+							"#": "110",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "89",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"MediumImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL._SL160_.jpg",
+						"Height": {
+							"#": "160",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "129",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					},
+					"LargeImage": {
+						"URL": "http://ecx.images-amazon.com/images/I/511BU-gAxwL.jpg",
+						"Height": {
+							"#": "500",
+							"@": {
+								"Units": "pixels"
+							}
+						},
+						"Width": {
+							"#": "404",
+							"@": {
+								"Units": "pixels"
+							}
+						}
+					}
+				}]
+			},
+			"ItemAttributes": {
+				"Author": "Rogers Cadenhead",
+				"Binding": "Paperback",
+				"EAN": "9780672337024",
+				"EANList": {
+					"EANListElement": "9780672337024"
+				},
+				"Edition": "7",
+				"ISBN": "0672337029",
+				"IsEligibleForTradeIn": "1",
+				"ItemDimensions": {
+					"Height": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "740",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "164",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "100",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"Label": "Sams Publishing",
+				"Languages": {
+					"Language": [{
+						"Name": "English",
+						"Type": "Published"
+					}, {
+						"Name": "English",
+						"Type": "Original Language"
+					}, {
+						"Name": "English",
+						"Type": "Unknown"
+					}]
+				},
+				"ListPrice": {
+					"Amount": "3499",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$34.99"
+				},
+				"Manufacturer": "Sams Publishing",
+				"NumberOfItems": "1",
+				"NumberOfPages": "450",
+				"PackageDimensions": {
+					"Height": {
+						"#": "110",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Length": {
+						"#": "910",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					},
+					"Weight": {
+						"#": "165",
+						"@": {
+							"Units": "hundredths-pounds"
+						}
+					},
+					"Width": {
+						"#": "740",
+						"@": {
+							"Units": "hundredths-inches"
+						}
+					}
+				},
+				"ProductGroup": "Book",
+				"ProductTypeName": "ABIS_BOOK",
+				"PublicationDate": "2014-05-30",
+				"Publisher": "Sams Publishing",
+				"Studio": "Sams Publishing",
+				"Title": "Java in 24 Hours, Sams Teach Yourself (Covering Java 8) (7th Edition)",
+				"TradeInValue": {
+					"Amount": "961",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$9.61"
+				}
+			},
+			"OfferSummary": {
+				"LowestNewPrice": {
+					"Amount": "1905",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$19.05"
+				},
+				"LowestUsedPrice": {
+					"Amount": "1900",
+					"CurrencyCode": "USD",
+					"FormattedPrice": "$19.00"
+				},
+				"TotalNew": "45",
+				"TotalUsed": "20",
+				"TotalCollectible": "0",
+				"TotalRefurbished": "0"
+			},
+			"EditorialReviews": {
+				"EditorialReview": {
+					"Source": "Product Description",
+					"Content": "<P style=\"MARGIN: 0px\"> <b>Sams Teach Yourself Java in 24 Hours, Seventh Edition</b> </p> <P style=\"MARGIN: 0px\"> <em>Covers Java 8 and Android Development</em> </p> </p> <P style=\"MARGIN: 0px\">In just 24 lessons of one hour or less, you can learn the fundamentals of Java programming.</P> </P> <P style=\"MARGIN: 0px\">In this book's straightforward, step-by-step approach, each lesson builds on everything that's come before, helping readers learn Java's core features and techniques from the ground up.</P> </P> <P style=\"MARGIN: 0px\">Friendly, accessible, and conversational, this book offers a practical grounding in the language, without ever becoming overwhelming or intimidating. Full-color figures and clear instructions visually show you how to program with Java.</p> </p> <P style=\"MARGIN: 0px\">Popular author Rogers Cadenhead helps you master the skills and technology you need to create desktop and web programs, web services, and even an Android app in Java.</P> </P> <P style=\"MARGIN: 0px\">Learn how to… <ul> <li>Set up your Java programming environment</li> <li>Write your first working program in just minutes</li> <li>Control program decisions and behavior</li> <li>Store and work with information</li> <li>Build straightforward user interfaces</li> <li>Create interactive web programs</li> <li>Use threading to build more responsive programs</li> <li>Read and write files and XML data</li> <li>Master best practices for object-oriented programming</li> <li>Create flexible, interoperable web services with JAX-WS</li> <li>Use Java to create an Android app</li> <li>Expand your skills with closures, the powerful new capability introduced in Java 8</li> </ul> <P style=\"MARGIN: 0px\"> <B>Contents at a Glance</B> </P> </p> <P style=\"MARGIN: 0px\"> <B>PART I: Getting Started</B> </P> <P style=\"MARGIN: 0px\">1 Becoming a Programmer</P> <P style=\"MARGIN: 0px\">2 Writing Your First Program</P> <P style=\"MARGIN: 0px\">3 Vacationing in Java</P> <P style=\"MARGIN: 0px\">4 Understanding How Java Programs Work</P> </p> <P style=\"MARGIN: 0px\"> <B>PART II: Learning the Basics of Programming</B> </P> <P style=\"MARGIN: 0px\">5 Storing and Changing Information in a Program</P> <P style=\"MARGIN: 0px\">6 Using Strings to Communicate</P> <P style=\"MARGIN: 0px\">7 Using Conditional Tests to Make Decisions</P> <P style=\"MARGIN: 0px\">8 Repeating an Action with Loops</P> </p> <P style=\"MARGIN: 0px\"> <B>PART III: Working with Information in New Ways</B> </P> <P style=\"MARGIN: 0px\">9 Storing Information with Arrays</P> <P style=\"MARGIN: 0px\">10 Creating Your First Object</P> <P style=\"MARGIN: 0px\">11 Describing What Your Object Is Like</P> <P style=\"MARGIN: 0px\">12 Making the Most of Existing Objects</P> </p> <P style=\"MARGIN: 0px\"> <B>PART IV: Programming a Graphical User Interface</B> </P> <P style=\"MARGIN: 0px\">13 Building a Simple User Interface</P> <P style=\"MARGIN: 0px\">14 Laying Out a User Interface</P> <P style=\"MARGIN: 0px\">15 Responding to User Input</P> <P style=\"MARGIN: 0px\">16 Building a Complex User Interface</P> </p> <P style=\"MARGIN: 0px\"> <B>PART V: Moving into Advanced Topics</B> </P> <P style=\"MARGIN: 0px\">17 Storing Objects in Data Structures</P> <P style=\"MARGIN: 0px\">18 Handling Errors in a Program</P> <P style=\"MARGIN: 0px\">19 Creating a Threaded Program</P> <P style=\"MARGIN: 0px\">20 Using Inner Classes and Closures</P> <P style=\"MARGIN: 0px\">21 Reading and Writing Files</P> <P style=\"MARGIN: 0px\">22 Creating Web Services with JAX-WS</P> <P style=\"MARGIN: 0px\">23 Creating Java2D Graphics</P> <P style=\"MARGIN: 0px\">24 Writing Android Apps</P> </p> <P style=\"MARGIN: 0px\"> <B>Appendixes</B> </P> <P style=\"MARGIN: 0px\">A Using the NetBeans Integrated Development Environment</P> <P style=\"MARGIN: 0px\">B Where to Go from Here: Java Resources</P> <P style=\"MARGIN: 0px\">C This Book’s Website</P> <P style=\"MARGIN: 0px\">D Setting Up an Android Development Environment</P>",
+					"IsLinkSuppressed": "0"
+				}
+			}
+		}]
+	}
+}

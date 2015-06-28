@@ -2,6 +2,7 @@ var home = require('../app/controllers/home');
 var OpenSource = require('../app/controllers/OpenSource');
 var question = require('../app/controllers/question');
 var video = require('../app/controllers/video');
+var book = require('../app/controllers/book');
 var share = require('../app/controllers/share');
 var yanzheng = require('../app/controllers/yanzheng');
 
@@ -28,8 +29,11 @@ module.exports = function(app, config) {
     app.get('/opensource/:ower/:repo', OpenSource.repo);
     app.get('/opensource/:ower/:repo/question/:pager(\\d+)?', question.list);
     app.get('/opensource/:ower/:repo/video/:pager(\\d+)?', video.list);
+    app.get('/opensource/:ower/:repo/book/:pager(\\d+)?', book.list);
+                   ///opensource/jadejs/jade/book
     app.get('/opensource/:ower/:repo/q/:id_site/:id_question/:title?', question.info);
     app.get('/opensource/:ower/:repo/v/:id_site/:id_video/:title?', video.info);
+    
 
 
 

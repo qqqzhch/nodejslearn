@@ -2,6 +2,7 @@ var request = require('request');
 var gitHubApi = require('../dataApi/gitHub');
 var youtubeApi = require('../dataApi/youtube');
 var stackApi = require('../dataApi/stack');
+var Amazon = require('../dataApi/Amazon');
 var env =process.env.NODE_ENV;
 
 function tryReq() {
@@ -83,4 +84,12 @@ module.exports.getgetAnswersnfo = function(q, callbaack) {
     } else {
         stackApi.getAnswersnfo(q,  callbaack)
     }
+}
+
+module.exports.getBookSearch = function(q, index, callbaack) {
+console.log('22')
+    Amazon.ItemSearch('', q, function(err, result) {
+        console.log('223')
+            callbaack(err, result,result) ;       
+    })
 }
