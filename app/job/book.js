@@ -18,7 +18,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 2,
+            limit: 10,
             order: '"stargazers_count" desc',
             where :["book_num is NULL"]
         })
