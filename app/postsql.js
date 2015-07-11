@@ -12,9 +12,9 @@ var booksearchHistry=require('./model/booksearchHistry');
 
 
 
-gitRepo.sync({
-    force: false
-})
+// gitRepo.sync({
+//     force: false
+// })
 amazonBook.sync({
     force: true
 })
