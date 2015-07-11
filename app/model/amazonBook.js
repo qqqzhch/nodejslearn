@@ -53,6 +53,13 @@ var model = sequelize.define('amazonBook', {
                     limit: (index+1) * pagesize
                 })
         },
+        getBookInfo: function(ASIN) {
+            return this.find({
+                where: {
+                    ASIN: ASIN
+                }
+            })
+        }
 
 
     }

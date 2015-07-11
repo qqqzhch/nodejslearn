@@ -57,3 +57,49 @@ exports.list = function(req, res) {
 
 
 }
+
+
+exports.info=function(req,res){
+        var ower = req.params.ower;
+    var repo = req.params.repo;
+    var full_name = ower + "/" + repo;
+    var id_site = req.params.id_site;
+    var id_book = req.params.id_book;
+    var videoBaseUrl = '/opensource/' + ower + "/" + repo + '/b/';
+    res.locals.videoBaseUrl = videoBaseUrl;
+    res.locals.friendlyUrl = friendlyUrl;
+    ///
+    async.parallel([
+
+        function(callback) {
+            gitRepoSql
+                .getRepoInfoPart(full_name)
+                .then(function(data) {
+                    res.locals.respInfo = data;
+                    callback();
+                }, function(err) {
+                    callback(err)
+                })
+        },
+        function(callback) {
+         amazonBookSql.getBookInfo(id_book)
+         .then(function (data) {
+         	console.log(data);
+         	res.locals.BookInfo = data;
+                callback();
+         },function (err) {
+         	callback(err)
+         })
+          
+
+        }
+    ], function(err) {
+        if (err) {
+            res.render('error');
+        } else {
+           res.render('OpenSource_bookInfo');
+        }
+    });
+    ///
+      
+}

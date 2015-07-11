@@ -33,6 +33,7 @@ module.exports = function(app, config) {
                    ///opensource/jadejs/jade/book
     app.get('/opensource/:ower/:repo/q/:id_site/:id_question/:title?', question.info);
     app.get('/opensource/:ower/:repo/v/:id_site/:id_video/:title?', video.info);
+    app.get('/opensource/:ower/:repo/b/:id_site/:id_book/:title?',  book.info);
     
 
 

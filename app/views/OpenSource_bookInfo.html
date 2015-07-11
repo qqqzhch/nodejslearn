@@ -1,6 +1,5 @@
 
-
-			<div class="post-topheader">
+	<div class="post-topheader">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2 col-xs-2">
@@ -34,56 +33,64 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-9 main mt30">
-						<ul class="nav nav-tabs nav-tabs-zen mb10">
+					<ul class="nav nav-tabs nav-tabs-zen mb10">
 						<li >
 							<a href="/opensource/{{=it.respInfo.full_name}}/">Readme</a>
 						</li>
-						<li >
+						<li>
 							<a href="/opensource/{{=it.respInfo.full_name}}/question/">Related Question</a>
 						</li>
 						<li >
 							<a href="/opensource/{{=it.respInfo.full_name}}/video/">Related Video</a>
 						</li>
-					                 <li class="active">
+						<li class="active">
 							<a href="/opensource/{{=it.respInfo.full_name}}/book/">Related book</a>
 						</li>
 					</ul>
-					<div class=" col-xs-12 col-md-12  mt20">
-						 {{~it.BookList.rows :item:index}}
-					
-						<div class="col-md-6 col-sm-6 col-xs-12">
-	<div class="widget-event">
-		<a href="{{=it.bookBaseUrl }}amazon/{{=item.ASIN}}/{{=it.friendlyUrl(item.bookname)}}">
-			<img  src="{{=item.MediumImage.URL}}"></a>
-		<div class="widget-event__info" style="height: 100px;">
-			<h4 class="h4 title">
-				<a href="{{=it.bookBaseUrl }}amazon/{{=item.ASIN}}/{{=it.friendlyUrl(item.bookname)}}">{{=item.bookname}}</a>
-			</h4>
-		
-		</div>
-	</div>
-</div>
-						{{~}}
+					<h3 class="h3 title">
+						{{=it.BookInfo.ItemAttributes.Title}} 	<a class="tag" data-toggle="popover"  href="{{=it.BookInfo.DetailPageURL}}">more book info</a>
+					</h3>
+					<div class="readme">
+				Author: {{=it.BookInfo.ItemAttributes.Author}}<br>
+				PublicationDate: {{=it.BookInfo.ItemAttributes.PublicationDate}}<br>
+				Publisher: {{=it.BookInfo.ItemAttributes.Publisher}}<br>
+				Studio: {{=it.BookInfo.ItemAttributes.Studio}}<br>
+
+			
+
+				<br>
+				<a href="{{=it.BookInfo.DetailPageURL}}">
+						<img src="{{=it.BookInfo.LargeImage.URL}}"/>
+				</a>		
+				
 					</div>
-					 {{#def.pager}}
+					<div>
+					{{?it.BookInfo.EditorialReviews}}
+						{{?it.BookInfo.EditorialReviews.EditorialReview}}
+						{{=it.BookInfo.EditorialReviews.EditorialReview.Content}}
+						{{?}}
+
+					{{?}}
+					<a class="tag" data-toggle="popover"  href="{{=it.BookInfo.DetailPageURL}}">more book info</a>
+					</div>
 				</div>
 				<div class="col-xs-12 col-md-3 side mt30">
 					<div class="widget-box">
 						<h2 class="h4 widget-box__title">
-							find book in  amazon  
+						find more book  {{=it.respInfo.name}}
 						</h2>
 						<ul class="taglist--inline multi">
-							<li class="tagPopup">
-								<a class="tag"  href="http://www.amazon.com/">amazon </a>
-							</li>
+							<li><a class="tag" data-toggle="popover"  href="http://www.amazon.com/">amazon</a>
+							
+						
 						</ul>
 					</div>
 					<div class="widget-box">
 						<h2 class="h4 widget-box__title">
-						
+							
 						</h2>
 						<ul class="widget-links list-unstyled">
-							
+						
 						</ul>
 					</div>
 				</div>
