@@ -13,6 +13,7 @@ exports.list = function(req, res) {
     var videoBaseUrl = '/opensource/' + ower + "/" + repo + '/v/';
     res.locals.videoBaseUrl = videoBaseUrl;
     res.locals.friendlyUrl = friendlyUrl;
+    res.locals.seo.title = "open source project " + repo + " related video"
     ///
     async.parallel([
 
@@ -94,6 +95,11 @@ exports.info=function(req,res){
         if (err) {
             res.render('error');
         } else {
+            res.locals.seo = {
+                title: res.locals.VideoInfo.snippet.title+"-open source projects "+full_name,
+                keywords: full_name,
+                description: ''
+            }
            res.render('OpenSource_videoInfo');
         }
     });

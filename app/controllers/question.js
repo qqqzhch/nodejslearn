@@ -105,7 +105,7 @@ exports.info = function(req, res) {
                 keywords = res.locals.questionInfo.tags.join(',');
             }
             res.locals.seo = {
-                title: res.locals.questionInfo.title,
+                title: res.locals.questionInfo.title+"-open source projects  "+full_name,
                 keywords: res.locals.questionInfo.tags.join(','),
                 description: ''
             }

@@ -97,6 +97,11 @@ exports.info=function(req,res){
         if (err) {
             res.render('error');
         } else {
+          res.locals.seo = {
+                title: res.locals.BookInfo.ItemAttributes.Title+"-open source projects "+full_name,
+                keywords: full_name,
+                description: ''
+            }
            res.render('OpenSource_bookInfo');
         }
     });
