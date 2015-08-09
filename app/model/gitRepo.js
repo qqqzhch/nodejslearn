@@ -74,6 +74,18 @@ var gitRepo = sequelize.define('gitRepo', {
                     full_name: full_name
                 }
             })
+        },
+        searchRepoInfoPart: function(full_name) {
+            return this.findAll({
+                attributes: ['name', 'full_name', 'owner', 'description', 'stargazers_count'],
+                limit: 30,
+                where: {
+                    full_name: {
+                          $like: '%'+full_name+'%'
+                      }
+
+                }
+            })
         }
 
     },

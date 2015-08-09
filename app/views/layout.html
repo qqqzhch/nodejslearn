@@ -30,6 +30,10 @@
     <nav class="container nav">
 
         <h1 class="logo"><a href="/">UnknownError</a></h1>
+        <form action="/search" class="header-search pull-left">
+            <button type="submit" class="btn btn-link"><span class="sr-only">search</span><span class="glyphicon glyphicon-search"></span></button>
+            <input style="width: 180px;" id="searchBox" name="q" placeholder="Project search" class="form-control" value="" type="text">
+        </form>
 <ul class="opts pull-right list-inline ">
   
             <li class="opts__item">
@@ -72,7 +76,7 @@
   ga('send', 'pageview');
 
 </script>
-
+<script src="/public/js/search.js"></script>
 </html>
 
 
