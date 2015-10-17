@@ -1,18 +1,67 @@
 var YSlow = require('yslowjs');
-var yslow = new YSlow('http://www.baidu.com/',
-    [ '--info', 'grade' ]);//basic  grade'
-console.log('\nRunning (Async)....');
-yslow.run( function (error, result) {
-    if (error) {
-        console.trace(error);
-    } else {
-        console.log(result);
-        console.log('=> grade:   ' + result.o);
-        console.log('=> load time: ' + result.lt);
+var request = require('request');
+var $ = require('jquery');
+ var url = require('url');
+var siteUrl = 'http://www.baidu.com'
+
+var  result= url.parse(siteUrl);
+ console.log(result);
+
+request(siteUrl ,function(error, response, body) {
+	console.log(response.statusCode)
+	if (!error && response.statusCode == 200) {
+		 console.log(body) // Show the HTML for the Google homepage. 
+		var title = getTitle(body)
+		console.log(title)
+		console.log(response.statusCode)
+
+		getYSlow(siteUrl)
 
 
-    }
-});
+	} else {
+		console.log('error') // Show the HTML for the Google homepage. 
+		console.log(error) // Show the HTML for the Google homepage. 
+	}
+})
+
+function getYSlow(siteUrl) {
+	console.log('getYSlowURL')
+	console.log(siteUrl)
+
+	var yslow = new YSlow(siteUrl,
+	    [ '--info', 'grade' ]);//(basic|grade|stats|comps|all) [all],
+	console.log('\nRunning (Async)....');
+	yslow.run( function (error, result) {
+	    if (error) {
+	        console.trace(error);
+	    } else {
+	        console.log('=> overall:   ' + result.o);
+	        console.log('=> load time: ' + result.lt);
+	        console.log( result);
+	        
+	    }
+	});
+}
+
+function getTitle(cont) {
+
+
+	(function() {
+		'use strict';
+
+		var env = require('jsdom').env,
+			html = cont;
+
+		// first argument can be html string, filename, or url
+		env(html, function(errors, window) {
+			console.log(errors);
+
+			var $ = require('jquery')(window);
+
+			console.log($('head>title').text());
+		});
+	}());
+}
 
 
 // Name	Value
