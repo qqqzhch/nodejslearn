@@ -6,6 +6,7 @@ var book = require('../app/controllers/book');
 var share = require('../app/controllers/share');
 var yanzheng = require('../app/controllers/yanzheng');
 var search = require('../app/controllers/search');
+var DeveloperTools = require('../app/controllers/DeveloperTools');
 
 
 module.exports = function(app, config) {
@@ -36,6 +37,7 @@ module.exports = function(app, config) {
     app.get('/opensource/:ower/:repo/v/:id_site/:id_video/:title?', video.info);
     app.get('/opensource/:ower/:repo/b/:id_site/:id_book/:title?',  book.info);
     app.get('/search/:keyword?',search.gitRepo )
+    app.get('/DeveloperTools/feature',DeveloperTools.feature )
 
     
 

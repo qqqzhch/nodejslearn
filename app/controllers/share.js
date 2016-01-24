@@ -26,7 +26,7 @@ exports.code = function(req, res) {
 	}
 	res.locals.uid = uid;
 	//res.cookies.set
-	res.locals.seo.title = 'share code to twitter,facebook as a img .markdown supported';
+	res.locals.seo.title = 'Online Markdown Editor - the Last Markdown Editor eve';
 	
 	res.render('share_code');
 	

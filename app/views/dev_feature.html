@@ -1,0 +1,100 @@
+    <style>
+
+      .yes { color: green; }
+      .no { color: red; }
+      h4 { margin: 3em 0 0; }
+      .test { background: red; margin: 1em 0; width: 4em; height: 4em; }
+      #results, #tests { border: 1px solid #aaa; padding: 5% 5%; margin: 0 0 4em; }
+      input { font-size: 16px; height: 4em; }
+      .active { background: green !important; }
+      picture * { margin: 1em 0; width: 4em; height: 4em; }
+    </style>
+     <script src="/public/js/feature.min.js"></script>
+    <h1> browser HTML5 feature detec­tion</h1>
+    <h5>you browser userAgent:<span id="browser_userAgent"></span></h5>
+    <h2>Test results:</h2>
+    <ul id="results"></ul>
+    <h2>In use:</h2>
+
+    <div id="tests">
+
+      <h4>CSS 3D transforms</h4>
+      <div id="css3dtransform" class="test" style="-webkit-transform: rotateY(45deg); -moz-transform: rotateY(45deg); -ms-transform: rotateY(45deg); -o-transform: rotateY(45deg); transform: rotateY(45deg);"></div>
+
+      <h4>CSS transforms</h4>
+      <div id="csstransform" class="test" style="-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);"></div>
+
+      <h4>CSS transitions</h4>
+      <p>Requires click event:</p>
+      <div class="test transition" style="-webkit-transition: all 1.5s ease; -moz-transition: all 1.5s ease; -ms-transition: all 1.5s ease; -o-transition: all 1.5s ease; transition: all 1.5s ease;"></div>
+
+      <h4>AddEventListener</h4>
+      <div class="test" id="addeventlistener"></div>
+
+      <h4>QuerySelectorAll</h4>
+      <div class="test queryselectorall"></div>
+      <div class="test queryselectorall"></div>
+      <div class="test queryselectorall"></div>
+
+      <h4>MatchMedia</h4>
+      <div class="test" id="matchmedia"></div>
+
+      <h4>ClassList API</h4>
+      <div class="test" id="classlist"></div>
+
+      <h4>Placeholders</h4>
+      <input type="text" id="placeholder" placeholder="This is a placeholder">
+
+      <h4>LocalStorage</h4>
+      <div class="test" id="localstorage"></div>
+
+      <h4>Viewport Units</h4>
+      <div class="test" id="viewportunits"></div>
+
+      <h4>REM Units</h4>
+      <div class="test" id="remunits"></div>
+
+      <h4>SVG</h4>
+      <img width="120" height="120" src="/public/fonts/test.svg" alt="">
+
+      <h4>Canvas</h4>
+      <canvas class="test" width="120" height="120" id="canvas"></canvas>
+
+      <h4>WebGL</h4>
+      <canvas class="test" width="120" height="120" id="webgl"></canvas>
+
+      <h4>Touch</h4>
+      <p>Requires touchstart event:</p>
+      <div class="test" id="touch"></div>
+
+      <h4>Geolocation</h4>
+      <div class="test" style="width: 10em" id="geolocation"></div>
+
+      <h4>Srcset</h4>
+      <img class="test" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAD/AAAAACwAAAAAAQABAAACAkQBADs=" alt="">
+
+      <h4>Picture element</h4>
+      <picture>
+        <source media="(min-width: 1px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAD/AAAAACwAAAAAAQABAAACAkQBADs=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8DwHwAFAAH/VscvDQAAAABJRU5ErkJggg==" alt="">
+      </picture>
+
+      <h4>CORS</h4>
+      <div class="test" id="cors"></div>
+
+      <h4>Device Motion</h4>
+      <div class="test" id="motion"></div>
+
+      <h4>Device Orientation</h4>
+      <div class="test" id="orientation"></div>
+
+      <h4>Context Menu</h4>
+      <p>Requires right click:</p>
+      <div class="test" id="context" contextmenu="mymenu"></div>
+      <menu type="context" id="mymenu">
+        <menuitem label="FEATURE.JS TEST MENU ITEM" onclick="window.location.reload();"></menuitem>
+      </menu>
+
+
+    </div>
+     <script src="/public/js/featurepage.js"></script>
