@@ -7,7 +7,7 @@ var github = new GitHubApi({
     protocol: "https",
     host: "api.github.com", // should be api.github.com for GitHub 
     pathPrefix: "", // for some GHEs; none for GitHub 
-    timeout: 5000,
+    timeout: 50000,
     headers: {
         "user-agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36" // GitHub is happy with a unique user agent 
     }
@@ -59,6 +59,34 @@ exports.getConent = function(user, repo, callbaack) {
     }, function(err, data) {
         callbaack(err, data,data)
 
+    })
+
+}
+
+// GET /repos/:owner/:repo/issues
+//  https://api.github.com/repos/sequelize/sequelize/issues
+
+exports.issues = function(owner, repo, callbaack) {
+   console.log(github.issues);
+    github.issues.repoIssues({
+        user: owner,
+        repo: repo
+    }, function(err, data) {
+        callbaack(err, data,data)
+    })
+
+}
+//    https://api.github.com/repos/sequelize/sequelize/issues/5396/comments
+//    fanhui jieguo zhong de    number  ziduan 
+//  /repos/:owner/:repo/issues/:number/comments
+exports.issuesComments = function(owner, repo, number,callbaack) {
+   console.log(github.issues);
+    github.issues.getComments({
+        user: owner,
+        repo: repo,
+        number:number
+    }, function(err, data) {
+        callbaack(err, data,data)
     })
 
 }
