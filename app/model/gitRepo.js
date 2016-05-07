@@ -26,6 +26,7 @@ var gitRepo = sequelize.define('gitRepo', {
     "readme_content": Sequelize.TEXT,
     "readme_encoding": Sequelize.STRING(10),
     "book_num": Sequelize.BIGINT
+     "story_num":Sequelize.BIGINT
 }, {
     // freezeTableName: true, // Model tableName will be the same as the model name
     timestamps: true, // timestamps will now be true

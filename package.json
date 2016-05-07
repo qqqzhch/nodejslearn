@@ -54,7 +54,8 @@
         "uid":"~0.0.2",
         "aws-lib":"~0.3.0",
         "xml2js": "0.1.x",
-        "sax": "0.1.x"
+        "sax": "0.1.x",
+        "hacker-news-api ":"2.0.0 "
     },
     "devDependencies": {
             "duo":"~0.12.0",

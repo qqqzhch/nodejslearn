@@ -1,0 +1,76 @@
+{
+	"hits": [{
+		"created_at": "2016-04-30T08:17:52.000Z",
+		"title": "Ask HN: Math books for a CS autodidact?",
+		"url": null,
+		"author": "kretonian",
+		"points": 3,
+		"story_text": "I am a full-stack web developer in my mid thirties and am mostly self-taught. Over the years I&#x27;ve build a good base of working knowledge, but lack the theoretical backgrounds. So to rectify that, I want to start (re)building my math skills from ground up.<p>My goal is to acquire enough knowledge to properly understand &quot;Concrete Mathematics&quot; (by Graham, Patashnik, Knuth), followed by CLRS and SICP. I&#x27;m searching for books that meet these criteria:<p>1. They must build &quot;from the ground up&quot;. My brain has pretty much forgotten all of high school math. For instance, I can&#x27;t even do division on paper.<p>2. I have a full time job, so the books should be pleasant to read and pedagogically well constructed.<p>3. No skipping over details, i.e. no books that are just collections of definitions and theorems. As someone else here on HN put it, I&#x27;d prefer them to &quot;be written by mathematicians, for mathematicians&quot;.<p>4. Good exercises with solutions.<p>I&#x27;ve already found a few suggestions in other threads:<p>* An Introduction to Mathematical Reasoning: Numbers, Sets and Functions (Eccles)<p>* How to Solve it: A New Aspect of Mathematical Method (Conway, Polya)<p>* Calculus (Spivak)<p>* Linear Algebra Done Right (Axler)<p>Can I read those in order before proceeding to &quot;Concrete Mathematics&quot;?<p>Thank you",
+		"comment_text": null,
+		"num_comments": 3,
+		"story_id": null,
+		"story_title": null,
+		"story_url": null,
+		"parent_id": null,
+		"created_at_i": 1462004272,
+		"_tags": ["story", "author_kretonian", "story_11600888", "ask_hn"],
+		"objectID": "11600888",
+		"_highlightResult": {
+			"title": {
+				"value": "Ask HN: Math books for a CS autodidact?",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"author": {
+				"value": "kretonian",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_text": {
+				"value": "I am a full-stack web developer in my mid thirties and am mostly self-taught. Over the years I've build a good base of working knowledge, but lack the theoretical backgrounds. So to <em>rect</em>ify that, I want to start (re)building my math skills from ground up.<p>My goal is to acquire enough knowledge to properly understand &quot;Concrete Mathematics&quot; (by Graham, Patashnik, Knuth), followed by CLRS and SICP. I'm searching for books that meet these criteria:<p>1. They must build &quot;from the ground up&quot;. My brain has pretty much forgotten all of high school math. For instance, I can't even do division on paper.<p>2. I have a full time job, so the books should be pleasant to read and pedagogically well constructed.<p>3. No skipping over details, i.e. no books that are just collections of definitions and theorems. As someone else here on HN put it, I'd prefer them to &quot;be written by mathematicians, for mathematicians&quot;.<p>4. Good exercises with solutions.<p>I've already found a few suggestions in other threads:<p>* An Introduction to Mathematical Reasoning: Numbers, Sets and Functions (Eccles)<p>* How to Solve it: A New Aspect of Mathematical Method (Conway, Polya)<p>* Calculus (Spivak)<p>* Linear Algebra Done Right (Axler)<p>Can I read those in order before proceeding to &quot;Concrete Mathematics&quot;?<p>Thank you",
+				"matchLevel": "full",
+				"matchedWords": ["react"]
+			}
+		}
+	}, {
+		"created_at": "2016-04-30T08:12:59.000Z",
+		"title": "Combining React with industrial design",
+		"url": "http://www.christianalfoni.com/articles/2016_04_27_Combining-React-with-industrial-design",
+		"author": "tbassetto",
+		"points": 1,
+		"story_text": null,
+		"comment_text": null,
+		"num_comments": 0,
+		"story_id": null,
+		"story_title": null,
+		"story_url": null,
+		"parent_id": null,
+		"created_at_i": 1462003979,
+		"_tags": ["story", "author_tbassetto", "story_11600875"],
+		"objectID": "11600875",
+		"_highlightResult": {
+			"title": {
+				"value": "Combining <em>React</em> with industrial design",
+				"matchLevel": "full",
+				"matchedWords": ["react"]
+			},
+			"url": {
+				"value": "http://www.christianalfoni.com/articles/2016_04_27_Combining-<em>React</em>-with-industrial-design",
+				"matchLevel": "full",
+				"matchedWords": ["react"]
+			},
+			"author": {
+				"value": "tbassetto",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}],
+	"nbHits": 17550,
+	"page": 0,
+	"nbPages": 500,
+	"hitsPerPage": 2,
+	"processingTimeMS": 66,
+	"query": "react",
+	"params": "advancedSyntax=true&analytics=false&hitsPerPage=2&numericFilters=created_at_i%3C%3D1462010391&query=react&tags=%28story%29"
+}
