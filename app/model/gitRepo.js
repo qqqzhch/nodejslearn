@@ -25,7 +25,7 @@ var gitRepo = sequelize.define('gitRepo', {
     "question_num": Sequelize.BIGINT,
     "readme_content": Sequelize.TEXT,
     "readme_encoding": Sequelize.STRING(10),
-    "book_num": Sequelize.BIGINT
+    "book_num": Sequelize.BIGINT,
      "story_num":Sequelize.BIGINT
 }, {
     // freezeTableName: true, // Model tableName will be the same as the model name

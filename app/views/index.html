@@ -1,18 +1,42 @@
 
-<div class="jumbotron masthead">
+
       <div class="container">
-        <h1>UnknownError</h1>
-        <h2>Pay attention to open source projects, collect relevant information about open source projects, for you!</h2>
-        <p class="masthead-button-links">
-          <a class="btn btn-lg btn-primary btn-shadow" href="/opensource" role="button">Preview   the popular project on GitHub</a>
-        </p>
-        <ul class="masthead-links">
-          <li>
-            <a href="http://www.UnknownError.org" target="_blank" role="button">UnknownError.org  promise to come back soon</a>
-          </li>
-          <div id="showTime">
+        <div class="row">
+          <div class="col-xs-12 col-md-9 mt20">
+             {{~it.respList.rows :item:index}}
+            
+
+            <div class="col-xs-12 mt10">
+              <div class="widget-event">
+                <div >
+                  <h2 class="h4 title">
+                    <a href="/opensource/{{=item.full_name}}">{{=item.title}}</a><a class="btn btn-sm btn-default" href="/opensource/{{=item.full_name}}">★:{{=item.points}}</a> 
+                  </h2>
+                  
+                  <div>{{!item.story_text}}</div>
+                  <div><a class="btn btn-warning btn-xs" href="/opensource/{{=item.full_name}}">{{=item. repo_full_name}}</a></div>
+
+
+                  
+                </div>
+                
+              </div>
+            </div>
+            
+            {{~}}
+
+                          {{#def.pager}}
+        
           </div>
-        </ul>
+          <div class="col-xs-12 col-md-3 side mt30">
+            <div class="widget-box">
+              <h2 class="h4 widget-box__title">
+       
+                
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
 

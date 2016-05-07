@@ -7,6 +7,7 @@ var share = require('../app/controllers/share');
 var yanzheng = require('../app/controllers/yanzheng');
 var search = require('../app/controllers/search');
 var DeveloperTools = require('../app/controllers/DeveloperTools');
+var homepage = require('../app/controllers/homepage');
 
 
 module.exports = function(app, config) {
@@ -14,7 +15,7 @@ module.exports = function(app, config) {
     //app.get('/',home.index );
     app.get('/codeshow',share.codetpl)
 
-    app.get('/', home.index);
+    app.get('/', homepage.index);
     app.get('/404', home.http404);
     app.get('/error', home.error);
     app.get('/errortest', home.errortest);

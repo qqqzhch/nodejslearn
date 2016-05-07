@@ -13,6 +13,7 @@ var model = sequelize.define('hackStory', {
     "points":Sequelize.BIGINT,
     "story_text":Sequelize.TEXT,
     "tags":Sequelize.JSONB,
+      haveurl: Sequelize.BOOLEAN,
      objectID: {
         type: Sequelize.BIGINT,
         primaryKey: true
@@ -24,24 +25,18 @@ var model = sequelize.define('hackStory', {
      indexes: [ {
         name: 'story_repo_full_name_index',
         method: 'BTREE',
-        fields: ['repo_full_name']
+        fields: ['repo_full_name','haveurl']
     },{
         name: 'story_tags',
         method: 'gin',
         fields: ['tags']
     }],
     classMethods: {
-              getBookPager:function(fullname,index,pagesize){
+              getPager:function(index,pagesize){
                  return this
                 .findAndCountAll({
-                    attributes: ['bookname', 'MediumImage','ASIN'],
-                    where: {
-                        // isSearchedSon:true,
-                        repo_full_nameList:{ $contains: [fullname] }
-                        //select * from  "amazonBooks"   where  "repo_full_nameList"  ? 'bower/bower'
-                        
-
-                    },
+          
+                    order: '"objectID"  DESC',
                     offset: index * pagesize,
                     limit: (index+1) * pagesize
                 })
