@@ -16,6 +16,9 @@ module.exports = function(app, config) {
     app.get('/codeshow',share.codetpl)
 
     app.get('/', homepage.index);
+    app.get('/:pager(\\d+)?', homepage.index);
+    app.get('/newsinfo/:id(\\d+)?', homepage.newsinfo);
+    
     app.get('/404', home.http404);
     app.get('/error', home.error);
     app.get('/errortest', home.errortest);

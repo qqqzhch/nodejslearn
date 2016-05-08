@@ -12,14 +12,14 @@ exports.index = function(req, res) {
     }
     res.locals.seo.title = "opensource -Find what you are looking for open source projects, to share and Exchange"
     console.log('=================================')
-  
+
     hackStory
         .getPager(index - 1, 30)
         .then(function(data) {
             if (index > 1) {
                 res.locals.seo.title = "page " + index + " of  " + res.locals.seo.title
             }
-            pagerCom.getPager(res, data, index, '/opensource/')
+            pagerCom.getPager(res, data, index, '/')
             res.locals.respList = data;
             console.log(data)
 
@@ -30,9 +30,22 @@ exports.index = function(req, res) {
             throw err;
 
         }).catch(function(error) {
-      console.log(error)
-                 console.log('8888866668886')
+            console.log(error)
+            console.log('8888866668886')
             res.statusCode = 500;
             res.render('error');
         })
+}
+exports.newsinfo = function (req, res) {
+        var id = req.params.id || 0;
+       hackStory.getBookInfo(id)
+        .then(function(data) {
+            console.log(data);
+            res.locals.BookInfo = data;
+                res.render('newsinfo');
+        }, function(err) {
+
+                res.render('error');
+        })
+
 }

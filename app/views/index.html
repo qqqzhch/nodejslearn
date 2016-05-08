@@ -10,11 +10,15 @@
               <div class="widget-event">
                 <div >
                   <h2 class="h4 title">
-                    <a href="/opensource/{{=item.full_name}}">{{=item.title}}</a><a class="btn btn-sm btn-default" href="/opensource/{{=item.full_name}}">★:{{=item.points}}</a> 
+                    <a href="/newsinfo/{{=item.objectID}}">{{=item.title}}</a>
                   </h2>
                   
                   <div>{{!item.story_text}}</div>
-                  <div><a class="btn btn-warning btn-xs" href="/opensource/{{=item.full_name}}">{{=item. repo_full_name}}</a></div>
+                  <div>
+                    
+                    <a class="btn btn-sm btn-default"  href="/opensource/{{=item. repo_full_name}}">{{=item. repo_full_name}}</a>
+                    <a class="btn btn-sm "   >@{{=item.author}}</a>
+                     </div>
 
 
                   

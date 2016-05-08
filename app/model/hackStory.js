@@ -41,10 +41,10 @@ var model = sequelize.define('hackStory', {
                     limit: (index+1) * pagesize
                 })
         },
-        getBookInfo: function(ASIN) {
+        getBookInfo: function(objectID) {
             return this.find({
                 where: {
-                    ASIN: ASIN
+                    objectID: objectID
                 }
             })
         }
