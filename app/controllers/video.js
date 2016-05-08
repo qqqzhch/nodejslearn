@@ -4,17 +4,22 @@ var friendlyUrl = require('friendly-url');
 var youtobeVideoSql = require('../model/youTobeVideos');
 var pagerCom = require('./pager');
 
+var hackStory = require('../model/hackStory');
+var async = require('async');
+
 exports.list = function(req, res) {
     var ower = req.params.ower;
     var repo = req.params.repo;
     var full_name = ower + "/" + repo;
     var index = req.params.pager || 1;
-    if(index<1){index=1}
+    if (index < 1) {
+        index = 1
+    }
     var videoBaseUrl = '/opensource/' + ower + "/" + repo + '/v/';
     res.locals.videoBaseUrl = videoBaseUrl;
     res.locals.friendlyUrl = friendlyUrl;
     res.locals.seo.title = "open source project " + repo + " related video"
-    ///
+        ///
     async.parallel([
 
         function(callback) {
@@ -32,12 +37,28 @@ exports.list = function(req, res) {
                 .getVideosPager(full_name, index - 1, 30)
                 .then(function(data) {
                     res.locals.youtobeVideoList = data;
-                    pagerCom.getPager(res,data,index,'/opensource/' + ower + "/" + repo + '/video/');
+                    pagerCom.getPager(res, data, index, '/opensource/' + ower + "/" + repo + '/video/');
                     callback()
                 }, function(e) {
                     console.log(e);
                     callback(e)
                 })
+
+        },
+        function(callback) {
+            hackStory
+                .getPagerByfullname(0, 30, full_name)
+                .then(function(data) {
+                    res.locals.respList = data;
+                    callback(null)
+                }, function(err) {
+                    callback(err)
+                }).catch(function(err) {
+
+                    res.statusCode = 500;
+                    callback(err)
+                })
+
 
         }
     ], function(err) {
@@ -52,8 +73,8 @@ exports.list = function(req, res) {
 
 }
 
-exports.info=function(req,res){
-        var ower = req.params.ower;
+exports.info = function(req, res) {
+    var ower = req.params.ower;
     var repo = req.params.repo;
     var full_name = ower + "/" + repo;
     var id_site = req.params.id_site;
@@ -78,12 +99,12 @@ exports.info=function(req,res){
             youtobeVideoSql
                 .getVideo(id_site, id_video)
                 .then(function(data) {
-                     res.locals.VideoInfo = data;
-                     res.locals.VideoUrl=''
-                     if(data.player){
-                        res.locals.VideoUrl=data.player.embedHtml
-                        res.locals.VideoUrl=res.locals.VideoUrl.replace("/>","></iframe>")
-                     }
+                    res.locals.VideoInfo = data;
+                    res.locals.VideoUrl = ''
+                    if (data.player) {
+                        res.locals.VideoUrl = data.player.embedHtml
+                        res.locals.VideoUrl = res.locals.VideoUrl.replace("/>", "></iframe>")
+                    }
 
                     callback()
                 }, function(e) {
@@ -96,13 +117,13 @@ exports.info=function(req,res){
             res.render('error');
         } else {
             res.locals.seo = {
-                title: res.locals.VideoInfo.snippet.title+"-open source projects "+full_name,
+                title: res.locals.VideoInfo.snippet.title + "-open source projects " + full_name,
                 keywords: full_name,
                 description: ''
             }
-           res.render('OpenSource_videoInfo');
+            res.render('OpenSource_videoInfo');
         }
     });
     ///
-      
+
 }

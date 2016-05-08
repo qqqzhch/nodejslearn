@@ -5,12 +5,18 @@ var async = require('async');
 var friendlyUrl = require('friendly-url');
 var pagerCom = require('./pager');
 
+
+var hackStory = require('../model/hackStory');
+var async = require('async');
+
 exports.list = function(req, res) {
     var ower = req.params.ower;
     var repo = req.params.repo;
     var full_name = ower + "/" + repo;
     var index = req.params.pager || 1;
-    if(index<1){index=1}
+    if (index < 1) {
+        index = 1
+    }
     var questionBaseUrl = '/opensource/' + ower + "/" + repo + '/q/';
 
     res.locals.questionBaseUrl = questionBaseUrl;
@@ -40,6 +46,22 @@ exports.list = function(req, res) {
                 }, function(e) {
                     callback(e)
                 })
+
+        },
+        function(callback) {
+            hackStory
+                .getPagerByfullname(0, 30, full_name)
+                .then(function(data) {
+                    res.locals.respList = data;
+                    callback(null)
+                }, function(err) {
+                    callback(err)
+                }).catch(function(err) {
+
+                    res.statusCode = 500;
+                    callback(err)
+                })
+
 
         }
     ], function(err) {
@@ -95,6 +117,22 @@ exports.info = function(req, res) {
                     callback(e)
                 })
 
+        },
+        function(callback) {
+            hackStory
+                .getPagerByfullname(0, 30, full_name)
+                .then(function(data) {
+                    res.locals.respList = data;
+                    callback(null)
+                }, function(err) {
+                    callback(err)
+                }).catch(function(err) {
+
+                    res.statusCode = 500;
+                    callback(err)
+                })
+
+
         }
     ], function(err) {
         if (err) {
@@ -105,7 +143,7 @@ exports.info = function(req, res) {
                 keywords = res.locals.questionInfo.tags.join(',');
             }
             res.locals.seo = {
-                title: res.locals.questionInfo.title+"-open source projects  "+full_name,
+                title: res.locals.questionInfo.title + "-open source projects  " + full_name,
                 keywords: res.locals.questionInfo.tags.join(','),
                 description: ''
             }

@@ -41,6 +41,7 @@ exports.newsinfo = function (req, res) {
        hackStory.getBookInfo(id)
         .then(function(data) {
             console.log(data);
+            res.locals.seo.title = data.title+ "-Find what you are looking for open source projects, to share and Exchange"
             res.locals.BookInfo = data;
                 res.render('newsinfo');
         }, function(err) {

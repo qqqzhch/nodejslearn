@@ -10107,9 +10107,10 @@ function normalizeLinkText(url) {
  * - __typographer__  - `false`. Set `true` to enable [some language-neutral
  *   replacement](https://github.com/markdown-it/markdown-it/blob/master/lib/rules_core/replacements.js) +
  *   quotes beautification (smartquotes).
- * - __quotes__ - `“”‘’`, string. Double + single quotes replacement pairs, when
- *   typographer enabled and smartquotes on. Set doubles to '«»' for Russian,
- *   '„“' for German.
+ * - __quotes__ - `“”‘’`, String or Array. Double + single quotes replacement
+ *   pairs, when typographer enabled and smartquotes on. For example, you can
+ *   use `'«»„“'` for Russian, `'„“‚‘'` for German, and
+ *   `['«\xA0', '\xA0»', '‹\xA0', '\xA0›']` for French (including nbsp).
  * - __highlight__ - `null`. Highlighter function for fenced code blocks.
  *   Highlighter `function (str, lang)` should return escaped HTML. It can also
  *   return empty string if the source was not changed and should be escaped externaly.
@@ -10228,8 +10229,10 @@ function MarkdownIt(presetName, options) {
    * MarkdownIt#validateLink(url) -> Boolean
    *
    * Link validation function. CommonMark allows too much in links. By default
-   * we disable `javascript:` and `vbscript:` schemas. You can change this
-   * behaviour.
+   * we disable `javascript:`, `vbscript:`, `file:` schemas, and almost all `data:...` schemas
+   * except some embedded image types.
+   *
+   * You can change this behaviour:
    *
    * ```javascript
    * var md = require('markdown-it')();
@@ -10840,7 +10843,10 @@ module.exports = {
     typographer:  false,
 
     // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
     quotes: '\u201c\u201d\u2018\u2019' /* “”‘’ */,
 
     // Highlighter function. Should return escaped HTML,
@@ -10913,7 +10919,10 @@ module.exports = {
     typographer:  false,
 
     // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
     quotes: '\u201c\u201d\u2018\u2019' /* “”‘’ */,
 
     // Highlighter function. Should return escaped HTML,
@@ -10953,7 +10962,10 @@ module.exports = {
     typographer:  false,
 
     // Double + single quotes replacement pairs, when typographer enabled,
-    // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
+    // and smartquotes on. Could be either a String or an Array.
+    //
+    // For example, you can use '«»„“' for Russian, '„“‚‘' for German,
+    // and ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'] for French (including nbsp).
     quotes: '\u201c\u201d\u2018\u2019' /* “”‘’ */,
 
     // Highlighter function. Should return escaped HTML,
@@ -11703,6 +11715,8 @@ module.exports = function blockquote(state, startLine, endLine, silent) {
   //      - - -
   //     ```
   for (nextLine = startLine + 1; nextLine < endLine; nextLine++) {
+    if (state.tShift[nextLine] < oldIndent) { break; }
+
     pos = state.bMarks[nextLine] + state.tShift[nextLine];
     max = state.eMarks[nextLine];
 
@@ -11748,7 +11762,7 @@ module.exports = function blockquote(state, startLine, endLine, silent) {
     //
     // Any negative number will do the job here, but it's better for it
     // to be large enough to make any bugs obvious.
-    state.tShift[nextLine] = -1337;
+    state.tShift[nextLine] = -1;
   }
 
   oldParentType = state.parentType;
@@ -12400,6 +12414,9 @@ module.exports = function paragraph(state, startLine/*, endLine*/) {
     // it's considered a lazy continuation regardless of what's there
     if (state.tShift[nextLine] - state.blkIndent > 3) { continue; }
 
+    // quirk for blockquotes, this line should already be checked by that rule
+    if (state.tShift[nextLine] < 0) { continue; }
+
     // Some tags can terminate paragraph without empty line.
     terminate = false;
     for (i = 0, l = terminatorRules.length; i < l; i++) {
@@ -12480,6 +12497,9 @@ module.exports = function reference(state, startLine, _endLine, silent) {
     // this would be a code block normally, but after paragraph
     // it's considered a lazy continuation regardless of what's there
     if (state.tShift[nextLine] - state.blkIndent > 3) { continue; }
+
+    // quirk for blockquotes, this line should already be checked by that rule
+    if (state.tShift[nextLine] < 0) { continue; }
 
     // Some tags can terminate paragraph without empty line.
     terminate = false;
@@ -12577,11 +12597,16 @@ module.exports = function reference(state, startLine, _endLine, silent) {
     return false;
   }
 
+  label = normalizeReference(str.slice(1, labelEnd));
+  if (!label) {
+    // CommonMark 0.20 disallows empty labels
+    return false;
+  }
+
   // Reference can not terminate anything. This check is for safety only.
   /*istanbul ignore if*/
   if (silent) { return true; }
 
-  label = normalizeReference(str.slice(1, labelEnd));
   if (typeof state.env.references === 'undefined') {
     state.env.references = {};
   }
@@ -12738,7 +12763,7 @@ StateBlock.prototype.getLines = function getLines(begin, end, indent, keepLastLF
   // Opt: don't use push queue for single line;
   if (line + 1 === end) {
     first = this.bMarks[line] + Math.min(this.tShift[line], indent);
-    last = keepLastLF ? this.bMarks[end] : this.eMarks[end - 1];
+    last = this.eMarks[end - 1] + (keepLastLF ? 1 : 0);
     return this.src.slice(first, last);
   }
 
@@ -13154,8 +13179,6 @@ module.exports = function inline(state) {
 },{}],37:[function(require,module,exports){
 // Simple typographyc replacements
 //
-// '' → ‘’
-// "" → “”. Set '«»' for Russian, '„“' for German, empty to disable
 // (c) (C) → ©
 // (tm) (TM) → ™
 // (r) (R) → ®
@@ -13266,7 +13289,7 @@ function replaceAt(str, index, ch) {
 function process_inlines(tokens, state) {
   var i, token, text, t, pos, max, thisLevel, item, lastChar, nextChar,
       isLastPunctChar, isNextPunctChar, isLastWhiteSpace, isNextWhiteSpace,
-      canOpen, canClose, j, isSingle, stack;
+      canOpen, canClose, j, isSingle, stack, openQuote, closeQuote;
 
   stack = [];
 
@@ -13351,16 +13374,28 @@ function process_inlines(tokens, state) {
           if (stack[j].level < thisLevel) { break; }
           if (item.single === isSingle && stack[j].level === thisLevel) {
             item = stack[j];
+
             if (isSingle) {
-              tokens[item.token].content = replaceAt(
-                tokens[item.token].content, item.pos, state.md.options.quotes[2]);
-              token.content = replaceAt(
-                token.content, t.index, state.md.options.quotes[3]);
+              openQuote = state.md.options.quotes[2];
+              closeQuote = state.md.options.quotes[3];
             } else {
-              tokens[item.token].content = replaceAt(
-                tokens[item.token].content, item.pos, state.md.options.quotes[0]);
-              token.content = replaceAt(token.content, t.index, state.md.options.quotes[1]);
+              openQuote = state.md.options.quotes[0];
+              closeQuote = state.md.options.quotes[1];
             }
+
+            // replace token.content *before* tokens[item.token].content,
+            // because, if they are pointing at the same token, replaceAt
+            // could mess up indices when quote length != 1
+            token.content = replaceAt(token.content, t.index, closeQuote);
+            tokens[item.token].content = replaceAt(
+              tokens[item.token].content, item.pos, openQuote);
+
+            pos += closeQuote.length - 1;
+            if (item.token === i) { pos += openQuote.length - 1; }
+
+            text = token.content;
+            max = text.length;
+
             stack.length = j;
             continue OUTER;
           }
@@ -15337,8 +15372,11 @@ var src_path = exports.src_path =
         '\\"(?:(?!' + src_ZCc + '|["]).)+\\"|' +
         "\\'(?:(?!" + src_ZCc + "|[']).)+\\'|" +
         "\\'(?=" + src_pseudo_letter + ').|' +  // allow `I'm_king` if no pair found
-        '\\.{2,3}[a-zA-Z0-9%]|' + // github has ... in commit range links. Restrict to
-                                  // english & percent-encoded only, until more examples found.
+        '\\.{2,3}[a-zA-Z0-9%/]|' + // github has ... in commit range links. Restrict to
+                                   // - english
+                                   // - percent-encoded
+                                   // - parts of file path
+                                   // until more examples found.
         '\\.(?!' + src_ZCc + '|[.]).|' +
         '\\-(?!' + src_ZCc + '|--(?:[^-]|$))(?:[-]+|.)|' +  // `---` => long dash, terminate
         '\\,(?!' + src_ZCc + ').|' +      // allow `,,,` in paths
@@ -15487,7 +15525,7 @@ function decode(string, exclude) {
   cache = getDecodeCache(exclude);
 
   return string.replace(/(%[a-f0-9]{2})+/gi, function(seq) {
-    var i, l, b1, b2, b3, b4, char,
+    var i, l, b1, b2, b3, b4, chr,
         result = '';
 
     for (i = 0, l = seq.length; i < l; i += 3) {
@@ -15503,12 +15541,12 @@ function decode(string, exclude) {
         b2 = parseInt(seq.slice(i + 4, i + 6), 16);
 
         if ((b2 & 0xC0) === 0x80) {
-          char = ((b1 << 6) & 0x7C0) | (b2 & 0x3F);
+          chr = ((b1 << 6) & 0x7C0) | (b2 & 0x3F);
 
-          if (char < 0x80) {
+          if (chr < 0x80) {
             result += '\ufffd\ufffd';
           } else {
-            result += String.fromCharCode(char);
+            result += String.fromCharCode(chr);
           }
 
           i += 3;
@@ -15522,12 +15560,12 @@ function decode(string, exclude) {
         b3 = parseInt(seq.slice(i + 7, i + 9), 16);
 
         if ((b2 & 0xC0) === 0x80 && (b3 & 0xC0) === 0x80) {
-          char = ((b1 << 12) & 0xF000) | ((b2 << 6) & 0xFC0) | (b3 & 0x3F);
+          chr = ((b1 << 12) & 0xF000) | ((b2 << 6) & 0xFC0) | (b3 & 0x3F);
 
-          if (char < 0x800 || (char >= 0xD800 && char <= 0xDFFF)) {
+          if (chr < 0x800 || (chr >= 0xD800 && chr <= 0xDFFF)) {
             result += '\ufffd\ufffd\ufffd';
           } else {
-            result += String.fromCharCode(char);
+            result += String.fromCharCode(chr);
           }
 
           i += 6;
@@ -15542,13 +15580,13 @@ function decode(string, exclude) {
         b4 = parseInt(seq.slice(i + 10, i + 12), 16);
 
         if ((b2 & 0xC0) === 0x80 && (b3 & 0xC0) === 0x80 && (b4 & 0xC0) === 0x80) {
-          char = ((b1 << 18) & 0x1C0000) | ((b2 << 12) & 0x3F000) | ((b3 << 6) & 0xFC0) | (b4 & 0x3F);
+          chr = ((b1 << 18) & 0x1C0000) | ((b2 << 12) & 0x3F000) | ((b3 << 6) & 0xFC0) | (b4 & 0x3F);
 
-          if (char < 0x10000 || char > 0x10FFFF) {
+          if (chr < 0x10000 || chr > 0x10FFFF) {
             result += '\ufffd\ufffd\ufffd\ufffd';
           } else {
-            char -= 0x10000;
-            result += String.fromCharCode(0xD800 + (char >> 10), 0xDC00 + (char & 0x3FF));
+            chr -= 0x10000;
+            result += String.fromCharCode(0xD800 + (chr >> 10), 0xDC00 + (chr & 0x3FF));
           }
 
           i += 9;
@@ -18172,4 +18210,7 @@ $(document).ready(function(argument) {
 
 	})
 })
+
+
+
 },{"jquery":1,"markdown-it":2,"underscore":67}]},{},[69]);

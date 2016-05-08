@@ -16,12 +16,12 @@ var hackStory=require('./model/hackStory');
 // gitRepo.sync({
 //     force: false
 // })
-amazonBook.sync({
-    force: true
-})
-booksearchHistry.sync({
-    force: true
-})
+// amazonBook.sync({
+//     force: true
+// })
+// booksearchHistry.sync({
+//     force: true
+// })
 
 // stackSearchHistry.sync({
 //     force: false

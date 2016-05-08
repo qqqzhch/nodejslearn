@@ -92,14 +92,13 @@
 					</div>
 					<div class="widget-box">
 						<h2 class="h4 widget-box__title">
-							
+							hacknews
 						</h2>
 						<ul class="widget-links list-unstyled">
-							<li class="widget-links__item">
-								<div id="showTime">
-          								</div>
-								
-							</li>
+							 {{~it.respList.rows :item:index}}
+						<li class="widget-links__item"> <a href="/newsinfo/{{=item.objectID}}">{{=item.title}}</a></li>
+							{{~}}
+							
 						</ul>
 					</div>
 				</div>

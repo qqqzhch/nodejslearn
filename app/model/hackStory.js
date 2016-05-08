@@ -11,8 +11,6 @@ var model = sequelize.define('hackStory', {
     "url":   Sequelize.STRING,
     "author": Sequelize.STRING,
     "points":Sequelize.BIGINT,
-    "story_text":Sequelize.TEXT,
-    "tags":Sequelize.JSONB,
       haveurl: Sequelize.BOOLEAN,
      objectID: {
         type: Sequelize.BIGINT,
@@ -25,11 +23,11 @@ var model = sequelize.define('hackStory', {
      indexes: [ {
         name: 'story_repo_full_name_index',
         method: 'BTREE',
-        fields: ['repo_full_name','haveurl']
+        fields: ['repo_full_name','points']
     },{
-        name: 'story_tags',
-        method: 'gin',
-        fields: ['tags']
+        name: 'story_points',
+        method: 'BTREE',
+        fields: ['points']
     }],
     classMethods: {
               getPager:function(index,pagesize){
@@ -37,6 +35,20 @@ var model = sequelize.define('hackStory', {
                 .findAndCountAll({
           
                     order: '"objectID"  DESC',
+                    offset: index * pagesize,
+                    limit: (index+1) * pagesize
+                })
+        },
+        getPagerByfullname:function(index,pagesize,fullname){
+                 return this
+                .findAndCountAll({
+                        where: {
+                        // isSearchedSon:true,
+                        repo_full_name:fullname
+
+                    },
+          
+                    order: '"points"  DESC',
                     offset: index * pagesize,
                     limit: (index+1) * pagesize
                 })
