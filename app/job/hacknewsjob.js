@@ -19,7 +19,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 5,
+            limit: 2,
             order: '"stargazers_count" desc',
             where: ["story_num is NULL"]
         })

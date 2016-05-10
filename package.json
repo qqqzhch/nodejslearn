@@ -59,7 +59,11 @@
     },
     "devDependencies": {
             "duo":"~0.12.0",
-            " browserify":"~10.2.3 "
+            " browserify":"~10.2.3 ",
+            " grunt":"1.0.1",
+            "grunt-contrib-cssmin ":"1.0.1",
+            "grunt-contrib-uglify ":"1.0.1",
+            "grunt-browserify ":"5.0.0"
         },
     "bundleDependencies": [],
 
