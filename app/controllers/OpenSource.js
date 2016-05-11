@@ -80,6 +80,7 @@ exports.repo = function(req, res) {
                 hackStory
                     . getPagerByfullname(0, 30,full_name)
                     .then(function(data) {
+                 
                         res.locals.respList = data;
                            callback(null)
                     }, function(err) {

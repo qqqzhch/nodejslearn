@@ -41,7 +41,7 @@ var model = sequelize.define('hackStory', {
         },
         getPagerByfullname:function(index,pagesize,fullname){
                  return this
-                .findAndCountAll({
+                .findAll({
                         where: {
                         // isSearchedSon:true,
                         repo_full_name:fullname
