@@ -19,7 +19,7 @@ function getresplist(callbaack) {
     gitRepoSql
         .findAll({
             offset: 0,
-            limit: 2,
+            limit: 4,
             order: '"stargazers_count" desc',
             where: ["story_num is NULL"]
         })
@@ -45,7 +45,7 @@ function getBookSearch(list, callbaack) {
             nameForSearch += "    " + aitem.owner.login
         }
         console.log('采集news ' + nameForSearch);
-        hn.story().search(nameForSearch).hitsPerPage(500).before('past_week', function(error, data) {
+        hn.story().search(nameForSearch).hitsPerPage(150).before('past_week', function(error, data) {
             if (error) {
                 //cuowu
                 console.log(error);
