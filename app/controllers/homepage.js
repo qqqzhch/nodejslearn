@@ -22,7 +22,6 @@ exports.index = function(req, res) {
             pagerCom.getPager(res, data, index, '/')
             res.locals.respList = data;
 
-
             res.render('index');
 
         }, function(err) {
