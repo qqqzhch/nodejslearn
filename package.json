@@ -55,7 +55,8 @@
         "aws-lib":"~0.3.0",
         "xml2js": "0.1.x",
         "sax": "0.1.x",
-        "hacker-news-api ":"2.0.0 "
+        "hacker-news-api ":"2.0.0 ",
+        "oneapm":"1.2.20 "
     },
     "devDependencies": {
             "duo":"~0.12.0",

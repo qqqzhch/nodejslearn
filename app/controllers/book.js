@@ -103,7 +103,7 @@ exports.info = function(req, res) {
 		function(callback) {
 			amazonBookSql.getBookInfo(id_book)
 				.then(function(data) {
-					console.log(data);
+					
 					res.locals.BookInfo = data;
 					callback();
 				}, function(err) {

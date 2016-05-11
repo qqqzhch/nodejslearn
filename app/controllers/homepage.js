@@ -21,7 +21,7 @@ exports.index = function(req, res) {
             }
             pagerCom.getPager(res, data, index, '/')
             res.locals.respList = data;
-            console.log(data)
+
 
             res.render('index');
 
@@ -40,7 +40,7 @@ exports.newsinfo = function (req, res) {
         var id = req.params.id || 0;
        hackStory.getBookInfo(id)
         .then(function(data) {
-            console.log(data);
+
             res.locals.seo.title = data.title+ "-Find what you are looking for open source projects, to share and Exchange"
             res.locals.BookInfo = data;
                 res.render('newsinfo');
