@@ -36,7 +36,7 @@ var model = sequelize.define('hackStory', {
           
                     order: '"objectID"  DESC',
                     offset: index * pagesize,
-                    limit: (index+1) * pagesize
+                    limit:pagesize
                 })
         },
         getPagerByfullname:function(index,pagesize,fullname){
@@ -50,7 +50,7 @@ var model = sequelize.define('hackStory', {
           
                     order: '"points"  DESC',
                     offset: index * pagesize,
-                    limit: (index+1) * pagesize
+                    limit:  pagesize
                 })
         },
         getBookInfo: function(objectID) {

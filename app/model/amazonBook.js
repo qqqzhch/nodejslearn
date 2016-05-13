@@ -50,7 +50,7 @@ var model = sequelize.define('amazonBook', {
 
                     },
                     offset: index * pagesize,
-                    limit: (index+1) * pagesize
+                    limit:pagesize
                 })
         },
         getBookInfo: function(ASIN) {

@@ -51,7 +51,7 @@ var stackQuestion = sequelize.define('stackQuestion', {
 
                     },
                     offset: index * pagesize,
-                    limit: (index+1) * pagesize
+                    limit:pagesize
                 })
         },
         getQuesionInfo:function(id_site,id_question_id){

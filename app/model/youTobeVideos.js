@@ -49,7 +49,7 @@ var youTobeVideos = sequelize.define('youTobeVideos', {
 
                     },
                     offset: index * pagesize,
-                    limit: (index+1) * pagesize
+                      limit:pagesize
                 })
 
         },
