@@ -18,8 +18,8 @@ function getresplist(callbaack) {
         .findAll({
             offset: 0,
             limit: 10,
-            order: '"createdAt" ASC',
-            where: ["question_num is NULL"]
+            order: '"question_num" ASC',
+            where: ["question_num > 5"]
         })
         .then(function(result) {
 
