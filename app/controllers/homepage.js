@@ -13,8 +13,8 @@ exports.index = function(req, res) {
     res.locals.seo.title = "opensource -Find what you are looking for open source projects, to share and Exchange"
     console.log('=================================')
 
-    hackStory
-        .getPager(index - 1, 30)
+    gitRepoSql 
+        .getReposPager(index - 1, 30)
         .then(function(data) {
             if (index > 1) {
                 res.locals.seo.title = "page " + index + " of  " + res.locals.seo.title

@@ -10,14 +10,14 @@
               <div class="widget-event">
                 <div >
                   <h2 class="h4 title">
-                    <a target="_blank"   rel="nofollow" href="/newsinfo/{{=item.objectID}}">{{=item.title}}</a>
+                    <a target="_blank"   href="/opensource/{{=item. full_name}}">{{=item.full_name}}</a>
                   </h2>
                   
-                  <div>{{!item.story_text}}</div>
+                  <div>{{!item.description}}</div>
                   <div>
                     
-                    <a class="btn btn-sm btn-default"  href="/opensource/{{=item. repo_full_name}}">{{=item. repo_full_name}}</a>
-                    <a class="btn btn-sm "   >@{{=item.author}}</a>
+                    <a class="btn btn-sm btn-default"  href="/opensource/{{=item. repo_full_name}}">Stars:{{=item. stargazers_count}}</a>
+             
                      </div>
 
 
