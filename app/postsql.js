@@ -1,21 +1,21 @@
 var Sequelize = require('sequelize');
 // var sequelize = new Sequelize('postgres://user:postgres:5432/bendi');
 var gitRepo=require('./model/gitRepo');
-var youTobeVideos=require('./model/youTobeVideos');
+// var youTobeVideos=require('./model/youTobeVideos');
 var stackQuestion=require('./model/stackQuestion');
 var stackAnswer=require('./model/stackAnswer');
 var gitRepoHistry=require('./model/gitRepoHistry');
-var youSearchHistry=require('./model/youSearchHistry');
+// var youSearchHistry=require('./model/youSearchHistry');
 var stackSearchHistry=require('./model/stackSearchHistry');
-var amazonBook=require('./model/amazonBook');
+// var amazonBook=require('./model/amazonBook');
 var booksearchHistry=require('./model/booksearchHistry');
 var hackStory=require('./model/hackStory');
 
 
 
-// gitRepo.sync({
-//     force: false
-// })
+gitRepo.sync({
+    force: true
+})
 // amazonBook.sync({
 //     force: true
 // })
@@ -23,16 +23,16 @@ var hackStory=require('./model/hackStory');
 //     force: true
 // })
 
-// stackSearchHistry.sync({
-//     force: false
-// })
+stackSearchHistry.sync({
+    force: true
+})
 
-// stackQuestion.sync({
-//     force: false
-// })
-// stackAnswer.sync({
-//     force: false
-// })
+stackQuestion.sync({
+    force: true
+})
+stackAnswer.sync({
+    force: true
+})
 
 // youSearchHistry.sync({
 //     force: false
@@ -42,9 +42,9 @@ var hackStory=require('./model/hackStory');
 //     force: false
 // })
 
-// gitRepoHistry.sync({
-//     force: false
-// })
+gitRepoHistry.sync({
+    force: true
+})
 
 // amazonBook.sync({
 //     force: true

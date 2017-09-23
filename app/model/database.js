@@ -1,6 +1,9 @@
 var Sequelize = require('sequelize');
 var env = process.env.NODE_ENV,
-	config = require('../../config/config')[env]
+	config = require('../../config/config')[env];
+console.log('huanjingbianliang');
+console.log(env);
+console.log(config );
 module.exports = new Sequelize(
 	config.postsql.dbname,
 	config.postsql.username,

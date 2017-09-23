@@ -3,7 +3,7 @@ var OpenSource = require('../app/controllers/OpenSource');
 var question = require('../app/controllers/question');
 var video = require('../app/controllers/video');
 var book = require('../app/controllers/book');
-var share = require('../app/controllers/share');
+// var share = require('../app/controllers/share');
 var yanzheng = require('../app/controllers/yanzheng');
 var search = require('../app/controllers/search');
 var DeveloperTools = require('../app/controllers/DeveloperTools');
@@ -13,7 +13,7 @@ var homepage = require('../app/controllers/homepage');
 module.exports = function(app, config) {
     console.log('luyou');
     //app.get('/',home.index );
-    app.get('/codeshow',share.codetpl)
+    // app.get('/codeshow',share.codetpl)
 
     app.get('/', homepage.index);
     app.get('/:pager(\\d+)?', homepage.index);
@@ -25,8 +25,8 @@ module.exports = function(app, config) {
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
     app.get('/robots.txt', home.robots);
-    app.get('/sharecode',share.code)
-    app.post('/sharecodeToimg',share.codeToimg)
+    // app.get('/sharecode',share.code)
+    // app.post('/sharecodeToimg',share.codeToimg)
 
     
 

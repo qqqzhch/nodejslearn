@@ -1,6 +1,6 @@
 #!/bin/env node
  //  OpenShift sample Node application
- require('oneapm');
+ 
 var express = require('express');
 var fs = require('fs');
 var env = process.env.NODE_ENV,

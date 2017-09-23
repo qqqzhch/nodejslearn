@@ -20,8 +20,13 @@ function getresplist(callbaack) {
         .findAll({
             offset: 0,
             limit: 4,
-            order: '"stargazers_count" desc',
-            where: ["story_num is NULL"]
+            order:[[ "stargazers_count","desc"  ]] ,
+            
+            where: {
+                story_num:{
+                    $eq:null
+                }
+            }
         })
         .then(function(result) {
             searchPage = 1;
@@ -38,19 +43,21 @@ function getBookSearch(list, callbaack) {
         if (aitem.search_name) {
             nameForSearch = aitem.search_name;
         }
-        if (aitem.language) {
-            nameForSearch += "    " + aitem.language
-        }
-        if (aitem.language == nameForSearch) {
-            nameForSearch += "    " + aitem.owner.login
-        }
+        // if (aitem.language) {
+        //     nameForSearch += "    " + aitem.language
+        // }
+        // if (aitem.language == nameForSearch) {
+        //     nameForSearch += "    " + aitem.owner.login
+        // }
         console.log('采集news ' + nameForSearch);
         hn.story().search(nameForSearch).hitsPerPage(150).before('past_week', function(error, data) {
+            console.log(data)
             if (error) {
                 //cuowu
                 console.log(error);
             } else {
                 if (data && data.hits) {
+
                     async.each(data.hits, function(qitem, callbackeach) {
                         // body...
                         // repo_full_name
@@ -102,7 +109,7 @@ function saveStore(qitem, itemCallback) {
         return;
     }
 
-
+console.log(qitem)
     hackStory
         .findOrCreate({
             where: {

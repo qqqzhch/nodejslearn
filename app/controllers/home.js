@@ -26,14 +26,14 @@ github.authenticate({
     password: "qq569033569033"
 });
 
-var stackexchange = require('stackexchange');
+// var stackexchange = require('stackexchange');
 
 
 
 var options = {
     version: 2.2
 };
-var context = new stackexchange(options);
+// var context = new stackexchange(options);
 var filter = {
     key: '1bHwZK)j3oMWIjndaVT*lQ((',
     pagesize: 50,
@@ -202,60 +202,60 @@ exports.getConent = function(req, res) {
     })
 
 }
-exports.getSearch = function(req, res) {
-    var q = req.query.q
-    if (q == undefined) {
-        return res.send({
-            error: '缺少参数q'
-        })
-    }
-    filter.intitle = q;
-    context.search.search(filter, function(err, results) {
-        if (err) {
-            return res.send({
-                error: err
-            })
+// exports.getSearch = function(req, res) {
+//     var q = req.query.q
+//     if (q == undefined) {
+//         return res.send({
+//             error: '缺少参数q'
+//         })
+//     }
+//     filter.intitle = q;
+//     context.search.search(filter, function(err, results) {
+//         if (err) {
+//             return res.send({
+//                 error: err
+//             })
 
-        }
-        res.send(results)
-    });
-}
-exports.getQuestionsInfo = function(req, res) {
-    var q = req.query.q
-    if (q == undefined) {
-        return res.send({
-            error: '缺少参数q'
-        })
-    }
-    q=q.split(',')
-    context.questions.questions(filterInfoQ, function(err, results) {
-        if (err) {
-            return res.send({
-                error: err
-            })
+//         }
+//         res.send(results)
+//     });
+// }
+// exports.getQuestionsInfo = function(req, res) {
+//     var q = req.query.q
+//     if (q == undefined) {
+//         return res.send({
+//             error: '缺少参数q'
+//         })
+//     }
+//     q=q.split(',')
+//     context.questions.questions(filterInfoQ, function(err, results) {
+//         if (err) {
+//             return res.send({
+//                 error: err
+//             })
 
-        }
-        res.send(results)
-    }, q);
-}
-exports.getAnswersnfo = function(req, res) {
-    var q = req.query.q
-    if (q == undefined) {
-        return res.send({
-            error: '缺少参数q'
-        })
-    }
-    q=q.split(',')
-    context.questions.answers(filterInfoQ, function(err, results) {
-        if (err) {
-            return res.send({
-                error: err
-            })
+//         }
+//         res.send(results)
+//     }, q);
+// }
+// exports.getAnswersnfo = function(req, res) {
+//     var q = req.query.q
+//     if (q == undefined) {
+//         return res.send({
+//             error: '缺少参数q'
+//         })
+//     }
+//     q=q.split(',')
+//     context.questions.answers(filterInfoQ, function(err, results) {
+//         if (err) {
+//             return res.send({
+//                 error: err
+//             })
 
-        }
-        res.send(results)
-    }, q);
-}
+//         }
+//         res.send(results)
+//     }, q);
+// }
 // 获取目录接口 /repos/:owner/:repo/contents/:path
 //https://api.github.com/repos/jrburke/requirejs/contents
 

@@ -15,11 +15,17 @@ function getlist(callbaack) {
         .findAll({
             offset: 0,
             limit: 10,
-            order: '"createdAt" ASC',
-            where: ['"isSearchedSon" is NULL']
+            order: [
+                ["createdAt","ASC"]
+            ],
+            where:{
+                isSearchedSon:{
+                  $eq: null
+                }
+            } 
         })
         .then(function(result) {
-
+            // console.log(result)
             callbaack(null, result)
         });
 }

@@ -18,11 +18,15 @@ function getresplist(callbaack) {
         .findAll({
             offset: 0,
             limit: 10,
-            order: '"question_num" ASC',
-            where: ["question_num > 5"]
+            order:[["question_num","ASC"]] ,
+            where: {
+                // question_num :{
+                //     $gt: 0
+                // }
+            }
         })
         .then(function(result) {
-
+          console.log('xingmu',result)
             callbaack(null, result)
         });
 }

@@ -1,1 +1,1 @@
-    require('./stackSearch').run()
+    require('./hacknewsjob').run()
