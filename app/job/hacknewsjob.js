@@ -43,6 +43,7 @@ function getBookSearch(list, callbaack) {
         if (aitem.search_name) {
             nameForSearch = aitem.search_name;
         }
+         
         // if (aitem.language) {
         //     nameForSearch += "    " + aitem.language
         // }
@@ -50,7 +51,7 @@ function getBookSearch(list, callbaack) {
         //     nameForSearch += "    " + aitem.owner.login
         // }
         console.log('采集news ' + nameForSearch);
-        hn.story().search(nameForSearch).hitsPerPage(150).before('past_week', function(error, data) {
+        hn.comment().search(nameForSearch).hitsPerPage(100).before('past_week', function(error, data) {
             console.log(data)
             if (error) {
                 //cuowu
@@ -62,6 +63,7 @@ function getBookSearch(list, callbaack) {
                         // body...
                         // repo_full_name
                         // repo_language
+                        console.log(qitem)
                         qitem.repo_full_name = aitem.full_name;
                         qitem.repo_language = aitem.language;
                         saveStore(qitem, callbackeach)
@@ -99,15 +101,15 @@ function saveStore(qitem, itemCallback) {
     console.log('save saveStore')
 
     qitem.tags = qitem._tags
-    if(qitem.url){
-        qitem.haveurl=true;
-    }else{
-        qitem.haveurl=false;
-    }
-    if(qitem.haveurl==false){
-        itemCallback(null)
-        return;
-    }
+    // if(qitem.url){
+    //     qitem.haveurl=true;
+    // }else{
+    //     qitem.haveurl=false;
+    // }
+    // if(qitem.haveurl==false){
+    //     itemCallback(null)
+    //     return;
+    // }
 
 console.log(qitem)
     hackStory

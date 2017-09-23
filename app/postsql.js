@@ -13,9 +13,9 @@ var hackStory=require('./model/hackStory');
 
 
 
-gitRepo.sync({
-    force: true
-})
+// gitRepo.sync({
+//     force: true
+// })
 // amazonBook.sync({
 //     force: true
 // })
@@ -23,16 +23,16 @@ gitRepo.sync({
 //     force: true
 // })
 
-stackSearchHistry.sync({
-    force: true
-})
+// stackSearchHistry.sync({
+//     force: true
+// })
 
-stackQuestion.sync({
-    force: true
-})
-stackAnswer.sync({
-    force: true
-})
+// stackQuestion.sync({
+//     force: true
+// })
+// stackAnswer.sync({
+//     force: true
+// })
 
 // youSearchHistry.sync({
 //     force: false
@@ -42,9 +42,9 @@ stackAnswer.sync({
 //     force: false
 // })
 
-gitRepoHistry.sync({
-    force: true
-})
+// gitRepoHistry.sync({
+//     force: true
+// })
 
 // amazonBook.sync({
 //     force: true

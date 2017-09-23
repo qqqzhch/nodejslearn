@@ -7,11 +7,9 @@ var sequelize = require('./database');
 var model = sequelize.define('hackStory', {
     repo_full_name: Sequelize.STRING(150),
     repo_language: Sequelize.STRING(50),
-    "title": Sequelize.TEXT,
-    "url":   Sequelize.STRING,
+    "story_title": Sequelize.TEXT,
     "author": Sequelize.STRING,
-    "points":Sequelize.BIGINT,
-      haveurl: Sequelize.BOOLEAN,
+      comment_text:Sequelize.TEXT,
      objectID: {
         type: Sequelize.BIGINT,
         primaryKey: true
@@ -23,11 +21,7 @@ var model = sequelize.define('hackStory', {
      indexes: [ {
         name: 'story_repo_full_name_index',
         method: 'BTREE',
-        fields: ['repo_full_name','points']
-    },{
-        name: 'story_points',
-        method: 'BTREE',
-        fields: ['points']
+        fields: ['repo_full_name']
     }],
     classMethods: {
               getPager:function(index,pagesize){
