@@ -2,6 +2,11 @@
     "name": "OpenShift-Sample-App",
     "version": "1.0.0",
     "description": "OpenShift Sample Application",
+    "scripts": {
+        "start": "supervisor server.js",
+        "getdata": "node app/job/cron.js"
+
+    },
     "keywords": [
         "OpenShift",
         "Node.js",
@@ -28,7 +33,7 @@
         "express": "~4.12.4",
         "github": "~0.2.4",
         "js-base64": "~2.1.8",
-        "stackexchange": "~0.4.0",
+        "stackexchange-zhch": "~0.2.0",
         "youtube-api": "~0.3.2",
         "async": "~2.5.0",
         "request": "~2.82.0",
@@ -65,8 +70,5 @@
     "bundleDependencies": [],
 
     "private": true,
-    "scripts": {
-        "start": "supervisor server.js"
-    },
     "main": "server.js"
 }

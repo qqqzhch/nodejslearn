@@ -19,3 +19,9 @@ on OS X or Linux:
 export NODE_ENV=development
 
 
+http://www.cnblogs.com/liusc/p/docker_node.html
+
+
+docker exec -it db3 /bin/sh 或者 docker exec -it d48b21a7e439 /bin/sh
+
+
