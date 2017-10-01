@@ -12,7 +12,7 @@ COPY . /usr/src/node
 ENV NODE_ENV development
 
 WORKDIR /usr/src/node/
-RUN npm install --registry=https://registry.npm.taobao.org
+RUN npm install 
 
 #暴露container的端口
 EXPOSE  8080
