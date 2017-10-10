@@ -9,7 +9,7 @@ WORKDIR /usr/src/node
 COPY . /usr/src/node
 
 #编译运行node项目，使用npm安装程序的所有依赖,利用taobao的npm安装
-ENV NODE_ENV development
+ENV NODE_ENV production
 
 WORKDIR /usr/src/node/
 RUN npm install 
