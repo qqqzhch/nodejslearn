@@ -5,7 +5,7 @@
     "scripts": {
         "start": "node server.js",
         "getdata": "node app/job/cron.js",
-        "web": "pm2 start  server.js"
+        "web": "pm2 start  server.js  --no-daemon"
 
     },
     "keywords": [
@@ -55,7 +55,8 @@
         "cookies":"~0.7.1",
         "uid":"~0.0.2",
         "aws-lib":"~0.3.0",
-        "hacker-news-api":"2.0.0"
+        "hacker-news-api":"2.0.0",
+        "markdown-it":"8.4.0"
         
         
         
