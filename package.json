@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "description": "OpenShift Sample Application",
     "scripts": {
-        "start": "supervisor server.js",
-        "getdata": "node app/job/cron.js"
+        "start": "node server.js",
+        "getdata": "node app/job/cron.js",
+        "web": "pm2 start  server.js"
 
     },
     "keywords": [

@@ -18,4 +18,4 @@ RUN npm install
 EXPOSE  8080
 
 #运行命令
-CMD ["npm", "run","getdata"]
+CMD ["npm", "run","web"]

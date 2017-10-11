@@ -12,7 +12,7 @@ var booksearchHistry=require('./model/booksearchHistry');
 var hackStory=require('./model/hackStory');
 
 
-
+console.log('start')
 gitRepo.sync({
     force: true
 })
@@ -35,7 +35,7 @@ gitRepoHistry.sync({
 hackStory.sync({
     force: true
 })
-
+console.log('end')
 
 //alter table "gitRepos"  add column story_num bigint
 // amazonBook.sync({
