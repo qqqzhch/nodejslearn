@@ -13,27 +13,37 @@ var hackStory=require('./model/hackStory');
 
 
 
-// gitRepo.sync({
-//     force: true
-// })
+gitRepo.sync({
+    force: true
+})
+
+stackSearchHistry.sync({
+    force: true
+})
+
+stackQuestion.sync({
+    force: true
+})
+stackAnswer.sync({
+    force: true
+})
+
+gitRepoHistry.sync({
+    force: true
+})
+
+hackStory.sync({
+    force: true
+})
+
+
+//alter table "gitRepos"  add column story_num bigint
 // amazonBook.sync({
 //     force: true
 // })
 // booksearchHistry.sync({
 //     force: true
 // })
-
-// stackSearchHistry.sync({
-//     force: true
-// })
-
-// stackQuestion.sync({
-//     force: true
-// })
-// stackAnswer.sync({
-//     force: true
-// })
-
 // youSearchHistry.sync({
 //     force: false
 // })
@@ -41,17 +51,6 @@ var hackStory=require('./model/hackStory');
 // youTobeVideos.sync({
 //     force: false
 // })
-
-// gitRepoHistry.sync({
-//     force: true
-// })
-
 // amazonBook.sync({
 //     force: true
 // })
-hackStory.sync({
-    force: true
-})
-
-
-//alter table "gitRepos"  add column story_num bigint
