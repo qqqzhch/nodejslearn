@@ -38,8 +38,10 @@ var gitRepo = sequelize.define('gitRepo', {
         name: 'yuyan_index',
         method: 'BTREE',
         fields: ['language']
-    }],
-    classMethods: {
+    }]
+});
+
+ var    classMethods={
         getReposPager: function(index, pagesize) {
             return this
                 .findAndCountAll({
@@ -89,11 +91,7 @@ var gitRepo = sequelize.define('gitRepo', {
             })
         }
 
-    },
-    instanceMethods: {
-        method2: function() {
-            return 'foo'
-        }
     }
-});
+    
+    gitRepo=Object.assign(gitRepo,classMethods)
 module.exports = gitRepo;

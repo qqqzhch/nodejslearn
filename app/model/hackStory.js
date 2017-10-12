@@ -22,8 +22,11 @@ var model = sequelize.define('hackStory', {
         name: 'story_repo_full_name_index',
         method: 'BTREE',
         fields: ['repo_full_name']
-    }],
-    classMethods: {
+    }]
+ 
+});
+
+var classMethods={
               getPager:function(index,pagesize){
                  return this
                 .findAndCountAll({
@@ -57,7 +60,7 @@ var model = sequelize.define('hackStory', {
 
 
     }
- 
-});
+
+model=Object.assign(model,classMethods)
 model.__s=sequelize;
 module.exports=model;

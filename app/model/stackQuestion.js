@@ -39,8 +39,10 @@ var stackQuestion = sequelize.define('stackQuestion', {
         name: 'Question_repo_full_name',
         method: 'BTREE',
         fields: ['repo_full_name']
-    }],
-    classMethods: {
+    }]
+})
+
+var classMethods={
         getQuesionPager:function(fullname,index,pagesize){
                  return this
                 .findAndCountAll({
@@ -67,5 +69,6 @@ var stackQuestion = sequelize.define('stackQuestion', {
         }
 
     }
-})
+
+stackQuestion=Object.assign(stackQuestion,classMethods)
 module.exports = stackQuestion;

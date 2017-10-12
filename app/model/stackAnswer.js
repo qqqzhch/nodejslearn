@@ -27,8 +27,9 @@ var stackAnswer = sequelize.define('stackAnswer', {
         name: 'Answer_repo_index',
         method: 'gin',
         fields: ['repo']
-    }],
-      classMethods: {
+    }]
+})
+    var classMethods={
         getAnswersByQuestion:function(question_id){
             return this.findAll({
                 where:{
@@ -39,5 +40,6 @@ var stackAnswer = sequelize.define('stackAnswer', {
         }
 
       }
-})
+
+stackAnswer=Object.assign(stackAnswer,classMethods)
 module.exports=stackAnswer;
