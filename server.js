@@ -148,7 +148,7 @@ var SampleApp = function() {
         // self.app.error=function(err, req, res) {
         //    errorhandler.common(err, req, res)
         // };
-        self.app.listen(self.port, self.ipaddress, function() {
+        self.app.listen(self.port, function() {
             console.log('%s: Node server started on %s:%d ...',
                 Date(Date.now()), self.ipaddress, self.port);
         });

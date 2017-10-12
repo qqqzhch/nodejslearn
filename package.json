@@ -5,7 +5,7 @@
     "scripts": {
         "start": "node server.js",
         "getdata": "node app/job/cron.js",
-        "web": "pm2 start  server.js  --no-daemon"
+        "web": "node  server.js  "
 
     },
     "keywords": [
