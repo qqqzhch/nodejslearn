@@ -45,7 +45,7 @@ var classMethods={
 
                     },
           
-                    order: '"points"  DESC',
+                    // order: '"objectID"  DESC',
                     offset: index * pagesize,
                     limit:  pagesize
                 })

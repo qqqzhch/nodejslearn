@@ -19,8 +19,8 @@ module.exports = function(app, config) {
     app.get('/:pager(\\d+)?', homepage.index);
     app.get('/newsinfo/:id(\\d+)?', homepage.newsinfo);
     
-    app.get('/404', home.http404);
-    app.get('/error', home.error);
+    // app.get('/404', home.http404);
+    // app.get('/error', home.error);
     app.get('/errortest', home.errortest);
     app.get('/info', home.info);
     app.get('/rlist', home.rlist);
@@ -55,12 +55,12 @@ module.exports = function(app, config) {
     // app.get('/stack/getAnswersnfo', home.getAnswersnfo);
     // app.get('/youtube/search', home.search);
     // app.get('/youtube/videos', home.videos);
-    app.get('*', function(req, res) {
-        res.writeHead(301, {
-            'Location': '/404'
-        });
-        res.end();
-    });
+    // app.get('*', function(req, res) {
+    //     res.writeHead(301, {
+    //         'Location': '/404'
+    //     });
+    //     res.end();
+    // });
 
 
 }

@@ -36,6 +36,16 @@ function getrespQuestion(list, callbaack) {
     async.map(list, function(aitem, callback) {
         console.log('采集' + aitem.name);
         requrstMock.getstackSearch(aitem.name, searchPage, function(error, response, body) {
+            if(body==undefined){
+                callback(null, {
+                    name: aitem.name,
+                    full_name: aitem.full_name,
+                    error: error,
+                    num: 0,
+                    has_more:false
+                });
+
+            }
             if (body.items == undefined) {
                 body.items = []
             }

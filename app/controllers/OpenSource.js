@@ -87,18 +87,20 @@ exports.repo = function(req, res) {
                           callback(err)
                     }).catch(function(err) {
                         
-                        res.statusCode = 500;
+                        // res.statusCode = 500;
+                        console.log(err)
                           callback(err)
                     })
 
 
             }
         ], function(err) {
+            console.log(err)
             // body...
             if (err == null) {
                 res.render('OpenSource_repo');
             } else {
-                res.render('error');
+                // res.render('error');
 
             }
 
@@ -106,9 +108,10 @@ exports.repo = function(req, res) {
 
 
     } else {
+        console.log(err)
         //跳到错误页面
-        console.log(full_name);
-        res.render('error');
+        // console.log(full_name);
+        // res.render('error');
 
     }
 
