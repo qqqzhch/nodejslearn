@@ -1,4 +1,4 @@
-var stackexchange = require('stackexchange');
+var stackexchange = require('stackexchange-zhch');
 
 
 

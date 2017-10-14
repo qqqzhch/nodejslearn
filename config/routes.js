@@ -47,14 +47,14 @@ module.exports = function(app, config) {
 
 
 
-    // app.get('/github/repos', home.repos);
-    // app.get('/github/getReadme', home.getReadme);
-    // app.get('/github/getConent', home.getConent);
-    // app.get('/stack/getSearch', home.getSearch);
-    // app.get('/stack/getQuestionsInfo', home.getQuestionsInfo);
-    // app.get('/stack/getAnswersnfo', home.getAnswersnfo);
-    // app.get('/youtube/search', home.search);
-    // app.get('/youtube/videos', home.videos);
+    app.get('/github/repos', home.repos);
+    app.get('/github/getReadme', home.getReadme);
+    app.get('/github/getConent', home.getConent);
+    app.get('/stack/getSearch', home.getSearch);
+    app.get('/stack/getQuestionsInfo', home.getQuestionsInfo);
+    app.get('/stack/getAnswersnfo', home.getAnswersnfo);
+    app.get('/youtube/search', home.search);
+    app.get('/youtube/videos', home.videos);
     app.get('*', function(req, res) {
         res.writeHead(301, {
             'Location': '/404'

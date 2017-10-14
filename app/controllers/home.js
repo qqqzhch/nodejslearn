@@ -26,7 +26,7 @@ github.authenticate({
     password: "qq569033569033"
 });
 
-var stackexchange = require('stackexchange');
+var stackexchange = require('stackexchange-zhch');
 
 
 
